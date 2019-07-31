@@ -1,0 +1,49 @@
+//
+//  PrefixHeader.pch
+//  MonthAndWeekDemo
+//
+//  Created by kfw on 2019/7/1.
+//  Copyright © 2019 kfw. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "UIView+Exting.h"
+#import "NSDate-Helper.h"
+#import "NSDate+Extension.h"
+#import "ColorTools.h"
+
+#endif /* PrefixHeader_pch */
+
+// 上安全区域高
+#define kSafeAreaTop \
+({CGFloat safeAreaTop = 0;\
+if (@available(iOS 11.0, *)) {\
+safeAreaTop = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.top;\
+} else {\
+safeAreaTop = [[UIApplication sharedApplication] statusBarFrame].size.height;\
+}\
+(safeAreaTop);})
+
+// 下安全区域高
+#define kSafeAreaBottom \
+({CGFloat safeAreaBottom = 0;\
+if (@available(iOS 11.0, *)) {\
+safeAreaBottom = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bottom;\
+}\
+(safeAreaBottom);})
+
+#define kColorF5F5F5                            [ColorTools colorWithHexString:@"#F5F5F5"]
+#define kColorE5E5E5                            [ColorTools colorWithHexString:@"#E5E5E5"]
+#define kColorTheme                             [ColorTools colorWithHexString:@"#f10180"]
+#define kColor6                                 [ColorTools colorWithHexString:@"#666666"]
+#define kColor3                                 [ColorTools colorWithHexString:@"#333333"]
+#define kColor9                                 [ColorTools colorWithHexString:@"#999999"]
+#define kColorE                                 [ColorTools colorWithHexString:@"#eeeeee"]
+#define kColorC                                 [ColorTools colorWithHexString:@"#cccccc"]
+#define kColorFF9072                            [ColorTools colorWithHexString:@"#FF9072"]
+#define kColorFFF3F0                            [ColorTools colorWithHexString:@"#FFF3F0"]

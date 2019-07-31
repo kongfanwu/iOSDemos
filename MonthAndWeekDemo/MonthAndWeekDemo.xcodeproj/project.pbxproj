@@ -1,0 +1,460 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F285346F22C9E8DD00C2430C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F285346E22C9E8DD00C2430C /* AppDelegate.m */; };
+		F285347222C9E8DD00C2430C /* XMHMonthWeekVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F285347122C9E8DD00C2430C /* XMHMonthWeekVC.m */; };
+		F285347522C9E8DD00C2430C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F285347322C9E8DD00C2430C /* Main.storyboard */; };
+		F285347722C9E8DD00C2430C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F285347622C9E8DD00C2430C /* Assets.xcassets */; };
+		F285347A22C9E8DD00C2430C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F285347822C9E8DD00C2430C /* LaunchScreen.storyboard */; };
+		F285347D22C9E8DD00C2430C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F285347C22C9E8DD00C2430C /* main.m */; };
+		F285348522C9E90A00C2430C /* XMHMonthAndWeekView.m in Sources */ = {isa = PBXBuildFile; fileRef = F285348322C9E90A00C2430C /* XMHMonthAndWeekView.m */; };
+		F285348822C9E9A100C2430C /* UIView+Exting.m in Sources */ = {isa = PBXBuildFile; fileRef = F285348622C9E9A100C2430C /* UIView+Exting.m */; };
+		F285348B22C9EBC300C2430C /* timg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F285348A22C9EBC300C2430C /* timg.jpg */; };
+		F285348E22C9FBED00C2430C /* XMHMonthAndWeekCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = F285348D22C9FBED00C2430C /* XMHMonthAndWeekCollectionView.m */; };
+		F285349122CA028300C2430C /* XMHCollectionWeekCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F285349022CA028300C2430C /* XMHCollectionWeekCell.m */; };
+		F285349422CA028F00C2430C /* XMHCollectionMonthCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F285349322CA028F00C2430C /* XMHCollectionMonthCell.m */; };
+		F28534BC22CB59C300C2430C /* XMHDateNavBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F28534BB22CB59C300C2430C /* XMHDateNavBarView.m */; };
+		F28534C422CB5C5B00C2430C /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F28534C122CB5C5B00C2430C /* NSDate+Extension.m */; };
+		F28534C522CB5C5B00C2430C /* NSDate-Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = F28534C322CB5C5B00C2430C /* NSDate-Helper.m */; };
+		F28534C822CB7D9900C2430C /* XMHMonthAndWeekModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F28534C722CB7D9900C2430C /* XMHMonthAndWeekModel.m */; };
+		F28534CB22CB82C300C2430C /* ColorTools.m in Sources */ = {isa = PBXBuildFile; fileRef = F28534CA22CB82C300C2430C /* ColorTools.m */; };
+		F28534D222CC918900C2430C /* XMHMonthAndWeekBgView.m in Sources */ = {isa = PBXBuildFile; fileRef = F28534D122CC918900C2430C /* XMHMonthAndWeekBgView.m */; };
+		F28534D622CCDBBC00C2430C /* Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = F28534D522CCDBBB00C2430C /* Aspects.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F285346A22C9E8DD00C2430C /* MonthAndWeekDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonthAndWeekDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F285346D22C9E8DD00C2430C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F285346E22C9E8DD00C2430C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F285347022C9E8DD00C2430C /* XMHMonthWeekVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMHMonthWeekVC.h; sourceTree = "<group>"; };
+		F285347122C9E8DD00C2430C /* XMHMonthWeekVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMHMonthWeekVC.m; sourceTree = "<group>"; };
+		F285347422C9E8DD00C2430C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F285347622C9E8DD00C2430C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F285347922C9E8DD00C2430C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F285347B22C9E8DD00C2430C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F285347C22C9E8DD00C2430C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F285348322C9E90A00C2430C /* XMHMonthAndWeekView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMHMonthAndWeekView.m; sourceTree = "<group>"; };
+		F285348422C9E90A00C2430C /* XMHMonthAndWeekView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMHMonthAndWeekView.h; sourceTree = "<group>"; };
+		F285348622C9E9A100C2430C /* UIView+Exting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Exting.m"; sourceTree = "<group>"; };
+		F285348722C9E9A100C2430C /* UIView+Exting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Exting.h"; sourceTree = "<group>"; };
+		F285348922C9E9BD00C2430C /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		F285348A22C9EBC300C2430C /* timg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg.jpg; sourceTree = "<group>"; };
+		F285348C22C9FBED00C2430C /* XMHMonthAndWeekCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMHMonthAndWeekCollectionView.h; sourceTree = "<group>"; };
+		F285348D22C9FBED00C2430C /* XMHMonthAndWeekCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMHMonthAndWeekCollectionView.m; sourceTree = "<group>"; };
+		F285348F22CA028300C2430C /* XMHCollectionWeekCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMHCollectionWeekCell.h; sourceTree = "<group>"; };
+		F285349022CA028300C2430C /* XMHCollectionWeekCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMHCollectionWeekCell.m; sourceTree = "<group>"; };
+		F285349222CA028F00C2430C /* XMHCollectionMonthCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMHCollectionMonthCell.h; sourceTree = "<group>"; };
+		F285349322CA028F00C2430C /* XMHCollectionMonthCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMHCollectionMonthCell.m; sourceTree = "<group>"; };
+		F28534BA22CB59C300C2430C /* XMHDateNavBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMHDateNavBarView.h; sourceTree = "<group>"; };
+		F28534BB22CB59C300C2430C /* XMHDateNavBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMHDateNavBarView.m; sourceTree = "<group>"; };
+		F28534C022CB5C5B00C2430C /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
+		F28534C122CB5C5B00C2430C /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
+		F28534C222CB5C5B00C2430C /* NSDate-Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate-Helper.h"; sourceTree = "<group>"; };
+		F28534C322CB5C5B00C2430C /* NSDate-Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate-Helper.m"; sourceTree = "<group>"; };
+		F28534C622CB7D9900C2430C /* XMHMonthAndWeekModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMHMonthAndWeekModel.h; sourceTree = "<group>"; };
+		F28534C722CB7D9900C2430C /* XMHMonthAndWeekModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMHMonthAndWeekModel.m; sourceTree = "<group>"; };
+		F28534C922CB82C200C2430C /* ColorTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorTools.h; sourceTree = "<group>"; };
+		F28534CA22CB82C300C2430C /* ColorTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorTools.m; sourceTree = "<group>"; };
+		F28534D022CC918900C2430C /* XMHMonthAndWeekBgView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMHMonthAndWeekBgView.h; sourceTree = "<group>"; };
+		F28534D122CC918900C2430C /* XMHMonthAndWeekBgView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMHMonthAndWeekBgView.m; sourceTree = "<group>"; };
+		F28534D422CCDBBB00C2430C /* Aspects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aspects.h; sourceTree = "<group>"; };
+		F28534D522CCDBBB00C2430C /* Aspects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Aspects.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F285346722C9E8DD00C2430C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F285346122C9E8DD00C2430C = {
+			isa = PBXGroup;
+			children = (
+				F285346C22C9E8DD00C2430C /* MonthAndWeekDemo */,
+				F285346B22C9E8DD00C2430C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F285346B22C9E8DD00C2430C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F285346A22C9E8DD00C2430C /* MonthAndWeekDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F285346C22C9E8DD00C2430C /* MonthAndWeekDemo */ = {
+			isa = PBXGroup;
+			children = (
+				F28534D322CCDBBB00C2430C /* Aspects */,
+				F28534CF22CC8DB600C2430C /* M */,
+				F28534CE22CC8DB100C2430C /* V */,
+				F28534CD22CC8DA800C2430C /* C */,
+				F28534CC22CB82D000C2430C /* Category */,
+				F285346D22C9E8DD00C2430C /* AppDelegate.h */,
+				F285346E22C9E8DD00C2430C /* AppDelegate.m */,
+				F285347322C9E8DD00C2430C /* Main.storyboard */,
+				F285347622C9E8DD00C2430C /* Assets.xcassets */,
+				F285347822C9E8DD00C2430C /* LaunchScreen.storyboard */,
+				F285347B22C9E8DD00C2430C /* Info.plist */,
+				F285347C22C9E8DD00C2430C /* main.m */,
+				F285348922C9E9BD00C2430C /* PrefixHeader.pch */,
+			);
+			path = MonthAndWeekDemo;
+			sourceTree = "<group>";
+		};
+		F28534CC22CB82D000C2430C /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				F285348A22C9EBC300C2430C /* timg.jpg */,
+				F28534C922CB82C200C2430C /* ColorTools.h */,
+				F28534CA22CB82C300C2430C /* ColorTools.m */,
+				F285348722C9E9A100C2430C /* UIView+Exting.h */,
+				F285348622C9E9A100C2430C /* UIView+Exting.m */,
+				F28534C222CB5C5B00C2430C /* NSDate-Helper.h */,
+				F28534C322CB5C5B00C2430C /* NSDate-Helper.m */,
+				F28534C022CB5C5B00C2430C /* NSDate+Extension.h */,
+				F28534C122CB5C5B00C2430C /* NSDate+Extension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		F28534CD22CC8DA800C2430C /* C */ = {
+			isa = PBXGroup;
+			children = (
+				F285347022C9E8DD00C2430C /* XMHMonthWeekVC.h */,
+				F285347122C9E8DD00C2430C /* XMHMonthWeekVC.m */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		F28534CE22CC8DB100C2430C /* V */ = {
+			isa = PBXGroup;
+			children = (
+				F28534D022CC918900C2430C /* XMHMonthAndWeekBgView.h */,
+				F28534D122CC918900C2430C /* XMHMonthAndWeekBgView.m */,
+				F28534BA22CB59C300C2430C /* XMHDateNavBarView.h */,
+				F28534BB22CB59C300C2430C /* XMHDateNavBarView.m */,
+				F285348422C9E90A00C2430C /* XMHMonthAndWeekView.h */,
+				F285348322C9E90A00C2430C /* XMHMonthAndWeekView.m */,
+				F285348C22C9FBED00C2430C /* XMHMonthAndWeekCollectionView.h */,
+				F285348D22C9FBED00C2430C /* XMHMonthAndWeekCollectionView.m */,
+				F285348F22CA028300C2430C /* XMHCollectionWeekCell.h */,
+				F285349022CA028300C2430C /* XMHCollectionWeekCell.m */,
+				F285349222CA028F00C2430C /* XMHCollectionMonthCell.h */,
+				F285349322CA028F00C2430C /* XMHCollectionMonthCell.m */,
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		F28534CF22CC8DB600C2430C /* M */ = {
+			isa = PBXGroup;
+			children = (
+				F28534C622CB7D9900C2430C /* XMHMonthAndWeekModel.h */,
+				F28534C722CB7D9900C2430C /* XMHMonthAndWeekModel.m */,
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		F28534D322CCDBBB00C2430C /* Aspects */ = {
+			isa = PBXGroup;
+			children = (
+				F28534D422CCDBBB00C2430C /* Aspects.h */,
+				F28534D522CCDBBB00C2430C /* Aspects.m */,
+			);
+			path = Aspects;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F285346922C9E8DD00C2430C /* MonthAndWeekDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F285348022C9E8DD00C2430C /* Build configuration list for PBXNativeTarget "MonthAndWeekDemo" */;
+			buildPhases = (
+				F285346622C9E8DD00C2430C /* Sources */,
+				F285346722C9E8DD00C2430C /* Frameworks */,
+				F285346822C9E8DD00C2430C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MonthAndWeekDemo;
+			productName = MonthAndWeekDemo;
+			productReference = F285346A22C9E8DD00C2430C /* MonthAndWeekDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F285346222C9E8DD00C2430C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = kfw;
+				TargetAttributes = {
+					F285346922C9E8DD00C2430C = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = F285346522C9E8DD00C2430C /* Build configuration list for PBXProject "MonthAndWeekDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F285346122C9E8DD00C2430C;
+			productRefGroup = F285346B22C9E8DD00C2430C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F285346922C9E8DD00C2430C /* MonthAndWeekDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F285346822C9E8DD00C2430C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F285348B22C9EBC300C2430C /* timg.jpg in Resources */,
+				F285347A22C9E8DD00C2430C /* LaunchScreen.storyboard in Resources */,
+				F285347722C9E8DD00C2430C /* Assets.xcassets in Resources */,
+				F285347522C9E8DD00C2430C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F285346622C9E8DD00C2430C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F28534D222CC918900C2430C /* XMHMonthAndWeekBgView.m in Sources */,
+				F285347222C9E8DD00C2430C /* XMHMonthWeekVC.m in Sources */,
+				F285348522C9E90A00C2430C /* XMHMonthAndWeekView.m in Sources */,
+				F28534CB22CB82C300C2430C /* ColorTools.m in Sources */,
+				F28534BC22CB59C300C2430C /* XMHDateNavBarView.m in Sources */,
+				F28534D622CCDBBC00C2430C /* Aspects.m in Sources */,
+				F285349422CA028F00C2430C /* XMHCollectionMonthCell.m in Sources */,
+				F28534C822CB7D9900C2430C /* XMHMonthAndWeekModel.m in Sources */,
+				F285349122CA028300C2430C /* XMHCollectionWeekCell.m in Sources */,
+				F285348822C9E9A100C2430C /* UIView+Exting.m in Sources */,
+				F28534C422CB5C5B00C2430C /* NSDate+Extension.m in Sources */,
+				F285347D22C9E8DD00C2430C /* main.m in Sources */,
+				F285346F22C9E8DD00C2430C /* AppDelegate.m in Sources */,
+				F28534C522CB5C5B00C2430C /* NSDate-Helper.m in Sources */,
+				F285348E22C9FBED00C2430C /* XMHMonthAndWeekCollectionView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F285347322C9E8DD00C2430C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F285347422C9E8DD00C2430C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F285347822C9E8DD00C2430C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F285347922C9E8DD00C2430C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F285347E22C9E8DD00C2430C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F285347F22C9E8DD00C2430C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F285348122C9E8DD00C2430C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = /Users/kfw/Documents/Demo/MonthAndWeekDemo/MonthAndWeekDemo/PrefixHeader.pch;
+				INFOPLIST_FILE = MonthAndWeekDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kfw.MonthAndWeekDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F285348222C9E8DD00C2430C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = /Users/kfw/Documents/Demo/MonthAndWeekDemo/MonthAndWeekDemo/PrefixHeader.pch;
+				INFOPLIST_FILE = MonthAndWeekDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kfw.MonthAndWeekDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F285346522C9E8DD00C2430C /* Build configuration list for PBXProject "MonthAndWeekDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F285347E22C9E8DD00C2430C /* Debug */,
+				F285347F22C9E8DD00C2430C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F285348022C9E8DD00C2430C /* Build configuration list for PBXNativeTarget "MonthAndWeekDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F285348122C9E8DD00C2430C /* Debug */,
+				F285348222C9E8DD00C2430C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F285346222C9E8DD00C2430C /* Project object */;
+}

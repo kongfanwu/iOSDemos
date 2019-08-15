@@ -8,7 +8,7 @@
 
 #import "XMHUserTagLayout.h"
 
-@interface XMHUserTagLayout() <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+@interface XMHUserTagLayout() <UICollectionViewDelegateFlowLayout>
 @property (assign, nonatomic) CGFloat currentY;   //当前Y值
 @property (assign, nonatomic) CGFloat currentX;   //当前X值
 @property (strong, nonatomic) NSMutableArray * attrubutesArray;   //所有元素的布局信息
@@ -81,6 +81,7 @@
         }
         
         // 2 Cells
+        NSInteger lineCount = 0; // 记录当前行有几个cell
         CGFloat cellX = _currentX;
         CGFloat cellY = _currentY;
         //计算cell的布局
@@ -108,11 +109,20 @@
             CGRect frame;
             frame.size = CGSizeMake(itemW, _itemHeight);
          
-            //检查坐标
-            if (indexPath.item % 3 == 0 && indexPath.item != 0) {
+//            if ((indexPath.item % 3 == 0 && indexPath.item != 0) || (cellX + itemW) > contentWidth) {
+//                cellX = _currentX;
+//                cellY += (_itemHeight + _lineSpace);
+//            }
+
+            // cell换行条件， 1 一行超过3个cell  2 cell right 超过当前总宽
+            if (lineCount == 3 || (cellX + itemW) > contentWidth) {
+                lineCount = 0;
+                
                 cellX = _currentX;
                 cellY += (_itemHeight + _lineSpace);
             }
+            
+            lineCount++;
             
             //设置坐标
             frame.origin = CGPointMake(cellX, cellY);

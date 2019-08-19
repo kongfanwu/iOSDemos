@@ -11,7 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 typedef NS_ENUM(NSInteger, XMHUserTagModelType) {
-    XMHUserTagModelTypeNormal, // 正常类型
+    XMHUserTagModelTypeNormal, // 正常类型 只能查看
+    XMHUserTagModelTypeEdit, // 编辑
     XMHUserTagModelTypeAdd,    // 添加类型
 };
 

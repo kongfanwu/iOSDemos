@@ -29,7 +29,7 @@
     self.view.backgroundColor = kBackgroundColor;
     self.navView.backgroundColor = kBtn_Commen_Color;
     
-    [self.navView setNavViewTitle:@"顾客管理" backBtnShow:YES rightBtnTitle:@"确定"];
+    [self.navView setNavViewTitle:@"顾客标签" backBtnShow:YES rightBtnTitle:@"确定"];
     __weak typeof(self) _self = self;
     [self.navView setNavViewBackBlock:^{
         __strong typeof(_self) self = _self;
@@ -131,53 +131,68 @@
     sectionModel.ID = @"2";
     [_dataArray addObject:sectionModel];
     sectionModel.name = @"section1";
-    
+
     userTagModel = XMHUserTagModel.new;
     [sectionModel.childs addObject:userTagModel];
     userTagModel.ID = @"1";
     userTagModel.name = @"一";
-    
+    userTagModel.deleteState = YES;
+
     userTagModel = XMHUserTagModel.new;
     [sectionModel.childs addObject:userTagModel];
     userTagModel.ID = @"2";
     userTagModel.name = @"一二";
-    
+    userTagModel.deleteState = YES;
+
     userTagModel = XMHUserTagModel.new;
     [sectionModel.childs addObject:userTagModel];
     userTagModel.ID = @"3";
     userTagModel.name = @"一二三";
-    
+    userTagModel.deleteState = YES;
+
     userTagModel = XMHUserTagModel.new;
     [sectionModel.childs addObject:userTagModel];
     userTagModel.ID = @"4";
     userTagModel.name = @"一二三四";
-    
+    userTagModel.deleteState = YES;
+//
     userTagModel = XMHUserTagModel.new;
+    userTagModel.deleteState = YES;
     [sectionModel.childs addObject:userTagModel];
     userTagModel.ID = @"5";
     userTagModel.name = @"一二三四五";
-    
+
     userTagModel = XMHUserTagModel.new;
+    userTagModel.deleteState = YES;
     [sectionModel.childs addObject:userTagModel];
     userTagModel.ID = @"6";
     userTagModel.name = @"一二三四五六";
-    
+
     userTagModel = XMHUserTagModel.new;
+    userTagModel.deleteState = YES;
     [sectionModel.childs addObject:userTagModel];
     userTagModel.ID = @"7";
     userTagModel.name = @"一二三四五六七";
-    
+
     userTagModel = XMHUserTagModel.new;
     userTagModel.type = XMHUserTagModelTypeAdd;
     [sectionModel.childs addObject:userTagModel];
     userTagModel.name = @"自定义";
-    
-    
+//
+//
     sectionModel = XMHUserTagSectionModel.new;
     sectionModel.type = XMHUserTagSectionModelTypeAdd;
     sectionModel.footerName = @"添加分类";
     [_dataArray addObject:sectionModel];
     
+    
+    [_dataArray enumerateObjectsUsingBlock:^(XMHUserTagSectionModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [obj.childs enumerateObjectsUsingBlock:^(XMHUserTagModel * _Nonnull userTagModel, NSUInteger idx, BOOL * _Nonnull stop) {
+            if (!(userTagModel.type == XMHUserTagModelTypeAdd)) {
+                userTagModel.type = XMHUserTagModelTypeEdit;
+            }
+        }];
+    }];
     
     // 将于选中的标签做选中状态
     for (XMHUserTagSectionModel *selectSectionModel in _selectDataArray) {
@@ -203,7 +218,6 @@
     
     _collectionView.dataArray = _dataArray;
     [_collectionView reloadData];
-    
 }
 
 - (void)sureClick {
@@ -240,6 +254,7 @@
     XMHUserTagModel *newUserTagModel = [userTagModel mutableCopy];
     newUserTagModel.select = NO;
     newUserTagModel.deleteState = NO;
+    newUserTagModel.type = XMHUserTagModelTypeNormal;
     [newSectionMdoel.childs addObject:newUserTagModel];
 }
 
@@ -340,14 +355,16 @@
  删除事件
  */
 - (void)deleteCellIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"%@", indexPath);
+    NSLog(@"section:%ld row:%ld", indexPath.section, indexPath.item);
     XMHUserTagSectionModel *sectionModel = _dataArray[indexPath.section];
     XMHUserTagModel *userTagModel = sectionModel.childs[indexPath.item];
     
     [self deleteSelectTagUserModel:userTagModel sectionModel:sectionModel];
     
     [sectionModel.childs removeObjectAtIndex:indexPath.item];
-    [_collectionView reloadData];
+//    [_collectionView reloadData];
+    
+    [_collectionView deleteItemsAtIndexPaths:@[indexPath]];
 }
 
 /**
@@ -358,6 +375,7 @@
     [self showAlertPlaceholder:@"请输入自定义标签名称" complete:^(NSString *text) {
         __strong typeof(_self) self = _self;
         XMHUserTagModel *userTagModel = XMHUserTagModel.new;
+        userTagModel.type = XMHUserTagModelTypeEdit;
         userTagModel.ID = @"1";
         userTagModel.name = text;
         
@@ -365,6 +383,9 @@
         sectionModel.ID = @"3";
         [sectionModel.childs insertObject:userTagModel atIndex:sectionModel.childs.count - 1];
         [self.collectionView reloadData];
+//        [self.collectionView performBatchUpdates:^{
+//            [_collectionView insertItemsAtIndexPaths:@[[NSIndexPath indexPathForItem:sectionModel.childs.count - 1 inSection:indexPath.section]]];
+//        } completion:nil];
     }];
 }
 
@@ -387,6 +408,7 @@
         
         self.collectionView.dataArray = self.dataArray;
         [self.collectionView reloadData];
+//        [self.collectionView insertSections:[NSIndexSet indexSetWithIndex:indexPath.section]];
     }];
 }
 

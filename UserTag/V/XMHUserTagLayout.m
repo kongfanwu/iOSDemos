@@ -16,6 +16,8 @@
 @property (strong, nonatomic) NSMutableDictionary *cellLayoutInfo;//保存cell的布局
 @property (strong, nonatomic) NSMutableDictionary *headLayoutInfo;//保存头视图的布局
 @property (strong, nonatomic) NSMutableDictionary *footLayoutInfo;//保存尾视图的布局
+@property (strong, nonatomic) NSMutableArray *deleteIndexPaths;
+@property (strong, nonatomic) NSMutableArray *insertIndexPaths;
 
 @end
 
@@ -33,12 +35,7 @@
     return self;
 }
 
-//CollectionView会在初次布局时首先调用该方法
-//CollectionView会在布局失效后、重新查询布局之前调用此方法
-//子类中必须重写该方法并调用超类的方法
--(void)prepareLayout {
-    [super prepareLayout];
-
+- (void)computeSubViews {
     //重新布局需要清空
     [self.cellLayoutInfo removeAllObjects];
     [self.headLayoutInfo removeAllObjects];
@@ -48,7 +45,7 @@
     _currentY = 0;
     _currentX = _sectionInsets.left;
     _attrubutesArray = [NSMutableArray array];
-
+    
     //获取宽度
     CGFloat contentWidth = self.collectionView.frame.size.width - _sectionInsets.left - _sectionInsets.right;
     //取有多少个section
@@ -108,12 +105,12 @@
             //计算item的frame
             CGRect frame;
             frame.size = CGSizeMake(itemW, _itemHeight);
-         
-//            if ((indexPath.item % 3 == 0 && indexPath.item != 0) || (cellX + itemW) > contentWidth) {
-//                cellX = _currentX;
-//                cellY += (_itemHeight + _lineSpace);
-//            }
-
+            
+            //            if ((indexPath.item % 3 == 0 && indexPath.item != 0) || (cellX + itemW) > contentWidth) {
+            //                cellX = _currentX;
+            //                cellY += (_itemHeight + _lineSpace);
+            //            }
+            
             // cell换行条件， 1 一行超过3个cell  2 cell right 超过当前总宽
             if (lineCount == 3 || (cellX + itemW) > contentWidth) {
                 lineCount = 0;
@@ -157,6 +154,15 @@
         }
         
     }
+    
+}
+
+//CollectionView会在初次布局时首先调用该方法
+//CollectionView会在布局失效后、重新查询布局之前调用此方法
+//子类中必须重写该方法并调用超类的方法
+-(void)prepareLayout {
+    [super prepareLayout];
+    [self computeSubViews];
 }
 
 //子类必须重写此方法。
@@ -164,12 +170,14 @@
 //这个值代表的是所有的内容的宽高，并不是当前可见的部分。
 //CollectionView将会使用该值配置内容的大小来促进滚动。
 - (CGSize)collectionViewContentSize {
+    [super collectionViewContentSize];
     CGFloat maxY = _currentY;// + _itemHeight + _sectionInsets.bottom;
     return CGSizeMake(self.collectionView.frame.size.width, MAX(maxY, self.collectionView.frame.size.height));
 }
 
 - (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect
 {
+    [super layoutAttributesForElementsInRect:rect];
     NSMutableArray *allAttributes = [NSMutableArray array];
     
     //添加当前屏幕可见的cell的布局
@@ -199,6 +207,7 @@
 //插入cell的时候系统会调用改方法
 - (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    [super layoutAttributesForItemAtIndexPath:indexPath];
     UICollectionViewLayoutAttributes *attribute = self.cellLayoutInfo[indexPath];
     return attribute;
 }
@@ -213,5 +222,114 @@
     }
     return attribute;
 }
+
+- (void)prepareForCollectionViewUpdates:(NSArray *)updateItems
+{
+    // Keep track of insert and delete index paths
+    [super prepareForCollectionViewUpdates:updateItems];
+    
+    self.deleteIndexPaths = [NSMutableArray array];
+    self.insertIndexPaths = [NSMutableArray array];
+    
+    for (UICollectionViewUpdateItem *update in updateItems)
+    {
+        if (update.updateAction == UICollectionUpdateActionDelete)
+        {
+            [self.deleteIndexPaths addObject:update.indexPathBeforeUpdate];
+        }
+        else if (update.updateAction == UICollectionUpdateActionInsert)
+        {
+            [self.insertIndexPaths addObject:update.indexPathAfterUpdate];
+        }
+    }
+    
+}
+
+- (void)finalizeCollectionViewUpdates
+{
+    [super finalizeCollectionViewUpdates];
+    // release the insert and delete index paths
+    
+    self.deleteIndexPaths = nil;
+    self.insertIndexPaths = nil;
+
+    // 内部刷新完。重新刷新代理。校正cell indexPath. 移除操作，必须动画完成后才可刷新。实测0.5秒后刷新可以。
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.5 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        NSLog(@"reloadData");
+       [self.collectionView reloadData];
+    });
+}
+//插入前，
+- (UICollectionViewLayoutAttributes *)initialLayoutAttributesForAppearingItemAtIndexPath:(NSIndexPath *)itemIndexPath
+{
+    // Must call super
+    UICollectionViewLayoutAttributes *attributes = [super initialLayoutAttributesForAppearingItemAtIndexPath:itemIndexPath];
+    
+    if ([self.insertIndexPaths containsObject:itemIndexPath])
+    {
+        // only change attributes on inserted cells
+        if (!attributes)
+            attributes = [self layoutAttributesForItemAtIndexPath:itemIndexPath];
+        
+        // Configure attributes ...
+        attributes.alpha = 0.0;
+        CGPoint center = CGPointMake(CGRectGetMidX(self.collectionView.bounds), CGRectGetMaxY(self.collectionView.bounds));
+        attributes.center = CGPointMake(center.x, center.y);
+    }
+    
+    return attributes;
+}
+
+// Note: name of method changed
+// Also this gets called for all visible cells (not just the deleted ones) and
+// even gets called when inserting cells!
+- (UICollectionViewLayoutAttributes *)finalLayoutAttributesForDisappearingItemAtIndexPath:(NSIndexPath *)itemIndexPath
+{
+    // So far, calling super hasn't been strictly necessary here, but leaving it in
+    // for good measure
+    UICollectionViewLayoutAttributes *attributes = [super finalLayoutAttributesForDisappearingItemAtIndexPath:itemIndexPath];
+    
+    if ([self.deleteIndexPaths containsObject:itemIndexPath])
+    {
+        // only change attributes on deleted cells
+        if (!attributes)
+            attributes = [self layoutAttributesForItemAtIndexPath:itemIndexPath];
+        
+        // Configure attributes ...
+//        attributes.alpha = 0.0;
+//        CGPoint center = CGPointMake(CGRectGetMidX(self.collectionView.bounds), CGRectGetMaxY(self.collectionView.bounds));
+//        attributes.center = CGPointMake(center.x, center.y);
+//        attributes.transform3D = CATransform3DMakeScale(0.1, 0.1, 1.0);
+        attributes.transform = CGAffineTransformMakeScale(0, 0);
+    }
+    
+    return attributes;
+}
+
+//
+//// 初始状态
+//- (nullable UICollectionViewLayoutAttributes *)initialLayoutAttributesForAppearingItemAtIndexPath:(NSIndexPath *)itemIndexPath
+//{
+//    // Must call super
+//    UICollectionViewLayoutAttributes *attributes = [super initialLayoutAttributesForAppearingItemAtIndexPath:itemIndexPath];
+//
+//    if (!attributes) attributes = [self layoutAttributesForItemAtIndexPath:itemIndexPath];
+//
+//    attributes.center = CGPointMake(CGRectGetMidX(self.collectionView.bounds), CGRectGetMaxY(self.collectionView.bounds));
+//    attributes.transform = CGAffineTransformRotate(CGAffineTransformMakeScale(0.2, 0.2), M_PI);
+//
+//    return attributes;
+//}
+//
+//
+//// 终结状态
+//- (nullable UICollectionViewLayoutAttributes *)finalLayoutAttributesForDisappearingItemAtIndexPath:(NSIndexPath *)itemIndexPath
+//{
+//    UICollectionViewLayoutAttributes *attributes = [super finalLayoutAttributesForDisappearingItemAtIndexPath:itemIndexPath];
+//    if (!attributes) attributes = [self layoutAttributesForItemAtIndexPath:itemIndexPath];
+//
+//    attributes.alpha = 0.0f;
+//    return attributes;
+//}
 
 @end

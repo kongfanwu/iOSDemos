@@ -122,7 +122,7 @@
 }
 
 - (void)longClick:(UILongPressGestureRecognizer *)sender {
-    if (_userTagModel.type == XMHUserTagModelTypeAdd) return;
+    if (_userTagModel.type == XMHUserTagModelTypeAdd || _userTagModel.type == XMHUserTagModelTypeNormal) return;
     
     if (sender.state == UIGestureRecognizerStateBegan) {
         _userTagModel.deleteState = !_userTagModel.deleteState;

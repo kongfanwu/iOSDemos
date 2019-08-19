@@ -36,7 +36,7 @@
     self.view.backgroundColor = kBackgroundColor;
     
     self.navView.backgroundColor = kBtn_Commen_Color;
-    [self.navView setNavViewTitle:@"顾客管理" backBtnShow:YES rightBtnTitle:@"编辑"];
+    [self.navView setNavViewTitle:@"顾客标签" backBtnShow:YES rightBtnTitle:@"编辑"];
     __weak typeof(self) _self = self;
     [self.navView setNavViewRightBlock:^{
         __strong typeof(_self) self = _self;
@@ -80,17 +80,22 @@
     XMHUserTagSectionModel *sectionModel;
     XMHUserTagModel *userTagModel;
     
+    // 创建section model
     sectionModel = XMHUserTagSectionModel.new;
+    // 添加到数组里
     [_dataArray addObject:sectionModel];
     sectionModel.ID = @"1";
     sectionModel.name = @"section0";
     
+    // 创建section 下的cell
     userTagModel = XMHUserTagModel.new;
+    // 将cell model添加到 section model 下
     [sectionModel.childs addObject:userTagModel];
     userTagModel.ID = @"1";
     userTagModel.name = @"一";
     
     
+    // 创建section model
     sectionModel = XMHUserTagSectionModel.new;
     sectionModel.ID = @"2";
     [_dataArray addObject:sectionModel];

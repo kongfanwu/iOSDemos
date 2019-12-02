@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SaleServiceCommitHeader">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u96-UM-BIQ">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pG7-Vo-LdA">
+                            <rect key="frame" x="15" y="0.0" width="345" height="44"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRG-Ep-NcG">
+                                    <rect key="frame" x="169" y="7" width="161" height="31"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="31" id="7Ny-DY-ESC"/>
+                                        <constraint firstAttribute="width" constant="161" id="XOg-zm-jeM"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="顾客姓名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NbG-09-meS">
+                                    <rect key="frame" x="15" y="7" width="62" height="31"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="31" id="ajp-HF-jau"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="nRG-Ep-NcG" secondAttribute="trailing" constant="15" id="39L-NJ-HG6"/>
+                                <constraint firstAttribute="height" constant="44" id="ECO-25-LCJ"/>
+                                <constraint firstItem="NbG-09-meS" firstAttribute="top" secondItem="pG7-Vo-LdA" secondAttribute="top" constant="7" id="N04-hB-NX9"/>
+                                <constraint firstItem="NbG-09-meS" firstAttribute="leading" secondItem="pG7-Vo-LdA" secondAttribute="leading" constant="15" id="sOp-kq-Pgs"/>
+                                <constraint firstItem="nRG-Ep-NcG" firstAttribute="top" secondItem="pG7-Vo-LdA" secondAttribute="top" constant="7" id="wo0-ah-0uE"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                    <size key="value" width="0.0" height="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="layer.shadowUIColor">
+                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                    <real key="value" value="0.14000000000000001"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                    <integer key="value" value="30"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.94509803920000002" green="0.0039215686269999999" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="pG7-Vo-LdA" secondAttribute="trailing" constant="15" id="EK0-hA-Twd"/>
+                        <constraint firstAttribute="height" constant="30" id="NkJ-l6-Esd"/>
+                        <constraint firstItem="pG7-Vo-LdA" firstAttribute="top" secondItem="u96-UM-BIQ" secondAttribute="top" id="RlI-cd-ReF"/>
+                        <constraint firstItem="pG7-Vo-LdA" firstAttribute="leading" secondItem="u96-UM-BIQ" secondAttribute="leading" constant="15" id="aK2-pe-NW7"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="u96-UM-BIQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="F2b-83-Rt7"/>
+                <constraint firstAttribute="trailing" secondItem="u96-UM-BIQ" secondAttribute="trailing" id="lRb-K6-zd1"/>
+                <constraint firstItem="u96-UM-BIQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="q2P-P0-JS6"/>
+            </constraints>
+            <connections>
+                <outlet property="backGroundTopView" destination="u96-UM-BIQ" id="2a8-Ol-ntS"/>
+                <outlet property="lb" destination="nRG-Ep-NcG" id="9UO-1U-Ec3"/>
+                <outlet property="viewToTopConstraint" destination="RlI-cd-ReF" id="6bG-BC-ATn"/>
+            </connections>
+            <point key="canvasLocation" x="24.5" y="51.5"/>
+        </view>
+    </objects>
+</document>

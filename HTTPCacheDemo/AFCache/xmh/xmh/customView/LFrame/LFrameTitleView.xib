@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="cAV-q2-4de" customClass="LFrameTitleView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6gP-Vk-Xxa">
+                    <rect key="frame" x="15" y="22.5" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gengduo.png" translatesAutoresizingMaskIntoConstraints="NO" id="BDh-2m-HOV">
+                    <rect key="frame" x="20" y="18.5" width="4" height="7"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="4" id="Ehc-lw-s2R"/>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="4" id="Z9i-cS-8pE"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="7" id="xQA-GM-yxs"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I7g-bw-Ln1">
+                    <rect key="frame" x="29" y="22.5" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gengduo.png" translatesAutoresizingMaskIntoConstraints="NO" id="M4r-lA-WJ0">
+                    <rect key="frame" x="352" y="14.5" width="8" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="15" id="Frr-QH-eGD"/>
+                        <constraint firstAttribute="width" constant="8" id="cey-gy-Wib"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="M4r-lA-WJ0" secondAttribute="trailing" constant="15" id="0GY-16-Iig"/>
+                <constraint firstItem="BDh-2m-HOV" firstAttribute="leading" secondItem="6gP-Vk-Xxa" secondAttribute="trailing" constant="5" id="CNS-eK-s7V"/>
+                <constraint firstItem="6gP-Vk-Xxa" firstAttribute="leading" secondItem="cAV-q2-4de" secondAttribute="leading" constant="15" id="X7O-6S-jYd"/>
+                <constraint firstItem="M4r-lA-WJ0" firstAttribute="centerY" secondItem="cAV-q2-4de" secondAttribute="centerY" id="eJM-2f-fBa"/>
+                <constraint firstItem="I7g-bw-Ln1" firstAttribute="leading" secondItem="BDh-2m-HOV" secondAttribute="trailing" constant="5" id="qPe-Ij-tTp"/>
+                <constraint firstItem="I7g-bw-Ln1" firstAttribute="centerY" secondItem="cAV-q2-4de" secondAttribute="centerY" id="tGh-m8-pme"/>
+                <constraint firstItem="6gP-Vk-Xxa" firstAttribute="centerY" secondItem="cAV-q2-4de" secondAttribute="centerY" id="xij-TB-pcp"/>
+                <constraint firstItem="BDh-2m-HOV" firstAttribute="centerY" secondItem="cAV-q2-4de" secondAttribute="centerY" id="yWG-zJ-TQ6"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="lbName1" destination="6gP-Vk-Xxa" id="pNP-eL-smi"/>
+                <outlet property="lbName2" destination="I7g-bw-Ln1" id="fbl-Bs-Uz7"/>
+            </connections>
+            <point key="canvasLocation" x="41" y="63"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="gengduo.png" width="7" height="14"/>
+    </resources>
+</document>

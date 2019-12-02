@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="LFreezeCell6">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="35"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="34.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vLB-4s-rgC">
+                        <rect key="frame" x="15" y="0.0" width="35" height="35.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="AFN-rm-JgR"/>
+                            <constraint firstAttribute="width" constant="35" id="W1G-wt-JF6"/>
+                        </constraints>
+                        <state key="normal" image="syspyyzhifuxuanzeweixuan.png"/>
+                        <state key="selected" image="syspyyzhifuxuanze.png"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmk-qi-8In">
+                        <rect key="frame" x="189" y="9.5" width="131" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wyi-2d-BSq">
+                        <rect key="frame" x="58" y="0.0" width="131" height="35.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="bmk-qi-8In" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-2" id="HLg-ze-6Tp"/>
+                    <constraint firstItem="vLB-4s-rgC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="IM7-aj-azR"/>
+                    <constraint firstAttribute="trailing" secondItem="bmk-qi-8In" secondAttribute="trailing" id="Rq8-I4-jGv"/>
+                    <constraint firstItem="wyi-2d-BSq" firstAttribute="leading" secondItem="vLB-4s-rgC" secondAttribute="trailing" constant="8" id="UV0-QO-nd6"/>
+                    <constraint firstItem="bmk-qi-8In" firstAttribute="centerY" secondItem="wyi-2d-BSq" secondAttribute="centerY" id="YiX-YV-t1F"/>
+                    <constraint firstItem="wyi-2d-BSq" firstAttribute="centerY" secondItem="vLB-4s-rgC" secondAttribute="centerY" id="dGd-ca-pyp"/>
+                    <constraint firstItem="vLB-4s-rgC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="dqY-Tr-rIt"/>
+                    <constraint firstItem="wyi-2d-BSq" firstAttribute="top" secondItem="vLB-4s-rgC" secondAttribute="top" id="dyE-yI-ViT"/>
+                    <constraint firstItem="bmk-qi-8In" firstAttribute="leading" secondItem="wyi-2d-BSq" secondAttribute="trailing" id="h1k-o8-ke7"/>
+                    <constraint firstAttribute="bottom" secondItem="vLB-4s-rgC" secondAttribute="bottom" id="xj0-bY-kkg"/>
+                    <constraint firstItem="wyi-2d-BSq" firstAttribute="width" secondItem="bmk-qi-8In" secondAttribute="width" id="zRc-Ix-rAD"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="btn1" destination="vLB-4s-rgC" id="8AO-4R-kph"/>
+                <outlet property="lb1" destination="wyi-2d-BSq" id="Kqf-c0-nes"/>
+                <outlet property="lb2" destination="bmk-qi-8In" id="dmW-ZZ-fyu"/>
+            </connections>
+            <point key="canvasLocation" x="25" y="51.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="syspyyzhifuxuanze.png" width="14" height="14"/>
+        <image name="syspyyzhifuxuanzeweixuan.png" width="14" height="14"/>
+    </resources>
+</document>

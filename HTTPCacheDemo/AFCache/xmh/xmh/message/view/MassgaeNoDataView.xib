@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="V43-BL-vOw" customClass="MassgaeNoDataView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zanwushuju" translatesAutoresizingMaskIntoConstraints="NO" id="RXy-6g-acm">
+                    <rect key="frame" x="116.5" y="120" width="142" height="157"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="142" id="2nB-ui-VWb"/>
+                        <constraint firstAttribute="height" constant="157" id="U3s-tG-Tfa"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="An9-Zi-nb8">
+                    <rect key="frame" x="0.0" y="297" width="375" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ILg-BE-6uo">
+                    <rect key="frame" x="0.0" y="323" width="375" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="An9-Zi-nb8" secondAttribute="trailing" id="OrB-0c-zwk"/>
+                <constraint firstItem="RXy-6g-acm" firstAttribute="top" secondItem="V43-BL-vOw" secondAttribute="top" constant="120" id="Uwf-pJ-CK9"/>
+                <constraint firstItem="An9-Zi-nb8" firstAttribute="leading" secondItem="V43-BL-vOw" secondAttribute="leading" id="aBZ-u3-l2A"/>
+                <constraint firstItem="ILg-BE-6uo" firstAttribute="top" secondItem="An9-Zi-nb8" secondAttribute="bottom" constant="5" id="bde-cQ-tUx"/>
+                <constraint firstItem="RXy-6g-acm" firstAttribute="centerX" secondItem="V43-BL-vOw" secondAttribute="centerX" id="gQW-hB-J1c"/>
+                <constraint firstItem="ILg-BE-6uo" firstAttribute="leading" secondItem="V43-BL-vOw" secondAttribute="leading" id="mrq-um-gRi"/>
+                <constraint firstAttribute="trailing" secondItem="ILg-BE-6uo" secondAttribute="trailing" id="rr0-Vs-UVe"/>
+                <constraint firstItem="An9-Zi-nb8" firstAttribute="top" secondItem="RXy-6g-acm" secondAttribute="bottom" constant="20" id="rt3-7G-nq2"/>
+            </constraints>
+            <connections>
+                <outlet property="lb1" destination="An9-Zi-nb8" id="GZc-eZ-vJk"/>
+                <outlet property="lb2" destination="ILg-BE-6uo" id="0mB-N2-ap4"/>
+                <outlet property="logo" destination="RXy-6g-acm" id="J9O-eq-vXW"/>
+            </connections>
+            <point key="canvasLocation" x="-21" y="-20"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="zanwushuju" width="142" height="157"/>
+    </resources>
+</document>

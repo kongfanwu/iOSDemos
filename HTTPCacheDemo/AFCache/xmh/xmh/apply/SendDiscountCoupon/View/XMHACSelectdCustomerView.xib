@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="XMHACSelectdCustomerView">
+            <rect key="frame" x="0.0" y="0.0" width="432" height="90"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fjz-rv-Hmw">
+                    <rect key="frame" x="0.0" y="0.0" width="432" height="90"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qdl-cQ-sh6">
+                    <rect key="frame" x="0.0" y="0.0" width="369" height="90"/>
+                    <connections>
+                        <action selector="selectedCustomerBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="734-fg-cyk"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="huodongzhongxin_xiugai" translatesAutoresizingMaskIntoConstraints="NO" id="8ce-mB-hE3">
+                    <rect key="frame" x="21" y="33.5" width="23" height="23"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="23" id="6JO-MT-L8I"/>
+                        <constraint firstAttribute="width" constant="23" id="HZ6-LM-plr"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shV-gZ-QzJ">
+                    <rect key="frame" x="56" y="0.0" width="376" height="90"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ijz-nG-Ctu">
+                    <rect key="frame" x="389" y="33.5" width="23" height="23"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="23" id="Q7M-Dk-OWq"/>
+                        <constraint firstAttribute="width" constant="23" id="iu7-VZ-R1B"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="huodongzhongxin_tianjiayouhuiquan"/>
+                    <connections>
+                        <action selector="addCustomerBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="vSc-gv-qwc"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ijz-nG-Ctu" secondAttribute="trailing" constant="20" id="4Mr-bv-S0H"/>
+                <constraint firstAttribute="bottom" secondItem="Qdl-cQ-sh6" secondAttribute="bottom" id="5PG-3a-l0h"/>
+                <constraint firstItem="shV-gZ-QzJ" firstAttribute="leading" secondItem="8ce-mB-hE3" secondAttribute="trailing" constant="12" id="856-fN-FRM"/>
+                <constraint firstItem="8ce-mB-hE3" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="8iq-mH-GjI"/>
+                <constraint firstItem="ijz-nG-Ctu" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="9Ob-CG-64D"/>
+                <constraint firstAttribute="trailing" secondItem="shV-gZ-QzJ" secondAttribute="trailing" id="9zJ-mr-2Vw"/>
+                <constraint firstAttribute="bottom" secondItem="Fjz-rv-Hmw" secondAttribute="bottom" id="DZu-2J-HsN"/>
+                <constraint firstAttribute="bottom" secondItem="shV-gZ-QzJ" secondAttribute="bottom" id="Lku-sK-bcN"/>
+                <constraint firstAttribute="trailing" secondItem="Fjz-rv-Hmw" secondAttribute="trailing" id="Mrq-ac-PCj"/>
+                <constraint firstItem="Qdl-cQ-sh6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="dRB-Dv-MqE"/>
+                <constraint firstItem="Qdl-cQ-sh6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="fuE-nc-3Ed"/>
+                <constraint firstItem="shV-gZ-QzJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="i5E-lb-nXX"/>
+                <constraint firstItem="8ce-mB-hE3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="21" id="jsw-WD-quB"/>
+                <constraint firstItem="ijz-nG-Ctu" firstAttribute="leading" secondItem="Qdl-cQ-sh6" secondAttribute="trailing" constant="20" id="mx2-4l-dHt"/>
+                <constraint firstItem="Fjz-rv-Hmw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="nrW-Pb-NxF"/>
+                <constraint firstItem="Fjz-rv-Hmw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="wiC-Fj-KGd"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="addCustomerBtn" destination="ijz-nG-Ctu" id="Jku-jU-Du6"/>
+                <outlet property="bgView" destination="Fjz-rv-Hmw" id="g7W-DD-P1i"/>
+                <outlet property="infoLab" destination="shV-gZ-QzJ" id="tU0-AE-iqA"/>
+                <outlet property="selectedCustomerBtn" destination="Qdl-cQ-sh6" id="nid-lA-rka"/>
+            </connections>
+            <point key="canvasLocation" x="100.8" y="46.776611694152926"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="huodongzhongxin_tianjiayouhuiquan" width="25" height="24.5"/>
+        <image name="huodongzhongxin_xiugai" width="24" height="22.5"/>
+    </resources>
+</document>

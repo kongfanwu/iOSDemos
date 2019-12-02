@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="BookCommonCell1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="68"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="67.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rAt-fX-2a6">
+                        <rect key="frame" x="15" y="15" width="38" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvA-6u-P42">
+                        <rect key="frame" x="15" y="38" width="28.5" height="13.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sdf-Xi-4qL">
+                        <rect key="frame" x="233" y="15" width="27" height="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="styygl_youjiantou" translatesAutoresizingMaskIntoConstraints="NO" id="aDy-TL-Ehd">
+                        <rect key="frame" x="298" y="27.5" width="7" height="13"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="13" id="OWW-m3-GVJ"/>
+                            <constraint firstAttribute="width" constant="7" id="eIL-rz-Dbu"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="aDy-TL-Ehd" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="3st-jO-BnG"/>
+                    <constraint firstItem="Sdf-Xi-4qL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="CnM-jB-8dd"/>
+                    <constraint firstAttribute="trailing" secondItem="aDy-TL-Ehd" secondAttribute="trailing" constant="15" id="EWT-Nq-8iM"/>
+                    <constraint firstItem="rAt-fX-2a6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Td2-hW-pJJ"/>
+                    <constraint firstAttribute="trailing" secondItem="Sdf-Xi-4qL" secondAttribute="trailing" constant="60" id="gS2-IR-RJd"/>
+                    <constraint firstItem="rAt-fX-2a6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="gWr-qL-HZB"/>
+                    <constraint firstItem="bvA-6u-P42" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="izW-QC-Dhe"/>
+                    <constraint firstItem="bvA-6u-P42" firstAttribute="top" secondItem="rAt-fX-2a6" secondAttribute="bottom" constant="5" id="jP6-p3-R1d"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="lbName" destination="rAt-fX-2a6" id="nES-hE-tLw"/>
+                <outlet property="lbTime" destination="Sdf-Xi-4qL" id="SF6-Cz-ltJ"/>
+                <outlet property="lbValue" destination="bvA-6u-P42" id="K2o-7j-MPp"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="styygl_youjiantou" width="6" height="11"/>
+    </resources>
+</document>

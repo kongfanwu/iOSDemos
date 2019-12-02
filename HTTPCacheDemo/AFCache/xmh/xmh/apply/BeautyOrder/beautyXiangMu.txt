@@ -1,0 +1,64 @@
+{
+"code": 1,
+"msg": "ok",
+"data": {
+"list": [{
+"id": 82985,
+"join_code": "SJ000003",
+"ly_type": "sales",
+"pro_code": "PR00004F",
+"num": 3,
+"num1": 0,
+"amount_a": "198.00",
+"numz": 1,
+"is_jz": 0,
+"info": {
+"id": 155,
+"name": "魔法体验",
+"code": "PR00004F",
+"shichang": 100,
+"state": 1,
+"price": 198
+}
+},
+{
+"id": 94615,
+"join_code": "SJ000003",
+"ly_type": "card_num",
+"pro_code": "PR00003D",
+"num": 5,
+"num1": 0,
+"amount_a": "0.00",
+"numz": 1,
+"is_jz": 1,
+"info": {
+"id": 118,
+"name": "净肤理疗（老）",
+"code": "PR00003D",
+"shichang": 90,
+"state": 1,
+"price": 0
+}
+},
+{
+"id": 94616,
+"join_code": "SJ000003",
+"ly_type": "card_num",
+"pro_code": "PR00003D",
+"num": 3,
+"num1": 0,
+"amount_a": "0.00",
+"numz": 1,
+"is_jz": 1,
+"info": {
+"id": 118,
+"name": "净肤理疗（老）",
+"code": "PR00003D",
+"shichang": 90,
+"state": 1,
+"price": 0
+}
+}
+]
+}
+}

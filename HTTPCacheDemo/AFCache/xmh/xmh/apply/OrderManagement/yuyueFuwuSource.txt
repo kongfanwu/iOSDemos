@@ -1,0 +1,130 @@
+{
+"code": 1,
+"msg": "ok",
+"data": {
+"appo_pres": [
+{
+"name": "白雪公主处方",
+"pro_list": [
+{
+"id": 120,
+"pro_code": "PR000014",
+"pro_name": "粉色套（新）",
+"shichang": 60,
+"num": 1,
+"price": "415.00",
+"appo_time": "2018-01-15 09:00:00",
+"jis_name": "刘蒙蒙"
+},
+{
+"id": 121,
+"pro_code": "PR000016",
+"pro_name": "粉玉套（新）",
+"shichang": 60,
+"num": 1,
+"price": "415.00",
+"appo_time": "2018-01-15 09:00:00",
+"jis_name": "刘蒙蒙"
+}
+]
+},
+{
+"name": "www",
+"pro_list": [
+{
+"id": 277,
+"pro_code": "PR00002E",
+"pro_name": "1280水光瓷光（新）",
+"shichang": 60,
+"num": 1,
+"price": "1280.00",
+"appo_time": "2018-01-15 08:05:00",
+"jis_name": "小蜜蜂"
+},
+{
+"id": 278,
+"pro_code": "PR00002E",
+"pro_name": "1280水光瓷光（新）",
+"shichang": 60,
+"num": 1,
+"price": "1280.00",
+"appo_time": "2018-01-15 08:05:00",
+"jis_name": "小蜜蜂"
+},
+{
+"id": 279,
+"pro_code": "PR00002H",
+"pro_name": "薇凯医美体验（新）",
+"shichang": 60,
+"num": 1,
+"price": "3980.00",
+"appo_time": "2018-01-15 08:05:00",
+"jis_name": "小蜜蜂"
+},
+{
+"id": 280,
+"pro_code": "PR00002J",
+"pro_name": "玉玲珑（新）1套",
+"shichang": 60,
+"num": 1,
+"price": "298.00",
+"appo_time": "2018-01-15 08:05:00",
+"jis_name": "小蜜蜂"
+},
+{
+"id": 281,
+"pro_code": "PR00002J",
+"pro_name": "玉玲珑（新）1套",
+"shichang": 60,
+"num": 1,
+"price": "298.00",
+"appo_time": "2018-01-15 08:05:00",
+"jis_name": "小蜜蜂"
+},
+{
+"id": 282,
+"pro_code": "PR00002K",
+"pro_name": "濡古方(新）1套",
+"shichang": 60,
+"num": 1,
+"price": "498.00",
+"appo_time": "2018-01-15 08:05:00",
+"jis_name": "小蜜蜂"
+},
+{
+"id": 283,
+"pro_code": "PR00002K",
+"pro_name": "濡古方(新）1套",
+"shichang": 60,
+"num": 1,
+"price": "498.00",
+"appo_time": "2018-01-15 08:05:00",
+"jis_name": "小蜜蜂"
+}
+]
+}
+],
+"appo_pro": [
+{
+"id": 190,
+"pro_code": "PR00003X",
+"pro_name": "qqq",
+"shichang": 60,
+"num": 1,
+"price": "10.25",
+"appo_time": "2018-01-15 16:00:00",
+"jis_name": "刘文娟"
+},
+{
+"id": 191,
+"pro_code": "PR000041",
+"pro_name": "净肤",
+"shichang": 60,
+"num": 1,
+"price": "1180.00",
+"appo_time": "2018-01-15 15:00:00",
+"jis_name": "刘文娟"
+}
+]
+}
+}

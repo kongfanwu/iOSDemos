@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="256" id="KGk-i7-Jjw" customClass="BillTiYanFuwuCell">
+            <rect key="frame" x="0.0" y="0.0" width="435" height="256"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="435" height="255.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fT1-OP-nEh">
+                        <rect key="frame" x="0.0" y="0.0" width="435" height="39"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="体验服务" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnp-SB-dQM">
+                                <rect key="frame" x="10" y="5" width="69.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gengduo.png" translatesAutoresizingMaskIntoConstraints="NO" id="QBA-A6-25Y">
+                                <rect key="frame" x="413" y="13" width="7" height="14"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="okR-CN-fIW">
+                                <rect key="frame" x="0.0" y="0.0" width="435" height="38"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="okR-CN-fIW" secondAttribute="trailing" id="0pn-NY-lXf"/>
+                            <constraint firstAttribute="bottom" secondItem="dnp-SB-dQM" secondAttribute="bottom" constant="4" id="9Dz-Oa-7p3"/>
+                            <constraint firstItem="dnp-SB-dQM" firstAttribute="leading" secondItem="fT1-OP-nEh" secondAttribute="leading" constant="10" id="F0t-T5-Fcw"/>
+                            <constraint firstItem="okR-CN-fIW" firstAttribute="top" secondItem="fT1-OP-nEh" secondAttribute="top" id="VrV-vJ-Ka3"/>
+                            <constraint firstAttribute="bottom" secondItem="okR-CN-fIW" secondAttribute="bottom" constant="1" id="cET-kg-jCJ"/>
+                            <constraint firstItem="dnp-SB-dQM" firstAttribute="top" secondItem="fT1-OP-nEh" secondAttribute="top" constant="5" id="kLz-lY-FVQ"/>
+                            <constraint firstItem="QBA-A6-25Y" firstAttribute="centerY" secondItem="dnp-SB-dQM" secondAttribute="centerY" id="oBR-CE-j0q"/>
+                            <constraint firstAttribute="height" constant="39" id="pJQ-gG-1C3"/>
+                            <constraint firstAttribute="trailing" secondItem="QBA-A6-25Y" secondAttribute="trailing" constant="15" id="qFQ-Bo-wy0"/>
+                            <constraint firstItem="okR-CN-fIW" firstAttribute="leading" secondItem="fT1-OP-nEh" secondAttribute="leading" id="re1-A3-fRd"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UPA-Cw-X9C">
+                        <rect key="frame" x="0.0" y="39" width="435" height="1"/>
+                        <color key="backgroundColor" red="0.7725490196" green="0.7725490196" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Zqw-py-Rzc"/>
+                        </constraints>
+                    </imageView>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Atd-Zq-TG4">
+                        <rect key="frame" x="0.0" y="40" width="435" height="216"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tableView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Atd-Zq-TG4" firstAttribute="top" secondItem="UPA-Cw-X9C" secondAttribute="bottom" id="0he-W3-cIQ"/>
+                    <constraint firstItem="UPA-Cw-X9C" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="A3A-vg-44x"/>
+                    <constraint firstItem="Atd-Zq-TG4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="AGn-ZX-3XO"/>
+                    <constraint firstAttribute="trailing" secondItem="UPA-Cw-X9C" secondAttribute="trailing" id="Lkd-7N-8Eh"/>
+                    <constraint firstAttribute="trailing" secondItem="fT1-OP-nEh" secondAttribute="trailing" id="RCe-c7-ITH"/>
+                    <constraint firstItem="fT1-OP-nEh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="h4B-Ma-QBq"/>
+                    <constraint firstAttribute="bottom" secondItem="Atd-Zq-TG4" secondAttribute="bottom" id="pc2-N6-g8x"/>
+                    <constraint firstAttribute="trailing" secondItem="Atd-Zq-TG4" secondAttribute="trailing" id="rEG-14-fWq"/>
+                    <constraint firstItem="fT1-OP-nEh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="tFS-TG-mso"/>
+                    <constraint firstItem="UPA-Cw-X9C" firstAttribute="top" secondItem="fT1-OP-nEh" secondAttribute="bottom" id="zd4-OA-HO6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="bgView" destination="fT1-OP-nEh" id="bAF-gp-HEV"/>
+                <outlet property="btn" destination="okR-CN-fIW" id="tS4-CM-7A1"/>
+                <outlet property="imGegnduo" destination="QBA-A6-25Y" id="ZNL-FD-qaD"/>
+                <outlet property="lb" destination="dnp-SB-dQM" id="FCw-LJ-OgU"/>
+                <outlet property="tbView" destination="Atd-Zq-TG4" id="6Sc-Tp-Hpc"/>
+            </connections>
+            <point key="canvasLocation" x="82.5" y="158"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="gengduo.png" width="7" height="14"/>
+    </resources>
+</document>

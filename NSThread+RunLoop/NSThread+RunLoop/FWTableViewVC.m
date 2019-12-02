@@ -56,6 +56,10 @@
                          withObject:image
                          afterDelay:0
                             inModes:@[NSDefaultRunLoopMode]];
+    
+    [[NSRunLoop currentRunLoop] performInModes:@[NSDefaultRunLoopMode] block:^{
+        NSLog(@"---:%ld", indexPath.row);
+    }];
     return cell;
 }
 

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ProjectWaitForBookTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="87.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lqu-68-hEy">
+                        <rect key="frame" x="15" y="15" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="3A1-op-XiV"/>
+                            <constraint firstAttribute="width" constant="60" id="fqD-Aj-vYs"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="顾客姓名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EIM-1Y-POQ">
+                        <rect key="frame" x="85" y="15" width="235" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="服务技师" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgn-Hj-8QY">
+                        <rect key="frame" x="85" y="38" width="235" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="服务项目" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7T1-YW-EQj">
+                        <rect key="frame" x="85" y="60" width="235" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dH9-c9-PJS" userLabel="btn1">
+                        <rect key="frame" x="245" y="47.5" width="60" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="dNr-wi-w0C"/>
+                            <constraint firstAttribute="width" constant="60" id="oKJ-i3-4hD"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <state key="normal" title="生成预约">
+                            <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="7T1-YW-EQj" firstAttribute="leading" secondItem="lqu-68-hEy" secondAttribute="trailing" constant="10" id="5ED-oM-K6p"/>
+                    <constraint firstItem="7T1-YW-EQj" firstAttribute="top" secondItem="hgn-Hj-8QY" secondAttribute="bottom" constant="6" id="5OT-Qn-RsE"/>
+                    <constraint firstItem="lqu-68-hEy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="9Ci-Z0-cOK"/>
+                    <constraint firstItem="hgn-Hj-8QY" firstAttribute="leading" secondItem="lqu-68-hEy" secondAttribute="trailing" constant="10" id="Bna-KP-ZE2"/>
+                    <constraint firstItem="EIM-1Y-POQ" firstAttribute="leading" secondItem="lqu-68-hEy" secondAttribute="trailing" constant="10" id="HE9-Ap-klV"/>
+                    <constraint firstAttribute="trailing" secondItem="dH9-c9-PJS" secondAttribute="trailing" constant="15" id="Hvv-FJ-EyN"/>
+                    <constraint firstItem="lqu-68-hEy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Shm-1m-LHP"/>
+                    <constraint firstAttribute="trailing" secondItem="EIM-1Y-POQ" secondAttribute="trailing" id="Ume-RP-YcV"/>
+                    <constraint firstItem="EIM-1Y-POQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="n15-dW-l1d"/>
+                    <constraint firstAttribute="trailing" secondItem="7T1-YW-EQj" secondAttribute="trailing" id="pvT-gV-2DQ"/>
+                    <constraint firstAttribute="trailing" secondItem="hgn-Hj-8QY" secondAttribute="trailing" id="rf6-qK-rdQ"/>
+                    <constraint firstAttribute="bottom" secondItem="dH9-c9-PJS" secondAttribute="bottom" constant="15" id="rkF-wd-AUp"/>
+                    <constraint firstAttribute="trailing" secondItem="7T1-YW-EQj" secondAttribute="trailing" id="tnq-je-R8O"/>
+                    <constraint firstItem="hgn-Hj-8QY" firstAttribute="top" secondItem="EIM-1Y-POQ" secondAttribute="bottom" constant="6" id="vds-Nb-HDm"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="btn1" destination="dH9-c9-PJS" id="LtV-gk-hxQ"/>
+                <outlet property="imgV" destination="lqu-68-hEy" id="iYo-qR-dW4"/>
+                <outlet property="lb1" destination="EIM-1Y-POQ" id="vPZ-Bc-RwN"/>
+                <outlet property="lb2" destination="hgn-Hj-8QY" id="bKr-8W-F1Y"/>
+                <outlet property="lb3" destination="7T1-YW-EQj" id="c9z-FH-L8f"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

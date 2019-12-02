@@ -1,0 +1,32 @@
+{
+"code": 1,
+"msg": "ok",
+"data": {
+"list": [
+{
+"id": 122,
+"code": "KT00000N",
+"name": "高兴时间卡",
+"is_have": 1
+},
+{
+"id": 123,
+"code": "KT00020N",
+"name": "时间卡",
+"is_have": 1
+},
+{
+"id": 124,
+"code": "KT00030N",
+"name": "xinfan时间卡",
+"is_have": 0
+},
+{
+"id": 125,
+"code": "KT00040N",
+"name": "fuck时间卡",
+"is_have": 1
+}
+]
+}
+}

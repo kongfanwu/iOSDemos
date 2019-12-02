@@ -1,0 +1,27 @@
+//
+//  SPGetStoreModel.h
+//  xmh
+//
+//  Created by 神灯智能-技术研发中心-ios dev on 2018/2/1.
+//  Copyright © 2018年 神灯智能-技术研发中心-ios dev. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+@class SPStoreModel;
+
+@interface SPGetStoreModel : NSObject
+
+@property (nonatomic, strong) NSArray<SPStoreModel *> *list;
+
+@end
+
+@interface SPStoreModel : NSObject
+
+@property (nonatomic, copy) NSString *name;
+
+@property (nonatomic, copy) NSString *code;
+
+@end
+
+

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BookAllCustomerCell" id="gTV-IL-0wX" customClass="BookAllCustomerCell">
+            <rect key="frame" x="0.0" y="0.0" width="316" height="240"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="316" height="240"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="美美哒" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xl2-Ny-tPg">
+                        <rect key="frame" x="0.0" y="5" width="316" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ELD-eo-Rst">
+                        <rect key="frame" x="15" y="25" width="10" height="10"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="10" id="1TA-9d-YeU"/>
+                            <constraint firstAttribute="height" constant="10" id="Tck-i2-dhI"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4j-D1-ub8">
+                        <rect key="frame" x="30" y="25" width="24" height="11"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="ELD-eo-Rst" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="0Tz-ME-GzT"/>
+                <constraint firstAttribute="trailing" secondItem="xl2-Ny-tPg" secondAttribute="trailing" id="8r9-BZ-lPj"/>
+                <constraint firstItem="X4j-D1-ub8" firstAttribute="top" secondItem="xl2-Ny-tPg" secondAttribute="bottom" constant="3" id="WlF-LS-VdZ"/>
+                <constraint firstItem="xl2-Ny-tPg" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="kTQ-bY-jbM"/>
+                <constraint firstItem="xl2-Ny-tPg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="rAF-PI-ksB"/>
+                <constraint firstItem="ELD-eo-Rst" firstAttribute="top" secondItem="xl2-Ny-tPg" secondAttribute="bottom" constant="3" id="sNm-al-bMI"/>
+                <constraint firstItem="X4j-D1-ub8" firstAttribute="leading" secondItem="ELD-eo-Rst" secondAttribute="trailing" constant="5" id="saU-pE-nwR"/>
+            </constraints>
+            <size key="customSize" width="316" height="240"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="3"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="imvState" destination="ELD-eo-Rst" id="Bt0-3e-2t9"/>
+                <outlet property="lbName" destination="xl2-Ny-tPg" id="Rzv-oI-1nR"/>
+                <outlet property="lbValue" destination="X4j-D1-ub8" id="V6b-99-8lz"/>
+            </connections>
+            <point key="canvasLocation" x="-122" y="-50"/>
+        </collectionViewCell>
+    </objects>
+</document>

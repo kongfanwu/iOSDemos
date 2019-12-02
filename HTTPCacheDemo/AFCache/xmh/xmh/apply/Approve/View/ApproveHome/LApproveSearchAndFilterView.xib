@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="LYz-l2-KPq" customClass="LApproveSearchAndFilterView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfy-KM-Ub4">
+                    <rect key="frame" x="0.0" y="0.0" width="187.5" height="44"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="搜索" image="styygl_sousuo">
+                        <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u4y-gY-ndE">
+                    <rect key="frame" x="187.5" y="0.0" width="187.5" height="44"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="筛选" image="stspyy_sanxuan2">
+                        <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="sfy-KM-Ub4" firstAttribute="top" secondItem="LYz-l2-KPq" secondAttribute="top" id="1Qu-KT-bPm"/>
+                <constraint firstAttribute="bottom" secondItem="u4y-gY-ndE" secondAttribute="bottom" id="C5j-xc-wCp"/>
+                <constraint firstItem="sfy-KM-Ub4" firstAttribute="leading" secondItem="LYz-l2-KPq" secondAttribute="leading" id="Eqn-Iz-OLW"/>
+                <constraint firstItem="u4y-gY-ndE" firstAttribute="leading" secondItem="sfy-KM-Ub4" secondAttribute="trailing" id="cIx-Ox-1kV"/>
+                <constraint firstAttribute="bottom" secondItem="sfy-KM-Ub4" secondAttribute="bottom" id="e1A-i0-846"/>
+                <constraint firstItem="u4y-gY-ndE" firstAttribute="leading" secondItem="sfy-KM-Ub4" secondAttribute="trailing" id="mNw-88-SAr"/>
+                <constraint firstItem="sfy-KM-Ub4" firstAttribute="width" secondItem="u4y-gY-ndE" secondAttribute="width" id="p1d-5E-u6G"/>
+                <constraint firstItem="u4y-gY-ndE" firstAttribute="top" secondItem="LYz-l2-KPq" secondAttribute="top" id="rq1-aG-fch"/>
+                <constraint firstAttribute="trailing" secondItem="u4y-gY-ndE" secondAttribute="trailing" id="sEf-FX-vcz"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="btnFilter" destination="u4y-gY-ndE" id="EMO-7w-uPv"/>
+                <outlet property="btnSearch" destination="sfy-KM-Ub4" id="383-ug-Sc1"/>
+            </connections>
+            <point key="canvasLocation" x="85" y="-484"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="stspyy_sanxuan2" width="21" height="21"/>
+        <image name="styygl_sousuo" width="22" height="21.5"/>
+    </resources>
+</document>

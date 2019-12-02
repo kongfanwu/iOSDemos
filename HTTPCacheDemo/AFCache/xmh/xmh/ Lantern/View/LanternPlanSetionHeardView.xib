@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="LanternPlanSetionHeardView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qro-yU-8B1">
+                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="xeQ-8J-5ar"/>
+                    </constraints>
+                    <state key="normal" image="styygl_duoxuanweixuan"/>
+                    <connections>
+                        <action selector="selectButtonAction:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="C58-ln-6a4"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="汪苏" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pP2-vQ-gLO">
+                    <rect key="frame" x="40" y="15" width="33" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="PBe-zs-5gh"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="销售推荐成功率最高" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="664-t2-arO">
+                    <rect key="frame" x="81" y="18" width="102" height="14"/>
+                    <color key="backgroundColor" red="1" green="0.95294117647058818" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="102" id="43e-xq-zBI"/>
+                        <constraint firstAttribute="height" constant="14" id="qbY-Mi-FXy"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" red="1" green="0.56470588235294117" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UzC-Sr-tPI">
+                    <rect key="frame" x="273" y="0.0" width="47" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="47" id="o4v-a8-hLu"/>
+                    </constraints>
+                    <state key="normal" image="zhinengguanjia_tianjia"/>
+                    <connections>
+                        <action selector="addButtonAction:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="GRf-xc-aiq"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Qro-yU-8B1" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="5if-Ny-lNL"/>
+                <constraint firstItem="pP2-vQ-gLO" firstAttribute="centerY" secondItem="Qro-yU-8B1" secondAttribute="centerY" id="8c0-xB-cPl"/>
+                <constraint firstAttribute="bottom" secondItem="UzC-Sr-tPI" secondAttribute="bottom" id="Kb2-Sf-BvC"/>
+                <constraint firstItem="Qro-yU-8B1" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="LHW-qT-tYG"/>
+                <constraint firstItem="pP2-vQ-gLO" firstAttribute="leading" secondItem="Qro-yU-8B1" secondAttribute="trailing" constant="-10" id="PF6-xJ-tUo"/>
+                <constraint firstItem="UzC-Sr-tPI" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="Q88-iB-ut5"/>
+                <constraint firstItem="664-t2-arO" firstAttribute="leading" secondItem="pP2-vQ-gLO" secondAttribute="trailing" constant="8" id="aT5-Nk-PaE"/>
+                <constraint firstAttribute="trailing" secondItem="UzC-Sr-tPI" secondAttribute="trailing" id="inw-Sg-0wB"/>
+                <constraint firstAttribute="bottom" secondItem="Qro-yU-8B1" secondAttribute="bottom" id="ogA-fO-42a"/>
+                <constraint firstItem="664-t2-arO" firstAttribute="centerY" secondItem="Qro-yU-8B1" secondAttribute="centerY" id="yzV-5u-MPS"/>
+            </constraints>
+            <connections>
+                <outlet property="recommendH" destination="qbY-Mi-FXy" id="rcZ-cP-kkY"/>
+                <outlet property="recommendW" destination="43e-xq-zBI" id="hjE-qi-fWj"/>
+                <outlet property="recommendedTitle" destination="664-t2-arO" id="nu2-o7-KlP"/>
+                <outlet property="sectionTitle" destination="pP2-vQ-gLO" id="6E4-Qq-iNb"/>
+                <outlet property="selectButton" destination="Qro-yU-8B1" id="p9R-n7-qvi"/>
+            </connections>
+            <point key="canvasLocation" x="-58" y="35"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="styygl_duoxuanweixuan" width="15.5" height="15"/>
+        <image name="zhinengguanjia_tianjia" width="21.5" height="21.5"/>
+    </resources>
+</document>

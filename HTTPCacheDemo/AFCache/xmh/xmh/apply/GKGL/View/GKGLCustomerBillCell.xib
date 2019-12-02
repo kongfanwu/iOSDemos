@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="GKGLCustomerBillCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="119.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Ms-I3-nEf">
+                        <rect key="frame" x="15" y="17.5" width="290" height="85"/>
+                        <color key="backgroundColor" red="0.68235294117647061" green="0.72941176470588232" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="85" id="4Zm-b7-UcJ"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gkgl_gkzdxiangmu" translatesAutoresizingMaskIntoConstraints="NO" id="RhC-vQ-4bL">
+                        <rect key="frame" x="10" y="12.5" width="85" height="95"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="85" id="G2m-Wa-2e1"/>
+                            <constraint firstAttribute="height" constant="95" id="N8t-rw-ww1"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yx-cw-nfc">
+                        <rect key="frame" x="36.5" y="76" width="32" height="15"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="1Ms-I3-nEf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="0OL-9V-by8"/>
+                    <constraint firstItem="4yx-cw-nfc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="76" id="DaO-yd-xVR"/>
+                    <constraint firstItem="4yx-cw-nfc" firstAttribute="centerX" secondItem="RhC-vQ-4bL" secondAttribute="centerX" id="Z3g-pu-tHx"/>
+                    <constraint firstAttribute="trailing" secondItem="1Ms-I3-nEf" secondAttribute="trailing" constant="15" id="ZAD-Og-AmD"/>
+                    <constraint firstItem="RhC-vQ-4bL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="ZNq-vg-vt3"/>
+                    <constraint firstItem="RhC-vQ-4bL" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="gr0-vS-qLf"/>
+                    <constraint firstItem="1Ms-I3-nEf" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="hba-Oq-aWn"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="icon" destination="RhC-vQ-4bL" id="iDr-5W-oly"/>
+                <outlet property="lbName" destination="4yx-cw-nfc" id="GSc-Uv-SPp"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="gkgl_gkzdxiangmu" width="85" height="95"/>
+    </resources>
+</document>

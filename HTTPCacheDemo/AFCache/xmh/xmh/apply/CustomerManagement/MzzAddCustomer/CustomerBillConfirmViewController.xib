@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomerBillConfirmViewController">
+            <connections>
+                <outlet property="tbView" destination="ZNG-fV-19a" id="dPj-Zs-x6X"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZNG-fV-19a">
+                    <rect key="frame" x="0.0" y="64" width="375" height="523"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="m0R-XA-rll"/>
+                        <outlet property="delegate" destination="-1" id="yvI-50-wFU"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bvu-SV-I14">
+                    <rect key="frame" x="30" y="603" width="315" height="44"/>
+                    <color key="backgroundColor" red="0.94509803920000002" green="0.0039215686269999999" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="od5-Zb-UbF"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="确认提交">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="btnConfirm:" destination="-1" eventType="touchUpInside" id="IO2-tq-t8B"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Bvu-SV-I14" secondAttribute="trailing" constant="30" id="4P9-6w-q3n"/>
+                <constraint firstAttribute="bottom" secondItem="ZNG-fV-19a" secondAttribute="bottom" constant="80" id="Bqn-yO-qLb"/>
+                <constraint firstItem="Bvu-SV-I14" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="Fx8-kj-wwZ"/>
+                <constraint firstItem="ZNG-fV-19a" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="Hbj-3G-5iv"/>
+                <constraint firstAttribute="trailing" secondItem="ZNG-fV-19a" secondAttribute="trailing" id="W88-nM-rRB"/>
+                <constraint firstItem="ZNG-fV-19a" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="a5T-lh-unO"/>
+                <constraint firstAttribute="bottom" secondItem="Bvu-SV-I14" secondAttribute="bottom" constant="20" id="rFE-HL-nir"/>
+            </constraints>
+            <point key="canvasLocation" x="24.5" y="52.5"/>
+        </view>
+    </objects>
+</document>

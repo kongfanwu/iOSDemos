@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="5QO-TV-xXh" customClass="LSmartSelectResultView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N1F-5F-Oqv">
+                    <rect key="frame" x="0.0" y="0.0" width="75" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="75" id="7wY-AG-Ysd"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="全选" image="smartweixuanzhong.png">
+                        <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <state key="selected" image="smartxuanzhong.png"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cvq-jR-og7">
+                    <rect key="frame" x="255" y="0.0" width="120" height="50"/>
+                    <color key="backgroundColor" red="0.94509803921568625" green="0.0039215686274509803" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="4Bo-G7-eiS"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="确认">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已选择0个" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UyK-nK-JEA">
+                    <rect key="frame" x="102" y="0.0" width="153" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="UyK-nK-JEA" secondAttribute="bottom" id="1tH-WS-g51"/>
+                <constraint firstItem="N1F-5F-Oqv" firstAttribute="top" secondItem="5QO-TV-xXh" secondAttribute="top" id="69I-2x-GK9"/>
+                <constraint firstItem="N1F-5F-Oqv" firstAttribute="leading" secondItem="5QO-TV-xXh" secondAttribute="leading" id="6TX-uy-sX1"/>
+                <constraint firstItem="cvq-jR-og7" firstAttribute="leading" secondItem="UyK-nK-JEA" secondAttribute="trailing" id="VXJ-EZ-gNl"/>
+                <constraint firstAttribute="trailing" secondItem="cvq-jR-og7" secondAttribute="trailing" id="XLp-2S-YUp"/>
+                <constraint firstAttribute="bottom" secondItem="N1F-5F-Oqv" secondAttribute="bottom" id="bzp-V6-QRJ"/>
+                <constraint firstItem="UyK-nK-JEA" firstAttribute="top" secondItem="5QO-TV-xXh" secondAttribute="top" id="eet-w2-cl1"/>
+                <constraint firstAttribute="bottom" secondItem="cvq-jR-og7" secondAttribute="bottom" id="fNe-Wg-Q54"/>
+                <constraint firstItem="cvq-jR-og7" firstAttribute="top" secondItem="5QO-TV-xXh" secondAttribute="top" id="niM-Ag-cBQ"/>
+                <constraint firstItem="UyK-nK-JEA" firstAttribute="leading" secondItem="N1F-5F-Oqv" secondAttribute="trailing" constant="27" id="t6N-aR-fnP"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="btn1" destination="N1F-5F-Oqv" id="Ool-C5-XzS"/>
+                <outlet property="btn2" destination="cvq-jR-og7" id="Ik8-L0-5L3"/>
+                <outlet property="lbNum" destination="UyK-nK-JEA" id="kMW-2r-hhX"/>
+            </connections>
+            <point key="canvasLocation" x="-474" y="-128"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="smartweixuanzhong.png" width="16" height="16"/>
+        <image name="smartxuanzhong.png" width="16" height="16"/>
+    </resources>
+</document>

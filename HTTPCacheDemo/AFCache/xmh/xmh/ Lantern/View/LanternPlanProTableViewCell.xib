@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="LanternPlanProTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="79.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="肩背痛" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHt-UR-DfM">
+                        <rect key="frame" x="15" y="15" width="46" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="l5W-G0-eas"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="零售价：￥555" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w1C-AE-nG2">
+                        <rect key="frame" x="15" y="39" width="91" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="AwR-Ua-Qk6"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHr-Za-9Tw">
+                        <rect key="frame" x="256.5" y="32" width="8.5" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="wme-uD-fVr"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfv-qg-N8J">
+                        <rect key="frame" x="216.5" y="27.5" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="oan-kB-o46"/>
+                        </constraints>
+                        <state key="normal" image="beautyjianhao.png"/>
+                        <connections>
+                            <action selector="btnReduceGDKDEvent:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="DxY-lh-B0t"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIt-27-l18">
+                        <rect key="frame" x="280" y="27.5" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="Bx5-fm-tDR"/>
+                            <constraint firstAttribute="height" constant="25" id="tpa-zB-tkB"/>
+                        </constraints>
+                        <state key="normal" image="beautyjiahao.png"/>
+                        <connections>
+                            <action selector="btnAddGDKDEvent:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="7Ta-yE-yDm"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="OIt-27-l18" firstAttribute="leading" secondItem="MHr-Za-9Tw" secondAttribute="trailing" constant="15" id="32b-8d-3QW"/>
+                    <constraint firstItem="OIt-27-l18" firstAttribute="centerY" secondItem="sfv-qg-N8J" secondAttribute="centerY" id="5kV-Kl-fpu"/>
+                    <constraint firstItem="MHr-Za-9Tw" firstAttribute="centerY" secondItem="sfv-qg-N8J" secondAttribute="centerY" id="MJj-wG-vsi"/>
+                    <constraint firstAttribute="trailing" secondItem="OIt-27-l18" secondAttribute="trailing" constant="15" id="Pw9-3q-hvY"/>
+                    <constraint firstItem="EHt-UR-DfM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="S5d-jR-LOm"/>
+                    <constraint firstAttribute="bottom" secondItem="w1C-AE-nG2" secondAttribute="bottom" constant="11" id="deN-cQ-b1T"/>
+                    <constraint firstItem="MHr-Za-9Tw" firstAttribute="leading" secondItem="sfv-qg-N8J" secondAttribute="trailing" constant="15" id="fhx-C3-eD3"/>
+                    <constraint firstItem="OIt-27-l18" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="hJH-Qw-H3X"/>
+                    <constraint firstItem="w1C-AE-nG2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="i9T-Ws-grm"/>
+                    <constraint firstItem="EHt-UR-DfM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="o89-Pb-Rwb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="btnReduce" destination="sfv-qg-N8J" id="aEI-Ua-FKt"/>
+                <outlet property="numLabel" destination="MHr-Za-9Tw" id="ZX9-ts-830"/>
+                <outlet property="priceLabel" destination="w1C-AE-nG2" id="rlO-PB-XGr"/>
+                <outlet property="titleLabel" destination="EHt-UR-DfM" id="h9Q-FF-5uc"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="beautyjiahao.png" width="25" height="25"/>
+        <image name="beautyjianhao.png" width="25" height="25"/>
+    </resources>
+</document>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="o1G-zy-la1" customClass="OneStepTableSectionHeader">
+            <rect key="frame" x="0.0" y="0.0" width="641" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gengduo.png" translatesAutoresizingMaskIntoConstraints="NO" id="WZy-cX-BTM">
+                    <rect key="frame" x="618" y="14.5" width="8" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="15" id="NHz-8W-tTh"/>
+                        <constraint firstAttribute="width" constant="8" id="SDs-c9-Ctt"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请选择顾客预约时间" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qfs-BZ-bPJ">
+                    <rect key="frame" x="15" y="0.0" width="129" height="44"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="qfs-BZ-bPJ" secondAttribute="bottom" id="06p-GI-HYP"/>
+                <constraint firstItem="WZy-cX-BTM" firstAttribute="centerY" secondItem="o1G-zy-la1" secondAttribute="centerY" id="3ue-LZ-m0Y"/>
+                <constraint firstItem="qfs-BZ-bPJ" firstAttribute="leading" secondItem="o1G-zy-la1" secondAttribute="leading" constant="15" id="J9o-fS-Z1H"/>
+                <constraint firstAttribute="trailing" secondItem="WZy-cX-BTM" secondAttribute="trailing" constant="15" id="OV6-lZ-hL4"/>
+                <constraint firstItem="qfs-BZ-bPJ" firstAttribute="top" secondItem="o1G-zy-la1" secondAttribute="top" id="REG-6U-lQp"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="lb" destination="qfs-BZ-bPJ" id="nAl-aj-EvP"/>
+            </connections>
+            <point key="canvasLocation" x="-148.5" y="-35"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="gengduo.png" width="7" height="14"/>
+    </resources>
+</document>

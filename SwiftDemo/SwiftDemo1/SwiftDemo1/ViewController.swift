@@ -8,23 +8,53 @@
 
 import UIKit
 
+class Person {
+    init() {
+        
+    }
+}
+
+class Dod: Person {
+    override init() {
+        
+    }
+}
+
+func NSClassFromString_Swift(_ className: String) -> AnyObject? {
+    let clsName = Bundle.main.infoDictionary!["CFBundleExecutable"] as? String//这是获取项目的名称，
+    let className=clsName! + "." + className
+//    let viewC = NSClassFromString(className)! as! Person.Type
+    return NSClassFromString(className)!
+}
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        _ = arithmeticMean(1, 2, 3, 4, 5)
+//        _ = arithmeticMean(1, 2, 3, 4, 5)
+//
+//        var someInt = 3
+//        var anotherInt = 107
+//        swapTwoInts(&someInt, &anotherInt)
+//        print("someInt is now \(someInt), and anotherInt is now \(anotherInt)")
+//
+//        // 使用函数类型
+//        var mathFunction: (Int, Int) -> Int = addTwoInts
+//        print("Result: \(mathFunction(2, 3))")
+//
+//        let moveNearerToZero = chooseStepFunction(backward: true)
+//        moveNearerToZero(1)
         
-        var someInt = 3
-        var anotherInt = 107
-        swapTwoInts(&someInt, &anotherInt)
-        print("someInt is now \(someInt), and anotherInt is now \(anotherInt)")
+       let clsName = Bundle.main.infoDictionary!["CFBundleExecutable"] as? String//这是获取项目的名称，
+
+        let className=clsName! + "." + "Person"
+
+                let viewC = NSClassFromString_Swift("Person")! as! Person.Type //这里需要指定类的类型XX.Type
+        print(viewC)
+//        let vc=viewC.init()
         
-        // 使用函数类型
-        var mathFunction: (Int, Int) -> Int = addTwoInts
-        print("Result: \(mathFunction(2, 3))")
+//
         
-        let moveNearerToZero = chooseStepFunction(backward: true)
-        moveNearerToZero(1)
     }
 
     func minMax(arra:[Int]) -> (min: Int, max: Int)? {

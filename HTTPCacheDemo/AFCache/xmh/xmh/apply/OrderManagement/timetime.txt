@@ -1,0 +1,17 @@
+{
+"code": 1,
+"msg": "ok",
+"data": {
+"list": [
+{
+"id": 122,
+"code": "KT00000N",
+"end_time": "2018-05-17",
+"name": "高兴时间卡",
+"fenqi_zt": 2,
+"xiaohao": 0,
+"price": "1000.00"
+}
+]
+}
+}

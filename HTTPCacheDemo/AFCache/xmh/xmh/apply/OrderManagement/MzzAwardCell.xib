@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="award" id="KGk-i7-Jjw" customClass="MzzAwardCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DBy-a9-TaE">
+                        <rect key="frame" x="16" y="13.5" width="35.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIP-JJ-Nti">
+                        <rect key="frame" x="170" y="13.5" width="35.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FsN-Tc-W0P">
+                        <rect key="frame" x="279.5" y="13.5" width="35.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eiY-s4-m0O">
+                        <rect key="frame" x="345" y="15" width="15" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="CpN-fv-qnA"/>
+                            <constraint firstAttribute="width" constant="15" id="xfL-aj-eze"/>
+                        </constraints>
+                        <state key="normal" image="tanchuangguanbi.png"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="eiY-s4-m0O" secondAttribute="trailing" constant="15" id="AfN-f5-QLx"/>
+                    <constraint firstItem="DBy-a9-TaE" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="DuL-M2-A9p"/>
+                    <constraint firstItem="pIP-JJ-Nti" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="FOo-J8-aSj"/>
+                    <constraint firstItem="pIP-JJ-Nti" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="RJs-P5-YyG"/>
+                    <constraint firstAttribute="trailing" secondItem="FsN-Tc-W0P" secondAttribute="trailing" constant="60" id="T20-hU-7L4"/>
+                    <constraint firstItem="eiY-s4-m0O" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="TxD-Vx-V9s"/>
+                    <constraint firstItem="FsN-Tc-W0P" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="nrV-sc-Ibc"/>
+                    <constraint firstItem="DBy-a9-TaE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="p07-16-nEw"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="lb1" destination="DBy-a9-TaE" id="4ga-sG-RcP"/>
+                <outlet property="lb2" destination="pIP-JJ-Nti" id="eno-8v-XUD"/>
+                <outlet property="lb3" destination="FsN-Tc-W0P" id="zgj-me-KkJ"/>
+                <outlet property="shanchu" destination="eiY-s4-m0O" id="n77-zg-tUT"/>
+            </connections>
+            <point key="canvasLocation" x="53.5" y="52"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="tanchuangguanbi.png" width="14" height="15"/>
+    </resources>
+</document>

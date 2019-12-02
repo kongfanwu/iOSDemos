@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="7DO-GZ-UaH" customClass="BookDetaiTbSectionHeader">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="54"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IkJ-fI-GkW">
+                    <rect key="frame" x="10" y="0.0" width="355" height="44"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请选择" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xsQ-Ry-NGz">
+                            <rect key="frame" x="15" y="13.5" width="43" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="styygl_youjiantou" translatesAutoresizingMaskIntoConstraints="NO" id="nzj-8F-6se">
+                            <rect key="frame" x="334" y="16.5" width="6" height="11"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="11" id="2Zd-A5-TDm"/>
+                                <constraint firstAttribute="width" constant="6" id="O0f-3Y-7yY"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="nzj-8F-6se" firstAttribute="centerY" secondItem="IkJ-fI-GkW" secondAttribute="centerY" id="Ctb-Rf-SCK"/>
+                        <constraint firstAttribute="trailing" secondItem="nzj-8F-6se" secondAttribute="trailing" constant="15" id="aAr-eq-lMe"/>
+                        <constraint firstItem="xsQ-Ry-NGz" firstAttribute="leading" secondItem="IkJ-fI-GkW" secondAttribute="leading" constant="15" id="l6y-Ov-Agq"/>
+                        <constraint firstItem="xsQ-Ry-NGz" firstAttribute="centerY" secondItem="IkJ-fI-GkW" secondAttribute="centerY" id="uMF-VY-cIG"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="IkJ-fI-GkW" firstAttribute="leading" secondItem="7DO-GZ-UaH" secondAttribute="leading" constant="10" id="fQy-Pi-oSR"/>
+                <constraint firstAttribute="trailing" secondItem="IkJ-fI-GkW" secondAttribute="trailing" constant="10" id="ozX-18-Eg0"/>
+                <constraint firstItem="IkJ-fI-GkW" firstAttribute="top" secondItem="7DO-GZ-UaH" secondAttribute="top" id="qGu-3m-Zid"/>
+                <constraint firstAttribute="bottom" secondItem="IkJ-fI-GkW" secondAttribute="bottom" constant="10" id="xsj-jb-Jxh"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="lbName" destination="xsQ-Ry-NGz" id="tvB-Ou-3uF"/>
+            </connections>
+            <point key="canvasLocation" x="204.5" y="-30"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="styygl_youjiantou" width="6" height="11"/>
+    </resources>
+</document>

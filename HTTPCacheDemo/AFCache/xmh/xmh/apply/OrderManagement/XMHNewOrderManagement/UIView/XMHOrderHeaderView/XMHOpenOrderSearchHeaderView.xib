@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="XMHOpenOrderSearchHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="432" height="76"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="order_search_customer.png" translatesAutoresizingMaskIntoConstraints="NO" id="U1q-Ok-f1Z">
+                    <rect key="frame" x="15" y="10" width="46" height="46"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="46" id="6jm-Aj-NvU"/>
+                        <constraint firstAttribute="width" constant="46" id="cm1-RJ-EJu"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="点击搜索顾客" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9A2-oA-hee">
+                    <rect key="frame" x="77" y="14" width="355" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="1" green="0.24142383739867701" blue="0.54102545287655812" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请先添加顾客后进行制单" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gcq-2d-sjb">
+                    <rect key="frame" x="77" y="37" width="355" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QSX-3e-M26" userLabel="line">
+                    <rect key="frame" x="0.0" y="75" width="432" height="1"/>
+                    <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.80000000000000004" id="jee-pF-EDT"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DaK-Fj-lrz">
+                    <rect key="frame" x="0.0" y="0.0" width="432" height="76"/>
+                    <connections>
+                        <action selector="searchCustomerBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="S4k-wa-fNF"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="DaK-Fj-lrz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="FIq-0Y-8FK"/>
+                <constraint firstItem="U1q-Ok-f1Z" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="FMt-Mb-P0p"/>
+                <constraint firstAttribute="bottom" secondItem="QSX-3e-M26" secondAttribute="bottom" id="ITX-FE-StX"/>
+                <constraint firstItem="Gcq-2d-sjb" firstAttribute="top" secondItem="9A2-oA-hee" secondAttribute="bottom" constant="5" id="Ke2-e2-m51"/>
+                <constraint firstItem="U1q-Ok-f1Z" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="LSl-df-wdl"/>
+                <constraint firstItem="QSX-3e-M26" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="P5F-8q-9oZ"/>
+                <constraint firstItem="9A2-oA-hee" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="14" id="PNO-Dx-nmd"/>
+                <constraint firstAttribute="bottom" secondItem="DaK-Fj-lrz" secondAttribute="bottom" id="Tvv-AO-DlI"/>
+                <constraint firstAttribute="trailing" secondItem="QSX-3e-M26" secondAttribute="trailing" id="WDx-hH-iog"/>
+                <constraint firstItem="9A2-oA-hee" firstAttribute="leading" secondItem="U1q-Ok-f1Z" secondAttribute="trailing" constant="16" id="eYy-AF-fck"/>
+                <constraint firstAttribute="trailing" secondItem="DaK-Fj-lrz" secondAttribute="trailing" id="gPq-D4-XIb"/>
+                <constraint firstItem="Gcq-2d-sjb" firstAttribute="leading" secondItem="U1q-Ok-f1Z" secondAttribute="trailing" constant="16" id="hQe-qy-CI3"/>
+                <constraint firstAttribute="trailing" secondItem="9A2-oA-hee" secondAttribute="trailing" id="iMI-jl-Rdo"/>
+                <constraint firstItem="DaK-Fj-lrz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="m8x-oJ-oga"/>
+                <constraint firstAttribute="trailing" secondItem="Gcq-2d-sjb" secondAttribute="trailing" id="nfZ-yO-l9u"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-132.80000000000001" y="-85.457271364317847"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="order_search_customer.png" width="92" height="93"/>
+    </resources>
+</document>

@@ -1,0 +1,74 @@
+{
+"code": 1,
+"msg": "ok",
+"data": {
+"list": [
+{
+"id": 157,
+"course_code": "KU00004G",
+"name": "特惠随意卡",
+"pro_list": [
+{
+"pro_code": "PR000008",
+"name": "容蜕（老）",
+"num": 1,
+"price": "380.00"
+},
+{
+"pro_code": "PR000001",
+"name": "水漾（老）",
+"num": 1,
+"price": "580.00"
+}
+],
+"goods_list": [
+{
+"goods_code": "GD000008",
+"name": "七叶树原液110ml",
+"num": 1,
+"price": "588.00"
+},
+{
+"goods_code": "GD000003",
+"name": "康乃馨体验装小套盒",
+"num": 1,
+"price": "680.00"
+}
+]
+},
+{
+"id": 158,
+"course_code": "KU00004I",
+"name": "特惠开心就好卡",
+"pro_list": [
+{
+"pro_code": "PR00000F",
+"name": "肩背通（新）",
+"num": 1,
+"price": "380.00"
+},
+{
+"pro_code": "PR00000B",
+"name": "精纯靓肤(新）",
+"num": 1,
+"price": "198.00"
+}
+],
+"goods_list": [
+{
+"goods_code": "GD00000G",
+"name": "豌豆原液菁华乳130ml",
+"num": 1,
+"price": "468.00"
+},
+{
+"goods_code": "GD00000D",
+"name": "葡萄籽原液110ml",
+"num": 1,
+"price": "588.00"
+}
+]
+}
+]
+}
+}

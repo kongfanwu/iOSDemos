@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="billcell" rowHeight="154" id="KGk-i7-Jjw" customClass="MzzBillCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="135"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="134.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="10U-2l-4Q4">
+                        <rect key="frame" x="15" y="10" width="290" height="124.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="销售单" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wpI-e4-3xN">
+                                <rect key="frame" x="15" y="15" width="46" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2017-10-04 10：33" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rq6-p9-gHY">
+                                <rect key="frame" x="15" y="38" width="111" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+11940元" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="luj-1x-kXE">
+                                <rect key="frame" x="179.5" y="52" width="74.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="st_gkglyoujiantou" translatesAutoresizingMaskIntoConstraints="NO" id="6AV-MZ-GOK">
+                                <rect key="frame" x="269" y="56.5" width="6" height="11"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="11" id="096-lY-eop"/>
+                                    <constraint firstAttribute="width" constant="6" id="A7J-Id-Bmu"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="6AV-MZ-GOK" secondAttribute="trailing" constant="15" id="2Pz-qI-Irw"/>
+                            <constraint firstItem="Rq6-p9-gHY" firstAttribute="top" secondItem="wpI-e4-3xN" secondAttribute="bottom" constant="5" id="CZs-fi-lGR"/>
+                            <constraint firstItem="6AV-MZ-GOK" firstAttribute="leading" secondItem="luj-1x-kXE" secondAttribute="trailing" constant="15" id="D4g-wW-at0"/>
+                            <constraint firstItem="wpI-e4-3xN" firstAttribute="leading" secondItem="10U-2l-4Q4" secondAttribute="leading" constant="15" id="Kja-Ov-oFS"/>
+                            <constraint firstItem="luj-1x-kXE" firstAttribute="centerY" secondItem="10U-2l-4Q4" secondAttribute="centerY" id="MKH-xl-7FR"/>
+                            <constraint firstItem="6AV-MZ-GOK" firstAttribute="centerY" secondItem="10U-2l-4Q4" secondAttribute="centerY" id="Oiw-pN-laf"/>
+                            <constraint firstItem="Rq6-p9-gHY" firstAttribute="leading" secondItem="10U-2l-4Q4" secondAttribute="leading" constant="15" id="cP9-AX-Kxm"/>
+                            <constraint firstItem="wpI-e4-3xN" firstAttribute="top" secondItem="10U-2l-4Q4" secondAttribute="top" constant="15" id="exg-u4-tcc"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="10U-2l-4Q4" secondAttribute="bottom" id="BIe-8b-ciL"/>
+                    <constraint firstAttribute="trailing" secondItem="10U-2l-4Q4" secondAttribute="trailing" constant="15" id="QT9-sm-1gY"/>
+                    <constraint firstItem="10U-2l-4Q4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="mb4-tM-rke"/>
+                    <constraint firstItem="10U-2l-4Q4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="v7e-aU-GqH"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="name" destination="wpI-e4-3xN" id="29R-hW-Wl6"/>
+                <outlet property="time" destination="Rq6-p9-gHY" id="VGm-3h-mZM"/>
+                <outlet property="value" destination="luj-1x-kXE" id="QlF-T7-agL"/>
+            </connections>
+            <point key="canvasLocation" x="31" y="99"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="st_gkglyoujiantou" width="6" height="11"/>
+    </resources>
+</document>

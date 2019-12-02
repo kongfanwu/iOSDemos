@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="EMm-kc-JnW" customClass="MzzFilterTbSectionHeaderViewTextfiled">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ag5-Sh-2Nh">
+                    <rect key="frame" x="15" y="14" width="35.5" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入金额" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v20-ts-Jbd">
+                    <rect key="frame" x="302.5" y="14" width="57.5" height="16"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nek-Uo-684">
+                    <rect key="frame" x="262.5" y="22" width="20" height="1"/>
+                    <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="5Z0-UE-FBT"/>
+                        <constraint firstAttribute="height" constant="1" id="S6F-aE-IJL"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入金额" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ydj-1S-CHb">
+                    <rect key="frame" x="185" y="14" width="57.5" height="16"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Ydj-1S-CHb" firstAttribute="centerY" secondItem="EMm-kc-JnW" secondAttribute="centerY" id="3yb-np-Irw"/>
+                <constraint firstAttribute="trailing" secondItem="v20-ts-Jbd" secondAttribute="trailing" constant="15" id="5Tf-Uu-kfd"/>
+                <constraint firstItem="ag5-Sh-2Nh" firstAttribute="leading" secondItem="EMm-kc-JnW" secondAttribute="leading" constant="15" id="5jz-v7-cIR"/>
+                <constraint firstItem="v20-ts-Jbd" firstAttribute="leading" secondItem="nek-Uo-684" secondAttribute="trailing" constant="20" id="FWH-sO-JOO"/>
+                <constraint firstItem="nek-Uo-684" firstAttribute="leading" secondItem="Ydj-1S-CHb" secondAttribute="trailing" constant="20" id="VDV-sb-JJc"/>
+                <constraint firstItem="v20-ts-Jbd" firstAttribute="centerY" secondItem="EMm-kc-JnW" secondAttribute="centerY" id="qVB-yL-xaC"/>
+                <constraint firstItem="ag5-Sh-2Nh" firstAttribute="centerY" secondItem="EMm-kc-JnW" secondAttribute="centerY" id="yWA-D9-Mz7"/>
+                <constraint firstItem="nek-Uo-684" firstAttribute="centerY" secondItem="EMm-kc-JnW" secondAttribute="centerY" id="yYJ-jj-lLo"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="lb" destination="ag5-Sh-2Nh" id="Npr-zb-hmh"/>
+                <outlet property="tf1" destination="Ydj-1S-CHb" id="tjg-C7-Aia"/>
+                <outlet property="tf2" destination="v20-ts-Jbd" id="3aW-vC-Rnw"/>
+            </connections>
+            <point key="canvasLocation" x="-119.5" y="48"/>
+        </view>
+    </objects>
+</document>

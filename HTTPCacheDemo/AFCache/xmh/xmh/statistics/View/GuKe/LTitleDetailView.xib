@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="QOT-wE-Ote" customClass="LTitleDetailView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="222"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OOb-cT-2i1">
+                    <rect key="frame" x="374" y="55.5" width="1" height="111"/>
+                    <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="43F-TD-rUG"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GMq-EI-r0t">
+                    <rect key="frame" x="0.0" y="10" width="374" height="18"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CFE-n0-OXt">
+                    <rect key="frame" x="0.0" y="34" width="374" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="OOb-cT-2i1" secondAttribute="trailing" id="2Uj-NC-f7W"/>
+                <constraint firstItem="CFE-n0-OXt" firstAttribute="top" secondItem="GMq-EI-r0t" secondAttribute="bottom" constant="6" id="G0H-YD-JtD"/>
+                <constraint firstItem="OOb-cT-2i1" firstAttribute="height" secondItem="QOT-wE-Ote" secondAttribute="height" multiplier="1:2" id="M2g-M4-qGg"/>
+                <constraint firstItem="GMq-EI-r0t" firstAttribute="top" secondItem="QOT-wE-Ote" secondAttribute="top" constant="10" id="OhX-bu-W1z"/>
+                <constraint firstItem="OOb-cT-2i1" firstAttribute="leading" secondItem="GMq-EI-r0t" secondAttribute="trailing" id="Oz0-IO-UZX"/>
+                <constraint firstItem="OOb-cT-2i1" firstAttribute="centerY" secondItem="QOT-wE-Ote" secondAttribute="centerY" id="Qfl-hh-HwJ"/>
+                <constraint firstItem="OOb-cT-2i1" firstAttribute="leading" secondItem="CFE-n0-OXt" secondAttribute="trailing" id="bEG-hK-2fP"/>
+                <constraint firstItem="CFE-n0-OXt" firstAttribute="leading" secondItem="QOT-wE-Ote" secondAttribute="leading" id="hht-58-G7P"/>
+                <constraint firstItem="GMq-EI-r0t" firstAttribute="leading" secondItem="QOT-wE-Ote" secondAttribute="leading" id="loQ-LC-JQF"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="lb1" destination="GMq-EI-r0t" id="TNy-QD-Qco"/>
+                <outlet property="lb2" destination="CFE-n0-OXt" id="JJG-4Q-o5G"/>
+            </connections>
+            <point key="canvasLocation" x="-37" y="-5"/>
+        </view>
+    </objects>
+</document>

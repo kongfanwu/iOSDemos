@@ -1,0 +1,400 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F222FE27232F89AC00922E0C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F222FE26232F89AC00922E0C /* AppDelegate.m */; };
+		F222FE2A232F89AC00922E0C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F222FE29232F89AC00922E0C /* ViewController.m */; };
+		F222FE2D232F89AC00922E0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F222FE2B232F89AC00922E0C /* Main.storyboard */; };
+		F222FE2F232F89AD00922E0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F222FE2E232F89AD00922E0C /* Assets.xcassets */; };
+		F222FE32232F89AD00922E0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F222FE30232F89AD00922E0C /* LaunchScreen.storyboard */; };
+		F222FE35232F89AD00922E0C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F222FE34232F89AD00922E0C /* main.m */; };
+		F222FE3D232F89D700922E0C /* DiDiCar.m in Sources */ = {isa = PBXBuildFile; fileRef = F222FE3C232F89D700922E0C /* DiDiCar.m */; };
+		F222FE41232F8A9400922E0C /* DiDiCarDecorate.m in Sources */ = {isa = PBXBuildFile; fileRef = F222FE40232F8A9400922E0C /* DiDiCarDecorate.m */; };
+		F222FE44232F8B7E00922E0C /* BeiJingDecorate.m in Sources */ = {isa = PBXBuildFile; fileRef = F222FE43232F8B7E00922E0C /* BeiJingDecorate.m */; };
+		F222FE47232F8B8E00922E0C /* ShangHaiDecorate.m in Sources */ = {isa = PBXBuildFile; fileRef = F222FE46232F8B8E00922E0C /* ShangHaiDecorate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F222FE22232F89AC00922E0C /* FWDecorate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FWDecorate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F222FE25232F89AC00922E0C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F222FE26232F89AC00922E0C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F222FE28232F89AC00922E0C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F222FE29232F89AC00922E0C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F222FE2C232F89AC00922E0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F222FE2E232F89AD00922E0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F222FE31232F89AD00922E0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F222FE33232F89AD00922E0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F222FE34232F89AD00922E0C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F222FE3B232F89D700922E0C /* DiDiCar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiDiCar.h; sourceTree = "<group>"; };
+		F222FE3C232F89D700922E0C /* DiDiCar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiDiCar.m; sourceTree = "<group>"; };
+		F222FE3E232F8A0E00922E0C /* DiDiCarComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiDiCarComponent.h; sourceTree = "<group>"; };
+		F222FE3F232F8A9400922E0C /* DiDiCarDecorate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiDiCarDecorate.h; sourceTree = "<group>"; };
+		F222FE40232F8A9400922E0C /* DiDiCarDecorate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiDiCarDecorate.m; sourceTree = "<group>"; };
+		F222FE42232F8B7E00922E0C /* BeiJingDecorate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeiJingDecorate.h; sourceTree = "<group>"; };
+		F222FE43232F8B7E00922E0C /* BeiJingDecorate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeiJingDecorate.m; sourceTree = "<group>"; };
+		F222FE45232F8B8E00922E0C /* ShangHaiDecorate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShangHaiDecorate.h; sourceTree = "<group>"; };
+		F222FE46232F8B8E00922E0C /* ShangHaiDecorate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShangHaiDecorate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F222FE1F232F89AC00922E0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F222FE19232F89AC00922E0C = {
+			isa = PBXGroup;
+			children = (
+				F222FE24232F89AC00922E0C /* FWDecorate */,
+				F222FE23232F89AC00922E0C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F222FE23232F89AC00922E0C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F222FE22232F89AC00922E0C /* FWDecorate.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F222FE24232F89AC00922E0C /* FWDecorate */ = {
+			isa = PBXGroup;
+			children = (
+				F222FE4B232F8F3900922E0C /* 被装饰的类 */,
+				F222FE48232F8EF900922E0C /* Component抽象类 */,
+				F222FE49232F8F0B00922E0C /* Decorate抽象类 */,
+				F222FE4A232F8F1B00922E0C /* Decorate具体类 */,
+				F222FE25232F89AC00922E0C /* AppDelegate.h */,
+				F222FE26232F89AC00922E0C /* AppDelegate.m */,
+				F222FE28232F89AC00922E0C /* ViewController.h */,
+				F222FE29232F89AC00922E0C /* ViewController.m */,
+				F222FE2B232F89AC00922E0C /* Main.storyboard */,
+				F222FE2E232F89AD00922E0C /* Assets.xcassets */,
+				F222FE30232F89AD00922E0C /* LaunchScreen.storyboard */,
+				F222FE33232F89AD00922E0C /* Info.plist */,
+				F222FE34232F89AD00922E0C /* main.m */,
+			);
+			path = FWDecorate;
+			sourceTree = "<group>";
+		};
+		F222FE48232F8EF900922E0C /* Component抽象类 */ = {
+			isa = PBXGroup;
+			children = (
+				F222FE3E232F8A0E00922E0C /* DiDiCarComponent.h */,
+			);
+			path = "Component抽象类";
+			sourceTree = "<group>";
+		};
+		F222FE49232F8F0B00922E0C /* Decorate抽象类 */ = {
+			isa = PBXGroup;
+			children = (
+				F222FE3F232F8A9400922E0C /* DiDiCarDecorate.h */,
+				F222FE40232F8A9400922E0C /* DiDiCarDecorate.m */,
+			);
+			path = "Decorate抽象类";
+			sourceTree = "<group>";
+		};
+		F222FE4A232F8F1B00922E0C /* Decorate具体类 */ = {
+			isa = PBXGroup;
+			children = (
+				F222FE42232F8B7E00922E0C /* BeiJingDecorate.h */,
+				F222FE43232F8B7E00922E0C /* BeiJingDecorate.m */,
+				F222FE45232F8B8E00922E0C /* ShangHaiDecorate.h */,
+				F222FE46232F8B8E00922E0C /* ShangHaiDecorate.m */,
+			);
+			path = "Decorate具体类";
+			sourceTree = "<group>";
+		};
+		F222FE4B232F8F3900922E0C /* 被装饰的类 */ = {
+			isa = PBXGroup;
+			children = (
+				F222FE3B232F89D700922E0C /* DiDiCar.h */,
+				F222FE3C232F89D700922E0C /* DiDiCar.m */,
+			);
+			path = "被装饰的类";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F222FE21232F89AC00922E0C /* FWDecorate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F222FE38232F89AD00922E0C /* Build configuration list for PBXNativeTarget "FWDecorate" */;
+			buildPhases = (
+				F222FE1E232F89AC00922E0C /* Sources */,
+				F222FE1F232F89AC00922E0C /* Frameworks */,
+				F222FE20232F89AC00922E0C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FWDecorate;
+			productName = FWDecorate;
+			productReference = F222FE22232F89AC00922E0C /* FWDecorate.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F222FE1A232F89AC00922E0C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "神灯智能";
+				TargetAttributes = {
+					F222FE21232F89AC00922E0C = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = F222FE1D232F89AC00922E0C /* Build configuration list for PBXProject "FWDecorate" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F222FE19232F89AC00922E0C;
+			productRefGroup = F222FE23232F89AC00922E0C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F222FE21232F89AC00922E0C /* FWDecorate */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F222FE20232F89AC00922E0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F222FE32232F89AD00922E0C /* LaunchScreen.storyboard in Resources */,
+				F222FE2F232F89AD00922E0C /* Assets.xcassets in Resources */,
+				F222FE2D232F89AC00922E0C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F222FE1E232F89AC00922E0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F222FE3D232F89D700922E0C /* DiDiCar.m in Sources */,
+				F222FE41232F8A9400922E0C /* DiDiCarDecorate.m in Sources */,
+				F222FE2A232F89AC00922E0C /* ViewController.m in Sources */,
+				F222FE47232F8B8E00922E0C /* ShangHaiDecorate.m in Sources */,
+				F222FE35232F89AD00922E0C /* main.m in Sources */,
+				F222FE27232F89AC00922E0C /* AppDelegate.m in Sources */,
+				F222FE44232F8B7E00922E0C /* BeiJingDecorate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F222FE2B232F89AC00922E0C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F222FE2C232F89AC00922E0C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F222FE30232F89AD00922E0C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F222FE31232F89AD00922E0C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F222FE36232F89AD00922E0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F222FE37232F89AD00922E0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F222FE39232F89AD00922E0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 346QFZZACH;
+				INFOPLIST_FILE = FWDecorate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.shendeng.zhineng.FWDecorate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F222FE3A232F89AD00922E0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 346QFZZACH;
+				INFOPLIST_FILE = FWDecorate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.shendeng.zhineng.FWDecorate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F222FE1D232F89AC00922E0C /* Build configuration list for PBXProject "FWDecorate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F222FE36232F89AD00922E0C /* Debug */,
+				F222FE37232F89AD00922E0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F222FE38232F89AD00922E0C /* Build configuration list for PBXNativeTarget "FWDecorate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F222FE39232F89AD00922E0C /* Debug */,
+				F222FE3A232F89AD00922E0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F222FE1A232F89AC00922E0C /* Project object */;
+}

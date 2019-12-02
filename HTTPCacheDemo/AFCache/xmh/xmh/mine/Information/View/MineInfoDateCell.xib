@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KDQ-aK-MvX" customClass="MineInfoDateCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KDQ-aK-MvX" id="PxQ-d5-gY7">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGy-Q6-e9k">
+                        <rect key="frame" x="15" y="13.5" width="37.5" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRz-Bk-C9N">
+                        <rect key="frame" x="297" y="15" width="8" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="J2R-ha-0PW"/>
+                            <constraint firstAttribute="width" constant="8" id="m2r-wG-Zdb"/>
+                        </constraints>
+                        <state key="normal" image="gengduo.png"/>
+                    </button>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MqZ-K8-XMN" customClass="MzzDatePickerTextField">
+                        <rect key="frame" x="52.5" y="13.5" width="229.5" height="17"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eo6-hV-EsV">
+                        <rect key="frame" x="0.0" y="42" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="xhI-BB-UyN"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="MqZ-K8-XMN" firstAttribute="centerY" secondItem="PxQ-d5-gY7" secondAttribute="centerY" id="2BH-2C-WnG"/>
+                    <constraint firstAttribute="trailing" secondItem="eo6-hV-EsV" secondAttribute="trailing" id="2HL-gh-6Ey"/>
+                    <constraint firstItem="qRz-Bk-C9N" firstAttribute="leading" secondItem="MqZ-K8-XMN" secondAttribute="trailing" constant="15" id="DPg-jY-YUz"/>
+                    <constraint firstItem="iGy-Q6-e9k" firstAttribute="centerY" secondItem="PxQ-d5-gY7" secondAttribute="centerY" id="Sar-8w-EXX"/>
+                    <constraint firstItem="MqZ-K8-XMN" firstAttribute="leading" secondItem="iGy-Q6-e9k" secondAttribute="trailing" id="bG9-MJ-7OT"/>
+                    <constraint firstItem="qRz-Bk-C9N" firstAttribute="centerY" secondItem="PxQ-d5-gY7" secondAttribute="centerY" id="jfQ-IR-LxL"/>
+                    <constraint firstItem="iGy-Q6-e9k" firstAttribute="leading" secondItem="PxQ-d5-gY7" secondAttribute="leading" constant="15" id="nDR-bv-IhY"/>
+                    <constraint firstItem="eo6-hV-EsV" firstAttribute="leading" secondItem="PxQ-d5-gY7" secondAttribute="leading" id="w3f-Q9-sge"/>
+                    <constraint firstAttribute="bottom" secondItem="eo6-hV-EsV" secondAttribute="bottom" id="wf4-cF-dfD"/>
+                    <constraint firstAttribute="trailing" secondItem="qRz-Bk-C9N" secondAttribute="trailing" constant="15" id="xvB-fe-kbH"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="btnMore" destination="qRz-Bk-C9N" id="NxV-4H-epj"/>
+                <outlet property="lbTitle" destination="iGy-Q6-e9k" id="plp-om-Xf1"/>
+                <outlet property="tfContent" destination="MqZ-K8-XMN" id="U4W-PJ-Lim"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="gengduo.png" width="7" height="14"/>
+    </resources>
+</document>

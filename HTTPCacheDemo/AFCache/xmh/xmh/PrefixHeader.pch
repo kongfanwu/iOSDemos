@@ -1,0 +1,102 @@
+//
+//  PrefixHeader.pch
+//  xmh
+//
+//  Created by 神灯智能-技术研发中心-ios dev on 2017/11/2.
+//  Copyright © 2017年 神灯智能-技术研发中心-ios dev. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "StringCheckMacro.h"
+#import "SizeMacro.h"
+#import "ColorMacro.h"
+#import "UIView+Exting.h"
+#import "EncryptMacro.h"
+#import "ColorTools.h"
+#import "customNav.h"
+#import "NSString+Costom.h"
+#import "MJRefresh.h"
+#import "NetworkDefind.h"
+#import "Singleton.h"
+#import "ResourceIdentifier.h"
+#import "NSDictionary+MzzDicToJson.h"
+#import <AFNetworking/AFNetworking.h>
+//#import <MBProgressHUD/MBProgressHUD.h>
+#import "NSArray+LArray2Json.h"
+//#import "MBProgressHUD+NHAdd.h"
+#import "MzzHud.h"
+#import "UIImage+Reduce.h"
+#import "SVProgressHUD+DGActivityIndicatorView.h"
+#import "BaseViewController.h"
+#import "LocalTxtToJsonDic.h"
+#import "YFKeychainTool.h"
+#import "MzzQuanxian.h"
+#import "UILabel+LineSpace.h"
+#import "NetworkUrl.h"
+#import "YQNetworking.h"
+#import "Masonry.h"
+#import "XMHMacro.h"
+#import "NSString+Safe.h"
+#import "NSArray+Safe.h"
+#import "NSMutableArray+Safe.h"
+#import "NSDictionary+Safe.h"
+#import "UITableViewCell+ZHCreate.h"
+#import "XMHExperienceOrderConst.h"
+#import "UserManager.h"
+#import "ShareWorkInstance.h"
+#import "UIView+FTCornerdious.h"
+#import "UIView+XMHXIBProperty.h"
+#import "NSObject+FWCopying.h"
+#import "XMHCouponListConst.h"
+#import "BlocksKit+UIKit.h"
+#import "XMHProgressHUD.h"
+#import "XMHBaseTableView.h"
+#import "XMHVCTools.h"
+#import "XMHWebSignTools.h"
+#import "XLForm.h"
+#import "XMHTaskFormCellConst.h"
+#import "XMHItemModel.h"
+#import "NSDate-Helper.h"
+#import "NSDate+Extension.h"
+#import "UIViewController+XMHAdditions.h"
+#import "XMHReportConst.h"
+#import "XMHHostUrlManager.h"
+#endif /* PrefixHeader_pch */
+
+
+//#ifdef DEBUG
+//#define MzzLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+//#else
+//#define MzzLog(...)
+//#endif
+
+#ifdef DEBUG
+//#define MzzLog(fmt, ...) NSLog((@"\n[文件名:%s]\n""[函数名:%s]\n""[行号:%d] \n" fmt), __FILE__, __FUNCTION__, __LINE__, ##__VA_ARGS__);
+#define MzzLog(fmt, ...) NSLog((@"[行号:%d][函数名:%s] \n" fmt), __LINE__, __FUNCTION__, ##__VA_ARGS__);
+#else
+# define MzzLog(...);
+#endif
+
+// 确保str为有效 NSString
+#define kXmHValidString(str) \
+do \
+{ \
+if ((str) == nil \
+|| [(str) isKindOfClass:[NSNull class]]) \
+{ \
+(str) = @""; \
+} \
+} \
+while(0);
+
+static inline BOOL IsEmpty(id thing) {
+    return thing == nil ||
+    [thing isEqual:[NSNull null]] ||
+    ([thing respondsToSelector:@selector(length)] && [(NSData *)thing length] == 0) ||
+    ([thing respondsToSelector:@selector(count)] && [(NSArray *)thing count] == 0) ||
+    ([thing isKindOfClass:[NSString class]] && [(NSString *)thing isEqualToString:@"(null)"]);
+}

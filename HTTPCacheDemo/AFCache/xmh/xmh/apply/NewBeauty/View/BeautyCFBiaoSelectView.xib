@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="j6V-2P-gbr" customClass="BeautyCFBiaoSelectView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1cy-sz-nBP">
+                    <rect key="frame" x="0.0" y="0.0" width="187.5" height="44"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ab-0g-fDF">
+                            <rect key="frame" x="15" y="11.5" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gengduo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Zig-cv-bwS">
+                            <rect key="frame" x="72" y="16.5" width="6" height="11"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="6" id="Mf0-hz-11N"/>
+                                <constraint firstAttribute="height" constant="11" id="ex4-Es-mR2"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Zig-cv-bwS" firstAttribute="leading" secondItem="7Ab-0g-fDF" secondAttribute="trailing" constant="15" id="KQh-gR-w9v"/>
+                        <constraint firstItem="7Ab-0g-fDF" firstAttribute="centerY" secondItem="1cy-sz-nBP" secondAttribute="centerY" id="WkX-fJ-tBt"/>
+                        <constraint firstItem="7Ab-0g-fDF" firstAttribute="leading" secondItem="1cy-sz-nBP" secondAttribute="leading" constant="15" id="kcF-TO-h5P"/>
+                        <constraint firstItem="Zig-cv-bwS" firstAttribute="centerY" secondItem="1cy-sz-nBP" secondAttribute="centerY" id="opn-gS-cks"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jmd-ZA-0HE">
+                    <rect key="frame" x="187.5" y="0.0" width="187.5" height="44"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6zW-lk-e1T">
+                            <rect key="frame" x="109.5" y="11.5" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gengduo.png" translatesAutoresizingMaskIntoConstraints="NO" id="jVx-uD-5Ka">
+                            <rect key="frame" x="166.5" y="16.5" width="6" height="11"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="11" id="gTg-aR-Sjo"/>
+                                <constraint firstAttribute="width" constant="6" id="syv-A5-FtS"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="jVx-uD-5Ka" firstAttribute="centerY" secondItem="Jmd-ZA-0HE" secondAttribute="centerY" id="3cD-wf-od8"/>
+                        <constraint firstAttribute="trailing" secondItem="jVx-uD-5Ka" secondAttribute="trailing" constant="15" id="Skb-le-jra"/>
+                        <constraint firstItem="6zW-lk-e1T" firstAttribute="centerY" secondItem="Jmd-ZA-0HE" secondAttribute="centerY" id="UuH-c5-amQ"/>
+                        <constraint firstItem="jVx-uD-5Ka" firstAttribute="leading" secondItem="6zW-lk-e1T" secondAttribute="trailing" constant="15" id="h9G-kf-EF3"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Jmd-ZA-0HE" firstAttribute="top" secondItem="j6V-2P-gbr" secondAttribute="top" id="9PN-9x-ssB"/>
+                <constraint firstItem="1cy-sz-nBP" firstAttribute="leading" secondItem="j6V-2P-gbr" secondAttribute="leading" id="A4D-VI-3Yr"/>
+                <constraint firstAttribute="bottom" secondItem="Jmd-ZA-0HE" secondAttribute="bottom" id="K2V-un-Frz"/>
+                <constraint firstItem="Jmd-ZA-0HE" firstAttribute="height" secondItem="1cy-sz-nBP" secondAttribute="height" id="M6N-RV-dah"/>
+                <constraint firstAttribute="trailing" secondItem="Jmd-ZA-0HE" secondAttribute="trailing" id="Yj9-Qj-His"/>
+                <constraint firstItem="Jmd-ZA-0HE" firstAttribute="leading" secondItem="1cy-sz-nBP" secondAttribute="trailing" id="buK-KR-HXR"/>
+                <constraint firstItem="Jmd-ZA-0HE" firstAttribute="width" secondItem="1cy-sz-nBP" secondAttribute="width" id="mcf-oN-MP3"/>
+                <constraint firstAttribute="bottom" secondItem="1cy-sz-nBP" secondAttribute="bottom" id="oTu-0b-cAI"/>
+                <constraint firstItem="1cy-sz-nBP" firstAttribute="top" secondItem="j6V-2P-gbr" secondAttribute="top" id="xit-hW-fiS"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="lb1" destination="7Ab-0g-fDF" id="Zz6-bP-A6J"/>
+                <outlet property="lb2" destination="6zW-lk-e1T" id="f84-NR-QEf"/>
+                <outlet property="viewDate" destination="Jmd-ZA-0HE" id="yOW-67-CZn"/>
+                <outlet property="viewStore" destination="1cy-sz-nBP" id="V53-O0-zQM"/>
+            </connections>
+            <point key="canvasLocation" x="368.80000000000001" y="76.46176911544228"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="gengduo.png" width="7" height="14"/>
+    </resources>
+</document>

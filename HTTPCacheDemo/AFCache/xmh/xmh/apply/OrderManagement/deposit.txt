@@ -1,0 +1,63 @@
+{
+"msg" : "ok",
+"data" : {
+"sales" : [
+{
+"amount" : "3000.00",
+"insert_time" : "2018-04-03 13:19:00",
+"ordernum" : "SA180403131900842444",
+"id" : 7503,
+"tk_amount" : 1000,
+"list" : [
+{
+"id" : 1066625,
+"code" : "PR0000AG",
+"qk_amount" : 1000,
+"pro_code" : "PR0000AG",
+"tk_amount" : 1000,
+"type" : "pro",
+"num" : 2,
+"name" : "RF面部",
+"amount_a" : "4000.00"
+},
+{
+"id" : 122,
+"qk_amount" : 1288,
+"stored_code" : "ST00003H",
+"tk_amount" : 0,
+"type" : "stored_card",
+"name" : "储值卡5000",
+"amount_a" : "1288.00"
+}
+],
+"heji" : "5288.00",
+"inper" : "美滋滋",
+"type" : "普通开单"
+},
+{
+"amount" : "500.00",
+"insert_time" : "2018-04-03 17:51:41",
+"ordernum" : "SA180403175141234379",
+"id" : 7526,
+"tk_amount" : 500,
+"list" : [
+{
+"id" : 1066635,
+"code" : "PR0000AF",
+"qk_amount" : 1500,
+"pro_code" : "PR0000AF",
+"tk_amount" : 500,
+"type" : "pro",
+"num" : 10,
+"name" : "净肤理疗新",
+"amount_a" : "2000.00"
+}
+],
+"heji" : "2000.00",
+"inper" : "美滋滋",
+"type" : "普通开单"
+}
+]
+},
+"code" : 1
+}

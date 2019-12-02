@@ -1,0 +1,42 @@
+{
+"code": 1,
+"msg": "ok",
+"data": {
+"list": [{
+"id": 520,
+"goods_code": "GD00000Z",
+"s_num": 2,
+"name": "玫瑰花水500g",
+"price": 68
+},
+{
+"id": 523,
+"goods_code": "GD00000Y",
+"s_num": 3,
+"name": "臻致展颜肌密晚霜50g",
+"price": 100
+},
+{
+"id": 524,
+"goods_code": "GD00000X",
+"s_num": 4,
+"name": "臻致倍润醒肤日霜50g",
+"price": 68
+},
+{
+"id": 525,
+"goods_code": "GD000016",
+"s_num": 5,
+"name": "海绵宝宝霜",
+"price": 100
+},
+{
+"id": 526,
+"goods_code": "GD00001A",
+"s_num": 6,
+"name": "磁波御养能量贴",
+"price": 100
+}
+]
+}
+}

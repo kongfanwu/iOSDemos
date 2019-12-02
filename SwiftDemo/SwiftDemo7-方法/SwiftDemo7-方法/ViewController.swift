@@ -67,10 +67,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        var somePoint = Point2(x: 1.0, y: 1.0)
-        somePoint.moveBy(x: 2.0, y: 3.0)
-        print("The point is now at (\(somePoint.x), \(somePoint.y))")
-        // 打印“The point is now at (3.0, 4.0)”
+//        var somePoint = Point2(x: 1.0, y: 1.0)
+//        somePoint.moveBy(x: 2.0, y: 3.0)
+//        print("The point is now at (\(somePoint.x), \(somePoint.y))")
+//        // 打印“The point is now at (3.0, 4.0)”
+        let names = ["Anna", "Alex", "Brian", "Jack"]
+        for (index, name) in names.enumerated() {
+            print("Hello, \(name)!")
+            print(index)
+        }
     }
 
 

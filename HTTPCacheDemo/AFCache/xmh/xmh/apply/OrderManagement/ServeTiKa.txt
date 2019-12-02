@@ -1,0 +1,288 @@
+{
+"code": 1,
+"msg": "ok",
+"data": {
+"stored_card": [
+{
+"id": 1,
+"money": "1775.00",
+"stored_code": "ST000001",
+"name": "唯美（老）",
+"pro_list": [
+{
+"pro_code": "PR000001",
+"name": "水漾（老）",
+"shichang": 90,
+"price": 290
+},
+{
+"pro_code": "PR000003",
+"name": "顺美（老）",
+"shichang": 90,
+"price": 100
+},
+{
+"pro_code": "PR000004",
+"name": "小分子（老）",
+"shichang": 30,
+"price": 290
+},
+{
+"pro_code": "PR000002",
+"name": "肤质(新）",
+"shichang": 90,
+"price": 199
+}
+],
+"goods_list": [
+{
+"goods_code": "GD000006",
+"name": "木瓜原液110ml",
+"shichang": 0,
+"price": 0
+},
+{
+"goods_code": "GD000005",
+"name": "金谷原液110ml",
+"shichang": 0,
+"price": 0
+},
+{
+"goods_code": "GD000004",
+"name": "豌豆原液110ml",
+"shichang": 0,
+"price": 0
+},
+{
+"goods_code": "GD000003",
+"name": "康乃馨体验装小套盒",
+"shichang": 0,
+"price": 0
+}
+]
+},
+{
+"id": 2,
+"money": "5000.00",
+"stored_code": "ST000002",
+"name": "维俏（老）",
+"pro_list": [
+{
+"pro_code": "PR000001",
+"name": "水漾（老）",
+"shichang": 90,
+"price": 261
+},
+{
+"pro_code": "PR000003",
+"name": "顺美（老）",
+"shichang": 90,
+"price": 90
+}
+],
+"goods_list": [
+{
+"goods_code": "GD000009",
+"name": "羽扇豆原液110ml",
+"shichang": 0,
+"price": 0
+},
+{
+"goods_code": "GD000007",
+"name": "燕麦原液110ml",
+"shichang": 0,
+"price": 0
+},
+{
+"goods_code": "GD000005",
+"name": "金谷原液110ml",
+"shichang": 0,
+"price": 0
+},
+{
+"goods_code": "GD000003",
+"name": "康乃馨体验装小套盒",
+"shichang": 0,
+"price": 0
+}
+]
+},
+{
+"id": 3,
+"money": "140.00",
+"stored_code": "ST000003",
+"name": "维至尊（老）",
+"pro_list": [
+{
+"pro_code": "PR000003",
+"name": "顺美（老）",
+"shichang": 90,
+"price": 70
+},
+{
+"pro_code": "PR000006",
+"name": "还原修复（新）",
+"shichang": 90,
+"price": 513.1
+}
+],
+"goods_list": [
+{
+"goods_code": "GD000006",
+"name": "木瓜原液110ml",
+"shichang": 0,
+"price": 0
+},
+{
+"goods_code": "GD000003",
+"name": "康乃馨体验装小套盒",
+"shichang": 0,
+"price": 0
+}
+]
+}
+],
+"card_num": [
+{
+"id": 1,
+"card_num_code": "KN00001A",
+"num": 10,
+"name": "你开心就好卡-人选卡",
+"pro_list": [
+{
+"pro_code": "PR00000F",
+"name": "肩背通（新）",
+"shichang": 40,
+"price": 1000
+},
+{
+"pro_code": "PR000009",
+"name": "肤色（新）",
+"shichang": 80,
+"price": 1000
+}
+],
+"goods_list": [
+{
+"goods_code": "GD000014",
+"name": "氨基酸洁面泡沫100ml",
+"shichang": 0,
+"price": 0
+},
+{
+"goods_code": "GD00001J",
+"name": "康乃馨大礼包",
+"shichang": 0,
+"price": 0
+}
+]
+},
+{
+"id": 2,
+"card_num_code": "KN000019",
+"num": 1,
+"name": "任选高兴卡",
+"pro_list": [
+{
+"pro_code": "PR00000E",
+"name": "背三焦（老）",
+"shichang": 60,
+"price": 100
+},
+{
+"pro_code": "PR000001",
+"name": "水漾（老）",
+"shichang": 90,
+"price": 100
+}
+],
+"goods_list": [
+{
+"goods_code": "GD00000D",
+"name": "葡萄籽原液110ml",
+"shichang": 0,
+"price": 0
+},
+{
+"goods_code": "GD000003",
+"name": "康乃馨体验装小套盒",
+"shichang": 0,
+"price": 0
+}
+]
+}
+],
+"card_time": [
+{
+"id": 1,
+"card_time_code": "KT00000O",
+"end_time": "2018-05-01 14:17:46",
+"name": "开心时间卡",
+"price": "15.00",
+"pro_list": [
+{
+"pro_code": "PR000002",
+"name": "肤质(新）",
+"shichang": 90,
+"price": "15.00"
+},
+{
+"pro_code": "PR00000O",
+"name": "养肺药浴(新）",
+"shichang": 90,
+"price": "15.00"
+}
+],
+"goods_list": [
+{
+"goods_code": "GD000004",
+"name": "豌豆原液110ml",
+"shichang": 0,
+"price": 0
+},
+{
+"goods_code": "GD000005",
+"name": "金谷原液110ml",
+"shichang": 0,
+"price": 0
+}
+]
+},
+{
+"id": 2,
+"card_time_code": "KT00000N",
+"end_time": "2018-05-01 14:17:46",
+"name": "高兴时间卡",
+"price": "10.00",
+"pro_list": [
+{
+"pro_code": "PR000003",
+"name": "顺美（老）",
+"shichang": 90,
+"price": "10.00"
+},
+{
+"pro_code": "PR000005",
+"name": "眼部（老）",
+"shichang": 30,
+"price": "10.00"
+}
+],
+"goods_list": [
+{
+"goods_code": "GD000004",
+"name": "豌豆原液110ml",
+"shichang": 0,
+"price": 0
+},
+{
+"goods_code": "GD000006",
+"name": "木瓜原液110ml",
+"shichang": 0,
+"price": 0
+}
+]
+}
+]
+}
+}

@@ -56,9 +56,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let res = someClosure(1, "str")
-        print(res)
+         print("124(\("456"))")
         
 //        let names = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
 //        var reversedNames = names.sorted(by: { (s1: String, s2: String) -> Bool in

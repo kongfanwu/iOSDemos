@@ -1,0 +1,30 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '9.0'
+use_frameworks!
+inhibit_all_warnings!
+
+target 'xmh' do
+pod 'AFNetworking' , '3.2.0'
+pod 'YYModel' , '1.0.4'
+pod 'YYWebImage' , '1.0.5'
+pod 'MJRefresh' , '3.1.15.3'
+pod 'IQKeyboardManager' , '6.0.2'
+pod 'MGSwipeTableCell' , '1.6.7'
+pod 'TZImagePickerController' , '2.1.0.3'
+pod 'ActionSheetPicker-3.0' , '2.3.0'
+pod 'SVProgressHUD' , '2.2.5'
+pod 'UMCCommon' , '1.5.0'
+pod 'UMCAnalytics'  , '5.5.0'
+pod 'Masonry'
+#pod 'DZNEmptyDataSet'
+pod 'PGDatePicker'
+pod 'BlocksKit', '~> 2.2.5'
+pod 'UMCSecurityPlugins'
+pod 'UMCShare/UI'
+pod 'UMCShare/Social/ReducedWeChat'
+pod 'UMCPush'
+pod 'XLForm', '~> 4.0'
+pod 'DoraemonKit/Core', '~> 1.2.0', :configurations => ['Debug']
+end
+ 

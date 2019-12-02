@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="How-UW-e9I" customClass="MzzFilterTbSectionHeaderViewCommon">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9aV-sz-Sid">
+                    <rect key="frame" x="15" y="14" width="35.5" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUJ-Vd-thD">
+                    <rect key="frame" x="345" y="20" width="15" height="5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="15" id="6f4-2z-uqC"/>
+                        <constraint firstAttribute="height" constant="5" id="YB5-8y-Wqv"/>
+                    </constraints>
+                    <state key="normal" image="sxxiajiantou.png"/>
+                    <state key="selected" image="sxshangjiantou.png"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="UUJ-Vd-thD" secondAttribute="trailing" constant="15" id="1q9-l7-FQm"/>
+                <constraint firstItem="UUJ-Vd-thD" firstAttribute="centerY" secondItem="How-UW-e9I" secondAttribute="centerY" id="Onb-4y-DKS"/>
+                <constraint firstItem="9aV-sz-Sid" firstAttribute="leading" secondItem="How-UW-e9I" secondAttribute="leading" constant="15" id="SCu-rG-WDJ"/>
+                <constraint firstItem="9aV-sz-Sid" firstAttribute="centerY" secondItem="How-UW-e9I" secondAttribute="centerY" id="lRI-eq-1yl"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="btn" destination="UUJ-Vd-thD" id="VRo-gc-RB7"/>
+                <outlet property="lb" destination="9aV-sz-Sid" id="BXw-6u-5d1"/>
+            </connections>
+            <point key="canvasLocation" x="-65.5" y="87.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="sxshangjiantou.png" width="17" height="9"/>
+        <image name="sxxiajiantou.png" width="17" height="9"/>
+    </resources>
+</document>

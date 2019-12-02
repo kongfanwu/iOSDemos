@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Edj-QD-D8c" customClass="MineInfoSexCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Edj-QD-D8c" id="m10-P5-D29">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5SI-MI-o5Z">
+                        <rect key="frame" x="15" y="13" width="37.5" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90W-e0-5z6">
+                        <rect key="frame" x="297" y="14.5" width="8" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="vfs-87-E1J"/>
+                            <constraint firstAttribute="width" constant="8" id="xU3-WU-pD9"/>
+                        </constraints>
+                        <state key="normal" image="gengduo.png"/>
+                    </button>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aC3-dr-ZEJ" customClass="MzzPickerTextField">
+                        <rect key="frame" x="52.5" y="13.5" width="229.5" height="17"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fg0-Om-aSl">
+                        <rect key="frame" x="0.0" y="43" width="320" height="0.5"/>
+                        <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="6Gg-fq-9Ks"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9qL-Rn-2Kb">
+                        <rect key="frame" x="0.0" y="42.5" width="320" height="0.5"/>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.59999999999999998" id="qox-bi-LVO"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="fg0-Om-aSl" secondAttribute="trailing" id="0zB-TW-EIu"/>
+                    <constraint firstAttribute="bottom" secondItem="fg0-Om-aSl" secondAttribute="bottom" id="424-A0-oYB"/>
+                    <constraint firstItem="fg0-Om-aSl" firstAttribute="leading" secondItem="m10-P5-D29" secondAttribute="leading" id="6hw-dw-AGv"/>
+                    <constraint firstAttribute="trailing" secondItem="9qL-Rn-2Kb" secondAttribute="trailing" id="By0-kk-Csu"/>
+                    <constraint firstItem="90W-e0-5z6" firstAttribute="leading" secondItem="aC3-dr-ZEJ" secondAttribute="trailing" constant="15" id="EmS-A2-zgk"/>
+                    <constraint firstItem="90W-e0-5z6" firstAttribute="centerY" secondItem="m10-P5-D29" secondAttribute="centerY" id="YRM-27-y9d"/>
+                    <constraint firstItem="aC3-dr-ZEJ" firstAttribute="centerY" secondItem="m10-P5-D29" secondAttribute="centerY" id="f9C-mQ-35h"/>
+                    <constraint firstItem="5SI-MI-o5Z" firstAttribute="leading" secondItem="m10-P5-D29" secondAttribute="leading" constant="15" id="o57-s7-tI0"/>
+                    <constraint firstItem="fg0-Om-aSl" firstAttribute="top" secondItem="9qL-Rn-2Kb" secondAttribute="bottom" id="qkW-eq-G9n"/>
+                    <constraint firstItem="5SI-MI-o5Z" firstAttribute="centerY" secondItem="m10-P5-D29" secondAttribute="centerY" id="tOI-gZ-M5k"/>
+                    <constraint firstAttribute="trailing" secondItem="90W-e0-5z6" secondAttribute="trailing" constant="15" id="vwu-FP-j6c"/>
+                    <constraint firstItem="aC3-dr-ZEJ" firstAttribute="leading" secondItem="5SI-MI-o5Z" secondAttribute="trailing" id="yzC-W6-Gnn"/>
+                    <constraint firstItem="9qL-Rn-2Kb" firstAttribute="leading" secondItem="m10-P5-D29" secondAttribute="leading" id="zmF-Uh-IEi"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="btnMore" destination="m10-P5-D29" id="6Sd-ey-sha"/>
+                <outlet property="lbTitle" destination="5SI-MI-o5Z" id="LM9-Qs-Ui1"/>
+                <outlet property="tfContent" destination="aC3-dr-ZEJ" id="XAI-qv-QzK"/>
+            </connections>
+            <point key="canvasLocation" x="137.59999999999999" y="153.82308845577214"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="gengduo.png" width="7" height="14"/>
+    </resources>
+</document>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="eGn-Gc-Pdn" customClass="LanternMCardView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="txB-WH-vqS">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tad-w7-5wq">
+                            <rect key="frame" x="0.0" y="0.0" width="60" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="RPa-tT-9YK"/>
+                                <constraint firstAttribute="width" constant="60" id="VuU-k8-Wix"/>
+                                <constraint firstAttribute="height" constant="44" id="qA1-oe-O8X"/>
+                            </constraints>
+                            <state key="normal" title="取消">
+                                <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="cancel:" destination="eGn-Gc-Pdn" eventType="touchUpInside" id="Edi-8O-kPU"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IEJ-us-j3D">
+                            <rect key="frame" x="315" y="0.0" width="60" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="7EN-OC-CUp"/>
+                                <constraint firstAttribute="width" constant="60" id="ZA4-QT-Mf6"/>
+                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="gjh-1K-yy0"/>
+                                <constraint firstAttribute="height" constant="44" id="zzB-4G-86h"/>
+                            </constraints>
+                            <state key="normal" title="确认">
+                                <color key="titleColor" red="0.94509803921568625" green="0.0039215686274509803" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="sure:" destination="eGn-Gc-Pdn" eventType="touchUpInside" id="JeO-lJ-5UI"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Tad-w7-5wq" secondAttribute="bottom" id="9Z2-PU-tRN"/>
+                        <constraint firstAttribute="bottom" secondItem="IEJ-us-j3D" secondAttribute="bottom" id="FRh-w2-UHO"/>
+                        <constraint firstAttribute="trailing" secondItem="IEJ-us-j3D" secondAttribute="trailing" id="FqY-Bb-gBc"/>
+                        <constraint firstAttribute="bottom" secondItem="IEJ-us-j3D" secondAttribute="bottom" id="Mum-XQ-L0Z"/>
+                        <constraint firstItem="Tad-w7-5wq" firstAttribute="leading" secondItem="txB-WH-vqS" secondAttribute="leading" id="Tdj-Hq-6eW"/>
+                        <constraint firstAttribute="trailing" secondItem="IEJ-us-j3D" secondAttribute="trailing" id="a0g-gZ-bTP"/>
+                        <constraint firstAttribute="bottom" secondItem="Tad-w7-5wq" secondAttribute="bottom" id="gzP-Gl-nmg"/>
+                        <constraint firstItem="Tad-w7-5wq" firstAttribute="leading" secondItem="txB-WH-vqS" secondAttribute="leading" id="mW2-dQ-ODN"/>
+                        <constraint firstAttribute="height" constant="44" id="x3F-hB-iCZ"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WMs-zK-hpu">
+                    <rect key="frame" x="0.0" y="44" width="375" height="54"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="54" id="iBz-nt-wJx"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pBX-sU-WR3">
+                    <rect key="frame" x="0.0" y="98" width="375" height="569"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="WMs-zK-hpu" firstAttribute="top" secondItem="txB-WH-vqS" secondAttribute="bottom" id="73I-PL-Vi1"/>
+                <constraint firstItem="txB-WH-vqS" firstAttribute="top" secondItem="eGn-Gc-Pdn" secondAttribute="top" id="Ixy-nL-sVc"/>
+                <constraint firstAttribute="trailing" secondItem="pBX-sU-WR3" secondAttribute="trailing" id="Kml-nH-OAu"/>
+                <constraint firstAttribute="bottom" secondItem="pBX-sU-WR3" secondAttribute="bottom" id="Z4b-j2-AGb"/>
+                <constraint firstItem="pBX-sU-WR3" firstAttribute="leading" secondItem="eGn-Gc-Pdn" secondAttribute="leading" id="iuc-gK-Iic"/>
+                <constraint firstItem="WMs-zK-hpu" firstAttribute="leading" secondItem="eGn-Gc-Pdn" secondAttribute="leading" id="kbt-Az-e4M"/>
+                <constraint firstAttribute="trailing" secondItem="txB-WH-vqS" secondAttribute="trailing" id="kgU-LI-Gib"/>
+                <constraint firstItem="pBX-sU-WR3" firstAttribute="top" secondItem="WMs-zK-hpu" secondAttribute="bottom" id="mtX-AM-fOQ"/>
+                <constraint firstAttribute="trailing" secondItem="WMs-zK-hpu" secondAttribute="trailing" id="y0V-B7-J0E"/>
+                <constraint firstItem="txB-WH-vqS" firstAttribute="leading" secondItem="eGn-Gc-Pdn" secondAttribute="leading" id="yTH-cU-blB"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="TopViewH" destination="x3F-hB-iCZ" id="Yx9-EL-A0r"/>
+                <outlet property="btnLeft" destination="Tad-w7-5wq" id="91e-je-b3A"/>
+                <outlet property="btnRight" destination="IEJ-us-j3D" id="FDa-fs-qLb"/>
+                <outlet property="container" destination="WMs-zK-hpu" id="FZi-m1-94G"/>
+                <outlet property="tbView" destination="pBX-sU-WR3" id="Kxk-a8-gvb"/>
+                <outlet property="topH" destination="Ixy-nL-sVc" id="vFp-Wb-ZwJ"/>
+            </connections>
+            <point key="canvasLocation" x="369" y="-65"/>
+        </view>
+    </objects>
+</document>

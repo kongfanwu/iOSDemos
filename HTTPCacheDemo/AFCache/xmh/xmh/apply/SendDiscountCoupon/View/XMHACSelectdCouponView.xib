@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="XMHACSelectdCouponView">
+            <rect key="frame" x="0.0" y="0.0" width="461" height="89"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QjU-z0-KRW">
+                    <rect key="frame" x="0.0" y="0.0" width="461" height="89"/>
+                    <connections>
+                        <action selector="btnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="Zw4-Id-t8S"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="huodongzhongxin_xiugai" translatesAutoresizingMaskIntoConstraints="NO" id="Lvx-Pa-vuC">
+                    <rect key="frame" x="21" y="33" width="23" height="23"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="23" id="L9b-oO-P3H"/>
+                        <constraint firstAttribute="height" constant="23" id="gMb-zD-jGR"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJb-DO-944">
+                    <rect key="frame" x="56" y="0.0" width="405" height="89"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="aJb-DO-944" firstAttribute="leading" secondItem="Lvx-Pa-vuC" secondAttribute="trailing" constant="12" id="5hy-Xs-f6t"/>
+                <constraint firstAttribute="trailing" secondItem="QjU-z0-KRW" secondAttribute="trailing" id="88T-Q2-F3z"/>
+                <constraint firstAttribute="bottom" secondItem="aJb-DO-944" secondAttribute="bottom" id="Afa-UV-o9L"/>
+                <constraint firstItem="aJb-DO-944" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Rxr-J1-ybL"/>
+                <constraint firstItem="QjU-z0-KRW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Tc4-JC-2Pw"/>
+                <constraint firstAttribute="bottom" secondItem="QjU-z0-KRW" secondAttribute="bottom" id="ZWO-ZN-lUz"/>
+                <constraint firstItem="Lvx-Pa-vuC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="21" id="cRr-SJ-4QJ"/>
+                <constraint firstAttribute="trailing" secondItem="aJb-DO-944" secondAttribute="trailing" id="g2A-Dx-Kcj"/>
+                <constraint firstItem="Lvx-Pa-vuC" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="icw-e8-u4a"/>
+                <constraint firstItem="QjU-z0-KRW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="t8f-J8-SDe"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="btn" destination="QjU-z0-KRW" id="17K-gE-o6Q"/>
+                <outlet property="infoLab" destination="aJb-DO-944" id="w1Y-pp-nms"/>
+            </connections>
+            <point key="canvasLocation" x="23.199999999999999" y="250.52473763118442"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="huodongzhongxin_xiugai" width="24" height="22.5"/>
+    </resources>
+</document>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="A8p-Jg-z26" customClass="LanternMYuanGongTbSectionHeader">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tp9-oX-EXg">
+                    <rect key="frame" x="15" y="49" width="345" height="1"/>
+                    <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="R69-Ch-QJ9"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ojs-v5-EGG">
+                    <rect key="frame" x="15" y="16" width="37.5" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pDw-qt-hjN">
+                    <rect key="frame" x="345" y="10" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="E53-fZ-3eV"/>
+                        <constraint firstAttribute="height" constant="30" id="Rjp-98-yhW"/>
+                    </constraints>
+                    <state key="normal" image="youjiantou"/>
+                    <state key="selected" image="xiala"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Ojs-v5-EGG" firstAttribute="leading" secondItem="A8p-Jg-z26" secondAttribute="leading" constant="15" id="2jF-Sd-JEJ"/>
+                <constraint firstItem="tp9-oX-EXg" firstAttribute="leading" secondItem="A8p-Jg-z26" secondAttribute="leading" constant="15" id="AD2-X0-e2H"/>
+                <constraint firstItem="Ojs-v5-EGG" firstAttribute="centerY" secondItem="A8p-Jg-z26" secondAttribute="centerY" id="CF4-0x-8e4"/>
+                <constraint firstAttribute="trailing" secondItem="tp9-oX-EXg" secondAttribute="trailing" constant="15" id="Q5G-c5-yzf"/>
+                <constraint firstAttribute="trailing" secondItem="pDw-qt-hjN" secondAttribute="trailing" id="bcf-vf-VP9"/>
+                <constraint firstItem="pDw-qt-hjN" firstAttribute="centerY" secondItem="A8p-Jg-z26" secondAttribute="centerY" id="jm9-Ho-fyk"/>
+                <constraint firstAttribute="bottom" secondItem="tp9-oX-EXg" secondAttribute="bottom" id="xFv-Y7-ksX"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="btnMore" destination="pDw-qt-hjN" id="WZy-fV-mr1"/>
+                <outlet property="lbName" destination="Ojs-v5-EGG" id="ffS-cm-eCF"/>
+            </connections>
+            <point key="canvasLocation" x="166" y="-390"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="xiala" width="18.5" height="6.5"/>
+        <image name="youjiantou" width="6" height="11.5"/>
+    </resources>
+</document>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>WorkPushTJGKError</key>
+	<string>您没有权限使用此审批,如有疑问请联系管理员</string>
+	<key>WorkPushYJYYError</key>
+	<string>您没有一键预约权限，请进行其他操作</string>
+	<key>WorkPushHYTDError</key>
+	<string>您没有权限使用此审批,如有疑问请联系管理员</string>
+	<key>WorkPushKXSDError</key>
+	<string>您没有制单权限，请进行其他操作</string>
+	<key>WorkPushKFWDError</key>
+	<string>您没有制单权限，请进行其他操作</string>
+	<key>WorkPushSQTKError</key>
+	<string>您没有权限使用此审批,如有疑问请联系管理员</string>
+	<key>WorkPushHYDJError</key>
+	<string>您没有权限使用此审批,如有疑问请联系管理员</string>
+	<key>WorkPushMLDZError</key>
+	<string>您没有权限使用此功能,如有疑问请联系管理员</string>
+	<key>WorkPushZDJZError</key>
+	<string>您没有权限使用此审批,如有疑问请联系管理员</string>
+</dict>
+</plist>

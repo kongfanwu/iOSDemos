@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="xLh-F0-Lcz" customClass="LanternRecommendSwtichView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DJk-Oi-OR0">
+                    <rect key="frame" x="0.0" y="0.0" width="187.5" height="44"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <inset key="titleEdgeInsets" minX="60" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="设定下月计划">
+                        <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="btnClick:" destination="xLh-F0-Lcz" eventType="touchUpInside" id="fiJ-nF-g0f"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O1o-8O-HJ0">
+                    <rect key="frame" x="187.5" y="0.0" width="187.5" height="44"/>
+                    <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="60" maxY="0.0"/>
+                    <state key="normal" title="补签本月计划">
+                        <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="btnClick:" destination="xLh-F0-Lcz" eventType="touchUpInside" id="UaT-Yr-hHA"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MPD-EY-YFp">
+                    <rect key="frame" x="110" y="42" width="30" height="2"/>
+                    <color key="backgroundColor" red="0.94509803921568625" green="0.0039215686274509803" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="2" id="ZJ4-g8-Bx7"/>
+                        <constraint firstAttribute="width" constant="30" id="ft5-1h-2hc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="O1o-8O-HJ0" firstAttribute="top" secondItem="xLh-F0-Lcz" secondAttribute="top" id="8GD-M4-Jbl"/>
+                <constraint firstItem="O1o-8O-HJ0" firstAttribute="leading" secondItem="DJk-Oi-OR0" secondAttribute="trailing" id="H4d-1N-HGK"/>
+                <constraint firstItem="O1o-8O-HJ0" firstAttribute="leading" secondItem="DJk-Oi-OR0" secondAttribute="trailing" id="MSg-yc-WWy"/>
+                <constraint firstItem="DJk-Oi-OR0" firstAttribute="width" secondItem="O1o-8O-HJ0" secondAttribute="width" id="U9c-5h-BOa"/>
+                <constraint firstAttribute="trailing" secondItem="O1o-8O-HJ0" secondAttribute="trailing" id="Zm1-Lk-w1t"/>
+                <constraint firstAttribute="bottom" secondItem="MPD-EY-YFp" secondAttribute="bottom" id="gOL-Hi-TgY"/>
+                <constraint firstItem="MPD-EY-YFp" firstAttribute="leading" secondItem="xLh-F0-Lcz" secondAttribute="leading" constant="110" id="lon-A0-43Z"/>
+                <constraint firstAttribute="bottom" secondItem="O1o-8O-HJ0" secondAttribute="bottom" id="mOs-Fv-iLh"/>
+                <constraint firstItem="DJk-Oi-OR0" firstAttribute="top" secondItem="xLh-F0-Lcz" secondAttribute="top" id="rij-dz-Y5N"/>
+                <constraint firstAttribute="bottom" secondItem="DJk-Oi-OR0" secondAttribute="bottom" id="wgs-Fa-SQW"/>
+                <constraint firstItem="DJk-Oi-OR0" firstAttribute="leading" secondItem="xLh-F0-Lcz" secondAttribute="leading" id="xSm-FS-tY4"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="btnLeft" destination="DJk-Oi-OR0" id="JBO-Xg-byW"/>
+                <outlet property="btnRight" destination="O1o-8O-HJ0" id="Dvc-IE-VqW"/>
+                <outlet property="line" destination="MPD-EY-YFp" id="MEc-Jt-6Oy"/>
+                <outlet property="lineX" destination="lon-A0-43Z" id="FOH-Y3-M7M"/>
+            </connections>
+            <point key="canvasLocation" x="183" y="-229"/>
+        </view>
+    </objects>
+</document>

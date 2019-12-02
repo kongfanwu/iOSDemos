@@ -1,0 +1,1 @@
+{"code":1,"msg":"ok","data":{"list":[{"id":5299,"code":"PR000001","money":747,"price":249,"nums":3,"name":"水漾（老）","fenqi_zt":0},{"id":5300,"code":"PR000003","money":880,"price":110,"nums":8,"name":"顺美（老）","fenqi_zt":0},{"id":5301,"code":"PR000009","money":1463,"price":209,"nums":7,"name":"肤色（新）","fenqi_zt":0}]}}

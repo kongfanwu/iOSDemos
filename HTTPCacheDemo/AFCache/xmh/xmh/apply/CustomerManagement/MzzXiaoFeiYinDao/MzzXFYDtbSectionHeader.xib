@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="6Gp-gJ-X8E" customClass="MzzXFYDtbSectionHeader">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZRq-il-Y33">
+                    <rect key="frame" x="15" y="10" width="345" height="49"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FfX-e1-1Ja">
+                            <rect key="frame" x="15" y="16" width="38.5" height="18"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caN-h5-VU1">
+                            <rect key="frame" x="228" y="15.5" width="38.5" height="18"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rVl-N7-UBk">
+                            <rect key="frame" x="291.5" y="15.5" width="38.5" height="18"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="rVl-N7-UBk" secondAttribute="trailing" constant="15" id="00N-HT-7t8"/>
+                        <constraint firstItem="rVl-N7-UBk" firstAttribute="centerY" secondItem="ZRq-il-Y33" secondAttribute="centerY" id="I8T-bI-p44"/>
+                        <constraint firstItem="FfX-e1-1Ja" firstAttribute="leading" secondItem="ZRq-il-Y33" secondAttribute="leading" constant="15" id="IA5-Xc-0zx"/>
+                        <constraint firstItem="rVl-N7-UBk" firstAttribute="leading" secondItem="caN-h5-VU1" secondAttribute="trailing" constant="25" id="KUW-G4-Zaq"/>
+                        <constraint firstItem="caN-h5-VU1" firstAttribute="centerY" secondItem="ZRq-il-Y33" secondAttribute="centerY" id="fwg-E8-lPs"/>
+                        <constraint firstItem="FfX-e1-1Ja" firstAttribute="centerY" secondItem="ZRq-il-Y33" secondAttribute="centerY" id="oMt-gv-Nhm"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="ZRq-il-Y33" firstAttribute="leading" secondItem="6Gp-gJ-X8E" secondAttribute="leading" constant="15" id="5w9-Ce-5Jr"/>
+                <constraint firstAttribute="bottom" secondItem="ZRq-il-Y33" secondAttribute="bottom" id="7RK-Ao-SVM"/>
+                <constraint firstItem="ZRq-il-Y33" firstAttribute="top" secondItem="6Gp-gJ-X8E" secondAttribute="top" constant="10" id="GmV-V1-Qlk"/>
+                <constraint firstAttribute="trailing" secondItem="ZRq-il-Y33" secondAttribute="trailing" constant="15" id="cb5-Wn-81W"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="containerView" destination="ZRq-il-Y33" id="6OG-lN-FAx"/>
+                <outlet property="lbLeft" destination="FfX-e1-1Ja" id="M5F-Ti-8xL"/>
+                <outlet property="lbMiddle" destination="caN-h5-VU1" id="WpV-Bh-vQi"/>
+                <outlet property="lbRight" destination="rVl-N7-UBk" id="3J0-fg-hvg"/>
+            </connections>
+            <point key="canvasLocation" x="186.5" y="-690.5"/>
+        </view>
+    </objects>
+</document>

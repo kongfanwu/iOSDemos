@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="zkH-Mj-OfP" customClass="BookChartTbHeader">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="85"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="USf-1G-0u2">
+                    <rect key="frame" x="10" y="10" width="355" height="65"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nVL-BD-yp0">
+                            <rect key="frame" x="295" y="0.0" width="60" height="65"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="bzx-l3-ReS"/>
+                            </constraints>
+                            <state key="normal" title="搜索">
+                                <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ukp-yc-qyt">
+                            <rect key="frame" x="15" y="12" width="280" height="41"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Ukp-yc-qyt" firstAttribute="top" secondItem="USf-1G-0u2" secondAttribute="top" constant="12" id="0N4-ge-kh1"/>
+                        <constraint firstItem="nVL-BD-yp0" firstAttribute="top" secondItem="USf-1G-0u2" secondAttribute="top" id="JCc-WO-gf1"/>
+                        <constraint firstAttribute="trailing" secondItem="nVL-BD-yp0" secondAttribute="trailing" id="Nrd-Fw-3cq"/>
+                        <constraint firstAttribute="bottom" secondItem="nVL-BD-yp0" secondAttribute="bottom" id="dop-td-O8e"/>
+                        <constraint firstAttribute="bottom" secondItem="Ukp-yc-qyt" secondAttribute="bottom" constant="12" id="e0u-hT-13y"/>
+                        <constraint firstItem="Ukp-yc-qyt" firstAttribute="leading" secondItem="USf-1G-0u2" secondAttribute="leading" constant="15" id="i0v-WH-6ro"/>
+                        <constraint firstItem="nVL-BD-yp0" firstAttribute="leading" secondItem="Ukp-yc-qyt" secondAttribute="trailing" id="kms-wl-t65"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="USf-1G-0u2" secondAttribute="bottom" constant="10" id="Gdb-fn-Jll"/>
+                <constraint firstItem="USf-1G-0u2" firstAttribute="leading" secondItem="zkH-Mj-OfP" secondAttribute="leading" constant="10" id="Kiu-Pf-yyK"/>
+                <constraint firstItem="USf-1G-0u2" firstAttribute="top" secondItem="zkH-Mj-OfP" secondAttribute="top" constant="10" id="nfR-e2-75g"/>
+                <constraint firstAttribute="trailing" secondItem="USf-1G-0u2" secondAttribute="trailing" constant="10" id="oGy-a5-PJK"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="container" destination="Ukp-yc-qyt" id="Df2-g0-0Er"/>
+            </connections>
+            <point key="canvasLocation" x="154" y="-52"/>
+        </view>
+    </objects>
+</document>

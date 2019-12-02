@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="0nb-2N-nPK" customClass="LanternRecommendFootView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pHw-v2-LZP">
+                    <rect key="frame" x="15" y="13" width="165" height="44"/>
+                    <color key="backgroundColor" red="0.91764705882352937" green="0.0" blue="0.49411764705882355" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="btnLeftClick:" destination="0nb-2N-nPK" eventType="touchUpInside" id="058-ef-grL"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fnW-6Z-Skz">
+                    <rect key="frame" x="195" y="13" width="165" height="44"/>
+                    <color key="backgroundColor" red="0.91764705879999997" green="0.0" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="btnRightClick:" destination="0nb-2N-nPK" eventType="touchUpInside" id="2bD-SS-5gk"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="fnW-6Z-Skz" secondAttribute="bottom" constant="13" id="95O-h0-jSK"/>
+                <constraint firstItem="pHw-v2-LZP" firstAttribute="width" secondItem="fnW-6Z-Skz" secondAttribute="width" id="Bxv-f7-5kT"/>
+                <constraint firstItem="pHw-v2-LZP" firstAttribute="leading" secondItem="0nb-2N-nPK" secondAttribute="leading" constant="15" id="Jx0-Ho-XJe"/>
+                <constraint firstItem="fnW-6Z-Skz" firstAttribute="leading" secondItem="pHw-v2-LZP" secondAttribute="trailing" constant="15" id="KdJ-Ka-Uvi"/>
+                <constraint firstAttribute="bottom" secondItem="pHw-v2-LZP" secondAttribute="bottom" constant="13" id="XG1-0f-ger"/>
+                <constraint firstItem="fnW-6Z-Skz" firstAttribute="top" secondItem="0nb-2N-nPK" secondAttribute="top" constant="13" id="YHq-j3-fBK"/>
+                <constraint firstAttribute="trailing" secondItem="fnW-6Z-Skz" secondAttribute="trailing" constant="15" id="kk2-CJ-iV7"/>
+                <constraint firstItem="pHw-v2-LZP" firstAttribute="top" secondItem="0nb-2N-nPK" secondAttribute="top" constant="13" id="lTO-nj-9Bv"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="btnLeft" destination="pHw-v2-LZP" id="fQn-gF-7Qu"/>
+                <outlet property="btnRight" destination="fnW-6Z-Skz" id="2LL-9Q-oyS"/>
+            </connections>
+            <point key="canvasLocation" x="40" y="-309"/>
+        </view>
+    </objects>
+</document>

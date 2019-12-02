@@ -1,0 +1,26 @@
+{
+"code": 1,
+"msg": "ok",
+"data": {
+"list": [
+{
+"id": 1802,
+"code": "GD000001",
+"money": "240.00",
+"price": 80,
+"nums": 3,
+"name": "白金贝壳吸色面膜",
+"fenqi_zt": 0
+},
+{
+"id": 1803,
+"code": "GD000001",
+"money": "240.00",
+"price": 80,
+"nums": 3,
+"name": "白金贝壳吸色面膜",
+"fenqi_zt": 0
+}
+]
+}
+}

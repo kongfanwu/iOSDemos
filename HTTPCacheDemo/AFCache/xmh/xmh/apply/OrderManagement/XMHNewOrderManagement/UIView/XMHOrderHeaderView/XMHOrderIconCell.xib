@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="XMHOrderIconCell" id="gTV-IL-0wX" customClass="XMHOrderIconCell">
+            <rect key="frame" x="0.0" y="0.0" width="47" height="108"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="47" height="108"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7dK-h1-eg4">
+                        <rect key="frame" x="0.0" y="8" width="47" height="47"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="47" id="lAh-4U-NWr"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C2k-eD-TuM">
+                        <rect key="frame" x="0.0" y="58" width="47" height="50"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="7dK-h1-eg4" secondAttribute="trailing" id="4hP-Kl-sNg"/>
+                <constraint firstItem="C2k-eD-TuM" firstAttribute="top" secondItem="7dK-h1-eg4" secondAttribute="bottom" constant="3" id="Hw3-uO-I5H"/>
+                <constraint firstItem="7dK-h1-eg4" firstAttribute="leading" secondItem="C2k-eD-TuM" secondAttribute="leading" id="Kwq-i0-eEh"/>
+                <constraint firstItem="7dK-h1-eg4" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="OtH-ao-kdT"/>
+                <constraint firstAttribute="bottom" secondItem="C2k-eD-TuM" secondAttribute="bottom" id="WdY-SU-5ky"/>
+                <constraint firstItem="7dK-h1-eg4" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="dyc-Sp-FW7"/>
+                <constraint firstAttribute="trailing" secondItem="C2k-eD-TuM" secondAttribute="trailing" id="rj8-Lf-xIv"/>
+                <constraint firstItem="C2k-eD-TuM" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="wI0-At-0bf"/>
+            </constraints>
+            <size key="customSize" width="47" height="108"/>
+            <connections>
+                <outlet property="iconImageView" destination="7dK-h1-eg4" id="BgU-Qa-hQt"/>
+                <outlet property="textLab" destination="C2k-eD-TuM" id="ThF-4a-PyS"/>
+            </connections>
+            <point key="canvasLocation" x="135.19999999999999" y="146.62668665667167"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="QzQ-du-yKI" customClass="LanternMBottomView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lao-bZ-EPo">
+                    <rect key="frame" x="15" y="15" width="165" height="40"/>
+                    <color key="backgroundColor" red="0.94509803921568625" green="0.0039215686274509803" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="重置">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="reset:" destination="QzQ-du-yKI" eventType="touchUpInside" id="tVB-hq-DZ3"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yFx-rW-uyp">
+                    <rect key="frame" x="195" y="15" width="165" height="40"/>
+                    <color key="backgroundColor" red="0.94509803921568625" green="0.0039215686274509803" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="检索">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="search:" destination="QzQ-du-yKI" eventType="touchUpInside" id="iml-ol-66r"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="yFx-rW-uyp" firstAttribute="top" secondItem="QzQ-du-yKI" secondAttribute="top" constant="15" id="1Rp-Es-vbm"/>
+                <constraint firstAttribute="bottom" secondItem="Lao-bZ-EPo" secondAttribute="bottom" constant="15" id="37q-Mh-fNH"/>
+                <constraint firstItem="Lao-bZ-EPo" firstAttribute="width" secondItem="yFx-rW-uyp" secondAttribute="width" id="5bb-nx-ySD"/>
+                <constraint firstItem="yFx-rW-uyp" firstAttribute="leading" secondItem="Lao-bZ-EPo" secondAttribute="trailing" constant="15" id="Haz-yD-PRx"/>
+                <constraint firstItem="Lao-bZ-EPo" firstAttribute="leading" secondItem="QzQ-du-yKI" secondAttribute="leading" constant="15" id="eLO-iF-k9Y"/>
+                <constraint firstAttribute="trailing" secondItem="yFx-rW-uyp" secondAttribute="trailing" constant="15" id="p0A-hf-Pe6"/>
+                <constraint firstAttribute="bottom" secondItem="yFx-rW-uyp" secondAttribute="bottom" constant="15" id="sSK-27-Chx"/>
+                <constraint firstItem="Lao-bZ-EPo" firstAttribute="top" secondItem="QzQ-du-yKI" secondAttribute="top" constant="15" id="w8u-pB-sSO"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="btnLeft" destination="Lao-bZ-EPo" id="xfc-oK-eQB"/>
+                <outlet property="btnRight" destination="yFx-rW-uyp" id="KEO-TA-oyO"/>
+            </connections>
+            <point key="canvasLocation" x="548" y="-93"/>
+        </view>
+    </objects>
+</document>

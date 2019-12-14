@@ -59,4 +59,13 @@
     };
 }
 
+- (UIButton *(^)(NSString *, UIColor *, UIFont *, UIControlState state))xmhSetTitleAndColorAndFontAndState {
+    return ^UIButton *(NSString *title, UIColor *color, UIFont *font, UIControlState state){
+        [self setTitle:title forState:state];
+        [self setTitleColor:color forState:state];
+        self.titleLabel.font = font;
+        return self;
+    };
+}
+
 @end

@@ -28,9 +28,7 @@
     
     self.la = UILabel
     .xmhNewAndSuperView(self.view)
-    .xmhText(@"234567")
-    .xmhFont([UIFont systemFontOfSize:14])
-    .xmhTextColor(UIColor.redColor)
+    .xmhTextAndTextColorAndFont(@"234567", UIColor.redColor, [UIFont systemFontOfSize:14])
     .xmhTextAlignment(NSTextAlignmentCenter)
     .xmhBackgroundColor(UIColor.blueColor)
     .xmhCornerRadius(10)
@@ -44,12 +42,8 @@
 
     self.button = UIButton
     .xmhNewAndSuperView(self.view)
-    .xmhSetTitleAndState(@"title", UIControlStateNormal)
-    .xmhSetTitlColorAndState(UIColor.redColor, UIControlStateNormal)
+    .xmhSetTitleAndColorAndFontAndState(@"title", UIColor.redColor, [UIFont systemFontOfSize:30], UIControlStateNormal)
     .xmhSetBackgroundImageAndState([UIImage imageNamed:@"1"], UIControlStateNormal)
-    .xmhTitleLabel(^(UILabel *titleLabel){
-        titleLabel.xmhFont([UIFont systemFontOfSize:30]);
-    })
     .xmhMakeConstraints(^(MASConstraintMaker * make){
         make.size.mas_equalTo(CGSizeMake(200, 80));
         make.top.equalTo(self.la.mas_bottom);
@@ -74,7 +68,6 @@
     .xmhPlaceholder(@"place")
     .xmhDelegate(self)
     .xmhBackgroundColor(UIColor.orangeColor)
-    
     .xmhMakeConstraints(^(MASConstraintMaker * make){
         make.size.mas_equalTo(CGSizeMake(200, 50));
         make.top.equalTo(self.imageView.mas_bottom);

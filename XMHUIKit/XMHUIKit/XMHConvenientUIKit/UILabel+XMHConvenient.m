@@ -45,6 +45,15 @@
     };
 }
 
+- (UILabel *(^)(NSString *, UIColor *, UIFont *))xmhTextAndTextColorAndFont {
+    return ^UILabel *(NSString *text, UIColor *color, UIFont *font){
+        self.text = text;
+        self.textColor = color;
+        self.font = font;
+        return self;
+    };
+}
+
 
 @end
 

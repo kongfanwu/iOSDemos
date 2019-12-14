@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (UITextView *(^)(UIKeyboardType))xmhKeyboardType;
 - (UITextView *(^)(UIReturnKeyType))xmhReturnKeyType;
 - (UITextView *(^)(NSAttributedString *))xmhAttributedText;
+- (UITextView *(^)(NSString *, UIColor *, UIFont *))xmhTextAndTextColorAndFont;
 
 @end
 

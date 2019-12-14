@@ -66,4 +66,13 @@
     };
 }
 
+- (UITextView *(^)(NSString *, UIColor *, UIFont *))xmhTextAndTextColorAndFont {
+    return ^UITextView *(NSString *text, UIColor *color, UIFont *font){
+        self.text = text;
+        self.textColor = color;
+        self.font = font;
+        return self;
+    };
+}
+
 @end

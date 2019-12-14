@@ -8,9 +8,33 @@
 
 #import "UIImageView+XMHConvenient.h"
 
-#import <AppKit/AppKit.h>
-
-
 @implementation UIImageView (XMHConvenient)
 
+- (UIImageView *(^)(UIImage *))xmhImage {
+    return ^UIImageView *(UIImage *image){
+        self.image = image;
+        return self;
+    };
+}
+
+- (UIImageView *(^)(UIImage *))xmhHighlightedImage {
+    return ^UIImageView *(UIImage *image){
+        self.highlightedImage = image;
+        return self;
+    };
+}
+
+- (UIImageView *(^)(BOOL))xmhUserInteractionEnabled {
+    return ^UIImageView *(BOOL userInteractionEnabled){
+        self.userInteractionEnabled = userInteractionEnabled;
+        return self;
+    };
+}
+
+- (UIImageView *(^)(BOOL))xmhHighlighted {
+    return ^UIImageView *(BOOL highlighted){
+        self.highlighted = highlighted;
+        return self;
+    };
+}
 @end

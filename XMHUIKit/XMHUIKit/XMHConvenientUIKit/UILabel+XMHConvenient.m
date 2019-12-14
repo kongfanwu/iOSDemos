@@ -8,9 +8,43 @@
 
 #import "UILabel+XMHConvenient.h"
 
-#import <AppKit/AppKit.h>
-
-
 @implementation UILabel (XMHConvenient)
 
+- (UILabel *(^)(NSString *))xmhText {
+    return ^UILabel *(NSString *text){
+        self.text = text;
+        return self;
+    };
+}
+
+- (UILabel *(^)(UIColor *))xmhTextColor {
+    return ^UILabel *(UIColor *color){
+        self.textColor = color;
+        return self;
+    };
+}
+
+- (UILabel *(^)(UIFont *))xmhFont {
+    return ^UILabel *(UIFont *font){
+        self.font = font;
+        return self;
+    };
+}
+
+- (UILabel *(^)(NSTextAlignment))xmhTextAlignment {
+    return ^UILabel *(NSTextAlignment textAlignment){
+        self.textAlignment = textAlignment;
+        return self;
+    };
+}
+
+- (UILabel *(^)(NSInteger))xmhNumberOfLines {
+    return ^UILabel *(NSInteger numberOfLines){
+        self.numberOfLines = numberOfLines;
+        return self;
+    };
+}
+
+
 @end
+

@@ -14,8 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UILabel (XMHConvenient)
 
 - (UILabel *(^)(NSString *))xmhText;
-- (UILabel *(^)(UIFont *))xmhFont;
 - (UILabel *(^)(UIColor *))xmhTextColor;
+- (UILabel *(^)(UIFont *))xmhFont;
 - (UILabel *(^)(NSTextAlignment))xmhTextAlignment;
 
 @end

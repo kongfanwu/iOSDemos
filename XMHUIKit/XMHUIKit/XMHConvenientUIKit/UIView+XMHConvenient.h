@@ -9,8 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "Masonry.h"
 
-NS_ASSUME_NONNULL_BEGIN
+// 创建类
+#define XMHCreateClass(ClassType, CategoryName, ProtocolName) \
+@interface ClassType (CategoryName) <ProtocolName> \
+@end \
+@implementation ClassType (CategoryName) \
+@end \
 
+NS_ASSUME_NONNULL_BEGIN
 
 @interface UIView (XMHConvenient)
 
@@ -26,7 +32,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface UILabel (XMHConvenient2)
+@protocol XMHUILabelConvenient2Protocol <NSObject>
+@optional
 + (UILabel *(^)(UIView *))xmhNewAndSuperView;
 - (UILabel *(^)(UIView *))xmhSuperView;
 - (UILabel *(^)(CGRect))xmhFrame;
@@ -36,10 +43,10 @@ NS_ASSUME_NONNULL_BEGIN
 - (UILabel *(^)(CGFloat))xmhBorderWidth;
 - (UILabel *(^)(UIColor *))xmhBorderColor;
 @end
-@implementation UILabel (XMHConvenient2)
-@end
+XMHCreateClass(UILabel, XMHConvenient2, XMHUILabelConvenient2Protocol)
 
-@interface UIImageView (XMHConvenient2)
+@protocol XMHUIImageViewConvenient2Protocol <NSObject>
+@optional
 + (UIImageView *(^)(UIView *))xmhNewAndSuperView;
 - (UIImageView *(^)(UIView *))xmhSuperView;
 - (UIImageView *(^)(CGRect))xmhFrame;
@@ -49,10 +56,10 @@ NS_ASSUME_NONNULL_BEGIN
 - (UIImageView *(^)(CGFloat))xmhBorderWidth;
 - (UIImageView *(^)(UIColor *))xmhBorderColor;
 @end
-@implementation UIImageView (XMHConvenient2)
-@end
+XMHCreateClass(UIImageView, XMHConvenient2, XMHUIImageViewConvenient2Protocol)
 
-@interface UITextField (XMHConvenient2)
+@protocol XMHUIUITextFieldConvenient2Protocol <NSObject>
+@optional
 + (UITextField *(^)(UIView *))xmhNewAndSuperView;
 - (UITextField *(^)(UIView *))xmhSuperView;
 - (UITextField *(^)(CGRect))xmhFrame;
@@ -62,10 +69,10 @@ NS_ASSUME_NONNULL_BEGIN
 - (UITextField *(^)(CGFloat))xmhBorderWidth;
 - (UITextField *(^)(UIColor *))xmhBorderColor;
 @end
-@implementation UITextField (XMHConvenient2)
-@end
+XMHCreateClass(UITextField, XMHConvenient2, XMHUIUITextFieldConvenient2Protocol)
 
-@interface UITextView (XMHConvenient2)
+@protocol XMHUIUITextViewConvenient2Protocol <NSObject>
+@optional
 + (UITextView *(^)(UIView *))xmhNewAndSuperView;
 - (UITextView *(^)(UIView *))xmhSuperView;
 - (UITextView *(^)(CGRect))xmhFrame;
@@ -75,10 +82,10 @@ NS_ASSUME_NONNULL_BEGIN
 - (UITextView *(^)(CGFloat))xmhBorderWidth;
 - (UITextView *(^)(UIColor *))xmhBorderColor;
 @end
-@implementation UITextView (XMHConvenient2)
-@end
+XMHCreateClass(UITextView, XMHConvenient2, XMHUIUITextViewConvenient2Protocol)
 
-@interface UIControl (XMHConvenient2)
+@protocol XMHUIControlConvenient2Protocol <NSObject>
+@optional
 + (UIControl *(^)(UIView *))xmhNewAndSuperView;
 - (UIControl *(^)(UIView *))xmhSuperView;
 - (UIControl *(^)(CGRect))xmhFrame;
@@ -87,13 +94,12 @@ NS_ASSUME_NONNULL_BEGIN
 - (UIControl *(^)(CGFloat))xmhCornerRadius;
 - (UIControl *(^)(CGFloat))xmhBorderWidth;
 - (UIControl *(^)(UIColor *))xmhBorderColor;
-
 - (UIControl *(^)(UIControlEvents controlEvents, void(^)(UIButton *)))xmhAddEvent;
 @end
-@implementation UIControl (XMHConvenient2)
-@end
+XMHCreateClass(UIControl, XMHConvenient2, XMHUIControlConvenient2Protocol)
 
-@interface UIButton (XMHConvenient2)
+@protocol XMHUIButtonConvenient2Protocol <NSObject>
+@optional
 + (UIButton *(^)(UIView *))xmhNewAndSuperView;
 - (UIButton *(^)(UIView *))xmhSuperView;
 - (UIButton *(^)(CGRect))xmhFrame;
@@ -102,10 +108,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (UIButton *(^)(CGFloat))xmhCornerRadius;
 - (UIButton *(^)(CGFloat))xmhBorderWidth;
 - (UIButton *(^)(UIColor *))xmhBorderColor;
-
 - (UIButton *(^)(UIControlEvents controlEvents, void(^)(UIButton *)))xmhAddEvent;
 @end
-@implementation UIButton (XMHConvenient2)
-@end
+XMHCreateClass(UIButton, XMHConvenient2, XMHUIButtonConvenient2Protocol)
 
 NS_ASSUME_NONNULL_END

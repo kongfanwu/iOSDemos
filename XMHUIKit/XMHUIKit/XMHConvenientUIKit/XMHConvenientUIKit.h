@@ -16,5 +16,6 @@
 #import "UIImageView+XMHConvenient.h"
 #import "UITextField+XMHConvenient.h"
 #import "UITextView+XMHConvenient.h"
+#import "UITableView+XMHConvenient.h"
 
 #endif /* XMHConvenientUIKit_h */

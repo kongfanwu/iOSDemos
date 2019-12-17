@@ -10,16 +10,15 @@
 
 
 
-
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
+//    [self test];
+//    [self test2];
     return YES;
 }
 

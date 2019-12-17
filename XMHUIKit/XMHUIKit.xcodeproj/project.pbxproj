@@ -31,6 +31,7 @@
 		F217F29123A4D02000774D09 /* UIImageView+XMHConvenient.m in Sources */ = {isa = PBXBuildFile; fileRef = F217F29023A4D02000774D09 /* UIImageView+XMHConvenient.m */; };
 		F217F29423A4D38400774D09 /* UITextField+XMHConvenient.m in Sources */ = {isa = PBXBuildFile; fileRef = F217F29323A4D38400774D09 /* UITextField+XMHConvenient.m */; };
 		F217F29723A4DB5000774D09 /* UITextView+XMHConvenient.m in Sources */ = {isa = PBXBuildFile; fileRef = F217F29623A4DB5000774D09 /* UITextView+XMHConvenient.m */; };
+		F217F29A23A71B0C00774D09 /* UITableView+XMHConvenient.m in Sources */ = {isa = PBXBuildFile; fileRef = F217F29923A71B0C00774D09 /* UITableView+XMHConvenient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +87,8 @@
 		F217F29323A4D38400774D09 /* UITextField+XMHConvenient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+XMHConvenient.m"; sourceTree = "<group>"; };
 		F217F29523A4DB5000774D09 /* UITextView+XMHConvenient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextView+XMHConvenient.h"; sourceTree = "<group>"; };
 		F217F29623A4DB5000774D09 /* UITextView+XMHConvenient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextView+XMHConvenient.m"; sourceTree = "<group>"; };
+		F217F29823A71B0C00774D09 /* UITableView+XMHConvenient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+XMHConvenient.h"; sourceTree = "<group>"; };
+		F217F29923A71B0C00774D09 /* UITableView+XMHConvenient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+XMHConvenient.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +156,8 @@
 				F217F29323A4D38400774D09 /* UITextField+XMHConvenient.m */,
 				F217F29523A4DB5000774D09 /* UITextView+XMHConvenient.h */,
 				F217F29623A4DB5000774D09 /* UITextView+XMHConvenient.m */,
+				F217F29823A71B0C00774D09 /* UITableView+XMHConvenient.h */,
+				F217F29923A71B0C00774D09 /* UITableView+XMHConvenient.m */,
 			);
 			path = XMHConvenientUIKit;
 			sourceTree = "<group>";
@@ -275,6 +280,7 @@
 				F217F28723A3417300774D09 /* UIView+XMHConvenient.m in Sources */,
 				F217F28B23A4BBB100774D09 /* UIButton+XMHConvenient.m in Sources */,
 				F217F24923A31F8C00774D09 /* SceneDelegate.m in Sources */,
+				F217F29A23A71B0C00774D09 /* UITableView+XMHConvenient.m in Sources */,
 				F217F28323A329DF00774D09 /* MASViewConstraint.m in Sources */,
 				F217F27B23A329DF00774D09 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				F217F28223A329DF00774D09 /* MASConstraint.m in Sources */,

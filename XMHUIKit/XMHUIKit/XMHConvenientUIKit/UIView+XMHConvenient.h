@@ -9,107 +9,67 @@
 #import <UIKit/UIKit.h>
 #import "Masonry.h"
 
-// 创建类
-#define XMHCreateClass(ClassType, CategoryName, ProtocolName) \
+// 创建分类
+#define XMHConvenientCreateCateory(ClassType, CategoryName, ProtocolName) \
 @interface ClassType (CategoryName) <ProtocolName> \
 @end \
 @implementation ClassType (CategoryName) \
 @end \
 
+// 创建协议、分类，并让分类遵循协议。 ...动态参数为协议需要添加的方法
+#define XMHConvenientCreateProtocolAndCategory(ClassType, ...) \
+@protocol XMH##ClassType##Convenient2Protocol <NSObject> \
+@optional \
+XMHConvenientUIViewMethods(ClassType *, \
+__VA_ARGS__ \
+) \
+@end \
+XMHConvenientCreateCateory(ClassType, XMHConvenient2, XMH##ClassType##Convenient2Protocol) \
+
+// 定义UIControl基类方法
+#define XMHConvenientUIControlMethods(ClassType, ...) \
+__VA_ARGS__ \
+- (ClassType (^)(UIControlEvents controlEvents, void(^)(ClassType)))xmhAddEvent; \
+
+// 定义UIView基类方法
+#define XMHConvenientUIViewMethods(ClassType, ...) \
+__VA_ARGS__ \
++ (ClassType (^)(UIView *))xmhNewAndSuperView; \
+- (ClassType(^)(UIView *))xmhSuperView; \
+- (ClassType(^)(CGRect))xmhFrame; \
+- (ClassType(^)(void(^)(MASConstraintMaker *)))xmhMakeConstraints; \
+- (ClassType(^)(UIColor *))xmhBackgroundColor; \
+- (ClassType(^)(CGFloat))xmhCornerRadius; \
+- (ClassType(^)(CGFloat))xmhBorderWidth; \
+- (ClassType(^)(UIColor *))xmhBorderColor; \
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIView (XMHConvenient)
-
+// 可直接写成此宏，考虑此文件是UIVeiw和应该有示例代码。此处不替换。
+//XMHConvenientCreateProtocolAndCategory(UIView,
+//+ (instancetype)xmhNew;
+//)
+@protocol XMHUIViewConvenient2Protocol <NSObject>
+@optional
+XMHConvenientUIViewMethods(UIView *,
 + (instancetype)xmhNew;
-+ (UIView *(^)(UIView *))xmhNewAndSuperView;
-- (UIView *(^)(UIView *))xmhSuperView;
-- (UIView *(^)(CGRect))xmhFrame;
-- (UIView *(^)(void(^)(MASConstraintMaker *)))xmhMakeConstraints;
-- (UIView *(^)(UIColor *))xmhBackgroundColor;
-- (UIView *(^)(CGFloat))xmhCornerRadius;
-- (UIView *(^)(CGFloat))xmhBorderWidth;
-- (UIView *(^)(UIColor *))xmhBorderColor;
-
+)
 @end
+XMHConvenientCreateCateory(UIView, XMHConvenient2, XMHUIViewConvenient2Protocol)
 
-@protocol XMHUILabelConvenient2Protocol <NSObject>
-@optional
-+ (UILabel *(^)(UIView *))xmhNewAndSuperView;
-- (UILabel *(^)(UIView *))xmhSuperView;
-- (UILabel *(^)(CGRect))xmhFrame;
-- (UILabel *(^)(void(^)(MASConstraintMaker *)))xmhMakeConstraints;
-- (UILabel *(^)(UIColor *))xmhBackgroundColor;
-- (UILabel *(^)(CGFloat))xmhCornerRadius;
-- (UILabel *(^)(CGFloat))xmhBorderWidth;
-- (UILabel *(^)(UIColor *))xmhBorderColor;
-@end
-XMHCreateClass(UILabel, XMHConvenient2, XMHUILabelConvenient2Protocol)
 
-@protocol XMHUIImageViewConvenient2Protocol <NSObject>
-@optional
-+ (UIImageView *(^)(UIView *))xmhNewAndSuperView;
-- (UIImageView *(^)(UIView *))xmhSuperView;
-- (UIImageView *(^)(CGRect))xmhFrame;
-- (UIImageView *(^)(void(^)(MASConstraintMaker *)))xmhMakeConstraints;
-- (UIImageView *(^)(UIColor *))xmhBackgroundColor;
-- (UIImageView *(^)(CGFloat))xmhCornerRadius;
-- (UIImageView *(^)(CGFloat))xmhBorderWidth;
-- (UIImageView *(^)(UIColor *))xmhBorderColor;
-@end
-XMHCreateClass(UIImageView, XMHConvenient2, XMHUIImageViewConvenient2Protocol)
-
-@protocol XMHUIUITextFieldConvenient2Protocol <NSObject>
-@optional
-+ (UITextField *(^)(UIView *))xmhNewAndSuperView;
-- (UITextField *(^)(UIView *))xmhSuperView;
-- (UITextField *(^)(CGRect))xmhFrame;
-- (UITextField *(^)(void(^)(MASConstraintMaker *)))xmhMakeConstraints;
-- (UITextField *(^)(UIColor *))xmhBackgroundColor;
-- (UITextField *(^)(CGFloat))xmhCornerRadius;
-- (UITextField *(^)(CGFloat))xmhBorderWidth;
-- (UITextField *(^)(UIColor *))xmhBorderColor;
-@end
-XMHCreateClass(UITextField, XMHConvenient2, XMHUIUITextFieldConvenient2Protocol)
-
-@protocol XMHUIUITextViewConvenient2Protocol <NSObject>
-@optional
-+ (UITextView *(^)(UIView *))xmhNewAndSuperView;
-- (UITextView *(^)(UIView *))xmhSuperView;
-- (UITextView *(^)(CGRect))xmhFrame;
-- (UITextView *(^)(void(^)(MASConstraintMaker *)))xmhMakeConstraints;
-- (UITextView *(^)(UIColor *))xmhBackgroundColor;
-- (UITextView *(^)(CGFloat))xmhCornerRadius;
-- (UITextView *(^)(CGFloat))xmhBorderWidth;
-- (UITextView *(^)(UIColor *))xmhBorderColor;
-@end
-XMHCreateClass(UITextView, XMHConvenient2, XMHUIUITextViewConvenient2Protocol)
-
-@protocol XMHUIControlConvenient2Protocol <NSObject>
-@optional
-+ (UIControl *(^)(UIView *))xmhNewAndSuperView;
-- (UIControl *(^)(UIView *))xmhSuperView;
-- (UIControl *(^)(CGRect))xmhFrame;
-- (UIControl *(^)(void(^)(MASConstraintMaker *)))xmhMakeConstraints;
-- (UIControl *(^)(UIColor *))xmhBackgroundColor;
-- (UIControl *(^)(CGFloat))xmhCornerRadius;
-- (UIControl *(^)(CGFloat))xmhBorderWidth;
-- (UIControl *(^)(UIColor *))xmhBorderColor;
-- (UIControl *(^)(UIControlEvents controlEvents, void(^)(UIButton *)))xmhAddEvent;
-@end
-XMHCreateClass(UIControl, XMHConvenient2, XMHUIControlConvenient2Protocol)
-
-@protocol XMHUIButtonConvenient2Protocol <NSObject>
-@optional
-+ (UIButton *(^)(UIView *))xmhNewAndSuperView;
-- (UIButton *(^)(UIView *))xmhSuperView;
-- (UIButton *(^)(CGRect))xmhFrame;
-- (UIButton *(^)(void(^)(MASConstraintMaker *)))xmhMakeConstraints;
-- (UIButton *(^)(UIColor *))xmhBackgroundColor;
-- (UIButton *(^)(CGFloat))xmhCornerRadius;
-- (UIButton *(^)(CGFloat))xmhBorderWidth;
-- (UIButton *(^)(UIColor *))xmhBorderColor;
-- (UIButton *(^)(UIControlEvents controlEvents, void(^)(UIButton *)))xmhAddEvent;
-@end
-XMHCreateClass(UIButton, XMHConvenient2, XMHUIButtonConvenient2Protocol)
+XMHConvenientCreateProtocolAndCategory(UILabel)
+XMHConvenientCreateProtocolAndCategory(UIImageView)
+XMHConvenientCreateProtocolAndCategory(UITextField)
+XMHConvenientCreateProtocolAndCategory(UITextView)
+XMHConvenientCreateProtocolAndCategory(UIControl,
+    XMHConvenientUIControlMethods(UIControl *)
+    // 在此可添加协议方法定义。例如：
+    // - (void)test;
+)
+XMHConvenientCreateProtocolAndCategory(UIButton,
+    XMHConvenientUIControlMethods(UIButton *)
+)
+XMHConvenientCreateProtocolAndCategory(UITableView)
 
 NS_ASSUME_NONNULL_END

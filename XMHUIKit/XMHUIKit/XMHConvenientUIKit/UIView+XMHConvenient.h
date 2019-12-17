@@ -20,7 +20,7 @@
 #define XMHConvenientCreateProtocolAndCategory(ClassType, ...) \
 @protocol XMH##ClassType##Convenient2Protocol <NSObject> \
 @optional \
-XMHConvenientUIViewMethods(ClassType *, \
+XMHConvenientUIViewMethods(__kindof ClassType *, \
 __VA_ARGS__ \
 ) \
 @end \
@@ -29,7 +29,7 @@ XMHConvenientCreateCateory(ClassType, XMHConvenient2, XMH##ClassType##Convenient
 // 定义UIControl基类方法
 #define XMHConvenientUIControlMethods(ClassType, ...) \
 __VA_ARGS__ \
-- (ClassType (^)(UIControlEvents controlEvents, void(^)(ClassType)))xmhAddEvent; \
+- (__kindof ClassType (^)(UIControlEvents controlEvents, void(^)(ClassType)))xmhAddEvent; \
 
 // 定义UIView基类方法
 #define XMHConvenientUIViewMethods(ClassType, ...) \
@@ -51,7 +51,7 @@ NS_ASSUME_NONNULL_BEGIN
 //)
 @protocol XMHUIViewConvenient2Protocol <NSObject>
 @optional
-XMHConvenientUIViewMethods(UIView *,
+XMHConvenientUIViewMethods(__kindof UIView *,
 + (instancetype)xmhNew;
 )
 @end

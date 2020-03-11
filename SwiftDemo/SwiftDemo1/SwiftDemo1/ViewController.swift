@@ -45,15 +45,25 @@ class ViewController: UIViewController {
 //        let moveNearerToZero = chooseStepFunction(backward: true)
 //        moveNearerToZero(1)
         
-       let clsName = Bundle.main.infoDictionary!["CFBundleExecutable"] as? String//这是获取项目的名称，
-
-        let className=clsName! + "." + "Person"
-
-                let viewC = NSClassFromString_Swift("Person")! as! Person.Type //这里需要指定类的类型XX.Type
-        print(viewC)
+//       let clsName = Bundle.main.infoDictionary!["CFBundleExecutable"] as? String//这是获取项目的名称，
+//
+//        let className=clsName! + "." + "Person"
+//
+//                let viewC = NSClassFromString_Swift("Person")! as! Person.Type //这里需要指定类的类型XX.Type
+//        print(viewC)
 //        let vc=viewC.init()
         
 //
+        
+        let text = "123456789"
+        
+        let range = text.range(of: "4567")
+        
+        print(range!.lowerBound.utf16Offset(in: text))
+        print(range!.upperBound.utf16Offset(in: text))
+        
+        print(text.distance(from: text.startIndex, to: range!.lowerBound))
+        print(text.distance(from: range!.lowerBound, to: range!.upperBound))
         
     }
 

@@ -1,0 +1,662 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F27D5491232B8469003508E8 /* FTMenDianModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F27D5490232B8469003508E8 /* FTMenDianModel.m */; };
+		F27D5494232B85CD003508E8 /* FTFormUniversalConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = F27D5493232B85CD003508E8 /* FTFormUniversalConversion.m */; };
+		F27D5497232E77BF003508E8 /* FTFormParamVerify.m in Sources */ = {isa = PBXBuildFile; fileRef = F27D5496232E77BF003508E8 /* FTFormParamVerify.m */; };
+		F27D54E1233101D3003508E8 /* FTFormButtonsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F27D54E0233101D3003508E8 /* FTFormButtonsCell.m */; };
+		F27D54E423310289003508E8 /* FTButtonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F27D54E323310289003508E8 /* FTButtonModel.m */; };
+		F27D54ED2331F840003508E8 /* FTTInformationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F27D54EC2331F840003508E8 /* FTTInformationCell.m */; };
+		F27D54F02331FA6B003508E8 /* FTTInformationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F27D54EF2331FA6B003508E8 /* FTTInformationModel.m */; };
+		F27D54F323320DA5003508E8 /* FTTChectView.m in Sources */ = {isa = PBXBuildFile; fileRef = F27D54F223320DA5003508E8 /* FTTChectView.m */; };
+		F27D54F623320E52003508E8 /* FTTChectButtonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F27D54F523320E52003508E8 /* FTTChectButtonModel.m */; };
+		F27D54FA2332661E003508E8 /* UIView+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = F27D54F92332661E003508E8 /* UIView+Image.m */; };
+		F296137B2326824E00DF4281 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F296137A2326824E00DF4281 /* AppDelegate.m */; };
+		F296137E2326824E00DF4281 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F296137D2326824E00DF4281 /* ViewController.m */; };
+		F29613812326824E00DF4281 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F296137F2326824E00DF4281 /* Main.storyboard */; };
+		F29613832326824F00DF4281 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F29613822326824F00DF4281 /* Assets.xcassets */; };
+		F29613862326824F00DF4281 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F29613842326824F00DF4281 /* LaunchScreen.storyboard */; };
+		F29613892326824F00DF4281 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F29613882326824F00DF4281 /* main.m */; };
+		F2961394232682C800DF4281 /* FTForm.m in Sources */ = {isa = PBXBuildFile; fileRef = F2961393232682C800DF4281 /* FTForm.m */; };
+		F2961397232682D700DF4281 /* FTFormSection.m in Sources */ = {isa = PBXBuildFile; fileRef = F2961396232682D700DF4281 /* FTFormSection.m */; };
+		F296139A232682E500DF4281 /* FTFormRow.m in Sources */ = {isa = PBXBuildFile; fileRef = F2961399232682E500DF4281 /* FTFormRow.m */; };
+		F296139D2326888C00DF4281 /* FTFormConst.m in Sources */ = {isa = PBXBuildFile; fileRef = F296139C2326888C00DF4281 /* FTFormConst.m */; };
+		F29613A323268C0700DF4281 /* FTFormInputCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F29613A223268C0700DF4281 /* FTFormInputCell.m */; };
+		F29613A623268D3B00DF4281 /* FTFormVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F29613A523268D3B00DF4281 /* FTFormVC.m */; };
+		F29613AA2327D07B00DF4281 /* FTFormBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F29613A92327D07B00DF4281 /* FTFormBaseCell.m */; };
+		F29613C52327E3EC00DF4281 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F29613AD2327E3EC00DF4281 /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		F29613C62327E3EC00DF4281 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F29613B62327E3EC00DF4281 /* ViewController+MASAdditions.m */; };
+		F29613C72327E3EC00DF4281 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = F29613BA2327E3EC00DF4281 /* MASCompositeConstraint.m */; };
+		F29613C82327E3EC00DF4281 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = F29613BB2327E3EC00DF4281 /* MASConstraintMaker.m */; };
+		F29613C92327E3EC00DF4281 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = F29613BC2327E3EC00DF4281 /* MASLayoutConstraint.m */; };
+		F29613CA2327E3EC00DF4281 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F29613BD2327E3EC00DF4281 /* NSArray+MASAdditions.m */; };
+		F29613CB2327E3EC00DF4281 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F29613BE2327E3EC00DF4281 /* View+MASAdditions.m */; };
+		F29613CC2327E3EC00DF4281 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = F29613C12327E3EC00DF4281 /* MASConstraint.m */; };
+		F29613CD2327E3EC00DF4281 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = F29613C32327E3EC00DF4281 /* MASViewConstraint.m */; };
+		F29613CE2327E3EC00DF4281 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = F29613C42327E3EC00DF4281 /* MASViewAttribute.m */; };
+		F2A8FBFC23291C4B00522936 /* FTSelectVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A8FBFB23291C4B00522936 /* FTSelectVC.m */; };
+		F2A8FBFF23291CD900522936 /* FTFormAction.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A8FBFE23291CD900522936 /* FTFormAction.m */; };
+		F2A8FC042329221100522936 /* UIView+FTFormExtern.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A8FC032329221100522936 /* UIView+FTFormExtern.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F27D548F232B8469003508E8 /* FTMenDianModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTMenDianModel.h; sourceTree = "<group>"; };
+		F27D5490232B8469003508E8 /* FTMenDianModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTMenDianModel.m; sourceTree = "<group>"; };
+		F27D5492232B85CD003508E8 /* FTFormUniversalConversion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTFormUniversalConversion.h; sourceTree = "<group>"; };
+		F27D5493232B85CD003508E8 /* FTFormUniversalConversion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTFormUniversalConversion.m; sourceTree = "<group>"; };
+		F27D5495232E77BF003508E8 /* FTFormParamVerify.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTFormParamVerify.h; sourceTree = "<group>"; };
+		F27D5496232E77BF003508E8 /* FTFormParamVerify.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTFormParamVerify.m; sourceTree = "<group>"; };
+		F27D54DF233101D3003508E8 /* FTFormButtonsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTFormButtonsCell.h; sourceTree = "<group>"; };
+		F27D54E0233101D3003508E8 /* FTFormButtonsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTFormButtonsCell.m; sourceTree = "<group>"; };
+		F27D54E223310289003508E8 /* FTButtonModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTButtonModel.h; sourceTree = "<group>"; };
+		F27D54E323310289003508E8 /* FTButtonModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTButtonModel.m; sourceTree = "<group>"; };
+		F27D54EA23310EFA003508E8 /* ViewControllerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewControllerProtocol.h; sourceTree = "<group>"; };
+		F27D54EB2331F840003508E8 /* FTTInformationCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTTInformationCell.h; sourceTree = "<group>"; };
+		F27D54EC2331F840003508E8 /* FTTInformationCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTTInformationCell.m; sourceTree = "<group>"; };
+		F27D54EE2331FA6B003508E8 /* FTTInformationModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTTInformationModel.h; sourceTree = "<group>"; };
+		F27D54EF2331FA6B003508E8 /* FTTInformationModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTTInformationModel.m; sourceTree = "<group>"; };
+		F27D54F123320DA5003508E8 /* FTTChectView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTTChectView.h; sourceTree = "<group>"; };
+		F27D54F223320DA5003508E8 /* FTTChectView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTTChectView.m; sourceTree = "<group>"; };
+		F27D54F423320E52003508E8 /* FTTChectButtonModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTTChectButtonModel.h; sourceTree = "<group>"; };
+		F27D54F523320E52003508E8 /* FTTChectButtonModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTTChectButtonModel.m; sourceTree = "<group>"; };
+		F27D54F82332661E003508E8 /* UIView+Image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Image.h"; sourceTree = "<group>"; };
+		F27D54F92332661E003508E8 /* UIView+Image.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Image.m"; sourceTree = "<group>"; };
+		F27D54FB23326D6C003508E8 /* FTFormVCProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTFormVCProtocol.h; sourceTree = "<group>"; };
+		F29613762326824E00DF4281 /* FTFormDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FTFormDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F29613792326824E00DF4281 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F296137A2326824E00DF4281 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F296137C2326824E00DF4281 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F296137D2326824E00DF4281 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F29613802326824E00DF4281 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F29613822326824F00DF4281 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F29613852326824F00DF4281 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F29613872326824F00DF4281 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F29613882326824F00DF4281 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F2961392232682C800DF4281 /* FTForm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTForm.h; sourceTree = "<group>"; };
+		F2961393232682C800DF4281 /* FTForm.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTForm.m; sourceTree = "<group>"; };
+		F2961395232682D700DF4281 /* FTFormSection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTFormSection.h; sourceTree = "<group>"; };
+		F2961396232682D700DF4281 /* FTFormSection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTFormSection.m; sourceTree = "<group>"; };
+		F2961398232682E500DF4281 /* FTFormRow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTFormRow.h; sourceTree = "<group>"; };
+		F2961399232682E500DF4281 /* FTFormRow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTFormRow.m; sourceTree = "<group>"; };
+		F296139B2326888C00DF4281 /* FTFormConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTFormConst.h; sourceTree = "<group>"; };
+		F296139C2326888C00DF4281 /* FTFormConst.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTFormConst.m; sourceTree = "<group>"; };
+		F29613A123268C0700DF4281 /* FTFormInputCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTFormInputCell.h; sourceTree = "<group>"; };
+		F29613A223268C0700DF4281 /* FTFormInputCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTFormInputCell.m; sourceTree = "<group>"; };
+		F29613A423268D3B00DF4281 /* FTFormVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTFormVC.h; sourceTree = "<group>"; };
+		F29613A523268D3B00DF4281 /* FTFormVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTFormVC.m; sourceTree = "<group>"; };
+		F29613A723268DF500DF4281 /* FTFormHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTFormHeader.h; sourceTree = "<group>"; };
+		F29613A82327D07B00DF4281 /* FTFormBaseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTFormBaseCell.h; sourceTree = "<group>"; };
+		F29613A92327D07B00DF4281 /* FTFormBaseCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTFormBaseCell.m; sourceTree = "<group>"; };
+		F29613AC2327E3EC00DF4281 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
+		F29613AD2327E3EC00DF4281 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		F29613AE2327E3EC00DF4281 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
+		F29613AF2327E3EC00DF4281 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASLayoutConstraint.h; sourceTree = "<group>"; };
+		F29613B02327E3EC00DF4281 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		F29613B12327E3EC00DF4281 /* MASConstraintMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraintMaker.h; sourceTree = "<group>"; };
+		F29613B22327E3EC00DF4281 /* View+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASAdditions.h"; sourceTree = "<group>"; };
+		F29613B32327E3EC00DF4281 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		F29613B42327E3EC00DF4281 /* MASUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASUtilities.h; sourceTree = "<group>"; };
+		F29613B52327E3EC00DF4281 /* MASViewAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewAttribute.h; sourceTree = "<group>"; };
+		F29613B62327E3EC00DF4281 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		F29613B72327E3EC00DF4281 /* MASViewConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewConstraint.h; sourceTree = "<group>"; };
+		F29613B82327E3EC00DF4281 /* MASConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraint.h; sourceTree = "<group>"; };
+		F29613B92327E3EC00DF4281 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		F29613BA2327E3EC00DF4281 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
+		F29613BB2327E3EC00DF4281 /* MASConstraintMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraintMaker.m; sourceTree = "<group>"; };
+		F29613BC2327E3EC00DF4281 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASLayoutConstraint.m; sourceTree = "<group>"; };
+		F29613BD2327E3EC00DF4281 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		F29613BE2327E3EC00DF4281 /* View+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "View+MASAdditions.m"; sourceTree = "<group>"; };
+		F29613BF2327E3EC00DF4281 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		F29613C02327E3EC00DF4281 /* Masonry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Masonry.h; sourceTree = "<group>"; };
+		F29613C12327E3EC00DF4281 /* MASConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraint.m; sourceTree = "<group>"; };
+		F29613C22327E3EC00DF4281 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
+		F29613C32327E3EC00DF4281 /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
+		F29613C42327E3EC00DF4281 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
+		F29613CF2327E40E00DF4281 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		F2A8FBFA23291C4B00522936 /* FTSelectVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTSelectVC.h; sourceTree = "<group>"; };
+		F2A8FBFB23291C4B00522936 /* FTSelectVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTSelectVC.m; sourceTree = "<group>"; };
+		F2A8FBFD23291CD900522936 /* FTFormAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTFormAction.h; sourceTree = "<group>"; };
+		F2A8FBFE23291CD900522936 /* FTFormAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTFormAction.m; sourceTree = "<group>"; };
+		F2A8FC022329221100522936 /* UIView+FTFormExtern.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+FTFormExtern.h"; sourceTree = "<group>"; };
+		F2A8FC032329221100522936 /* UIView+FTFormExtern.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+FTFormExtern.m"; sourceTree = "<group>"; };
+		F2A8FC2C232925EA00522936 /* FTFormActionViewControllerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTFormActionViewControllerProtocol.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F29613732326824E00DF4281 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F27D54E523310E35003508E8 /* FormCustom */ = {
+			isa = PBXGroup;
+			children = (
+				F27D54F7233265E8003508E8 /* Category */,
+				F27D54E923310EA0003508E8 /* Protocol */,
+				F27D54E823310E70003508E8 /* M */,
+				F27D54E723310E69003508E8 /* V */,
+				F27D54E623310E63003508E8 /* C */,
+			);
+			path = FormCustom;
+			sourceTree = "<group>";
+		};
+		F27D54E623310E63003508E8 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				F296137C2326824E00DF4281 /* ViewController.h */,
+				F296137D2326824E00DF4281 /* ViewController.m */,
+				F2A8FBFA23291C4B00522936 /* FTSelectVC.h */,
+				F2A8FBFB23291C4B00522936 /* FTSelectVC.m */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		F27D54E723310E69003508E8 /* V */ = {
+			isa = PBXGroup;
+			children = (
+				F27D54F123320DA5003508E8 /* FTTChectView.h */,
+				F27D54F223320DA5003508E8 /* FTTChectView.m */,
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		F27D54E823310E70003508E8 /* M */ = {
+			isa = PBXGroup;
+			children = (
+				F27D548F232B8469003508E8 /* FTMenDianModel.h */,
+				F27D5490232B8469003508E8 /* FTMenDianModel.m */,
+				F27D54E223310289003508E8 /* FTButtonModel.h */,
+				F27D54E323310289003508E8 /* FTButtonModel.m */,
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		F27D54E923310EA0003508E8 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				F27D54EA23310EFA003508E8 /* ViewControllerProtocol.h */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		F27D54F7233265E8003508E8 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				F27D54F82332661E003508E8 /* UIView+Image.h */,
+				F27D54F92332661E003508E8 /* UIView+Image.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		F296136D2326824E00DF4281 = {
+			isa = PBXGroup;
+			children = (
+				F29613782326824E00DF4281 /* FTFormDemo */,
+				F29613772326824E00DF4281 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F29613772326824E00DF4281 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F29613762326824E00DF4281 /* FTFormDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F29613782326824E00DF4281 /* FTFormDemo */ = {
+			isa = PBXGroup;
+			children = (
+				F29613AB2327E3EC00DF4281 /* Masonry */,
+				F296139F23268BC800DF4281 /* Demo */,
+				F296139E23268BA100DF4281 /* FTForm */,
+				F29613792326824E00DF4281 /* AppDelegate.h */,
+				F296137A2326824E00DF4281 /* AppDelegate.m */,
+				F27D54E523310E35003508E8 /* FormCustom */,
+				F29613CF2327E40E00DF4281 /* PrefixHeader.pch */,
+				F296137F2326824E00DF4281 /* Main.storyboard */,
+				F29613822326824F00DF4281 /* Assets.xcassets */,
+				F29613842326824F00DF4281 /* LaunchScreen.storyboard */,
+				F29613872326824F00DF4281 /* Info.plist */,
+				F29613882326824F00DF4281 /* main.m */,
+			);
+			path = FTFormDemo;
+			sourceTree = "<group>";
+		};
+		F296138F2326827B00DF4281 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				F29613A423268D3B00DF4281 /* FTFormVC.h */,
+				F29613A523268D3B00DF4281 /* FTFormVC.m */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		F29613902326828900DF4281 /* V */ = {
+			isa = PBXGroup;
+			children = (
+				F29613A82327D07B00DF4281 /* FTFormBaseCell.h */,
+				F29613A92327D07B00DF4281 /* FTFormBaseCell.m */,
+				F29613A123268C0700DF4281 /* FTFormInputCell.h */,
+				F29613A223268C0700DF4281 /* FTFormInputCell.m */,
+				F27D54DF233101D3003508E8 /* FTFormButtonsCell.h */,
+				F27D54E0233101D3003508E8 /* FTFormButtonsCell.m */,
+				F27D54EB2331F840003508E8 /* FTTInformationCell.h */,
+				F27D54EC2331F840003508E8 /* FTTInformationCell.m */,
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		F29613912326829200DF4281 /* M */ = {
+			isa = PBXGroup;
+			children = (
+				F29613A723268DF500DF4281 /* FTFormHeader.h */,
+				F296139B2326888C00DF4281 /* FTFormConst.h */,
+				F296139C2326888C00DF4281 /* FTFormConst.m */,
+				F2961392232682C800DF4281 /* FTForm.h */,
+				F2961393232682C800DF4281 /* FTForm.m */,
+				F2961395232682D700DF4281 /* FTFormSection.h */,
+				F2961396232682D700DF4281 /* FTFormSection.m */,
+				F2961398232682E500DF4281 /* FTFormRow.h */,
+				F2961399232682E500DF4281 /* FTFormRow.m */,
+				F2A8FBFD23291CD900522936 /* FTFormAction.h */,
+				F2A8FBFE23291CD900522936 /* FTFormAction.m */,
+				F27D5492232B85CD003508E8 /* FTFormUniversalConversion.h */,
+				F27D5493232B85CD003508E8 /* FTFormUniversalConversion.m */,
+				F27D5495232E77BF003508E8 /* FTFormParamVerify.h */,
+				F27D5496232E77BF003508E8 /* FTFormParamVerify.m */,
+				F27D54EE2331FA6B003508E8 /* FTTInformationModel.h */,
+				F27D54EF2331FA6B003508E8 /* FTTInformationModel.m */,
+				F27D54F423320E52003508E8 /* FTTChectButtonModel.h */,
+				F27D54F523320E52003508E8 /* FTTChectButtonModel.m */,
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		F296139E23268BA100DF4281 /* FTForm */ = {
+			isa = PBXGroup;
+			children = (
+				F2A8FC052329232500522936 /* Protocol */,
+				F2A8FC00232921D800522936 /* Category */,
+				F29613912326829200DF4281 /* M */,
+				F29613902326828900DF4281 /* V */,
+				F296138F2326827B00DF4281 /* C */,
+			);
+			path = FTForm;
+			sourceTree = "<group>";
+		};
+		F296139F23268BC800DF4281 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				F29613A023268BCF00DF4281 /* V */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		F29613A023268BCF00DF4281 /* V */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		F29613AB2327E3EC00DF4281 /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				F29613AC2327E3EC00DF4281 /* MASCompositeConstraint.h */,
+				F29613AD2327E3EC00DF4281 /* NSLayoutConstraint+MASDebugAdditions.m */,
+				F29613AE2327E3EC00DF4281 /* MASConstraint+Private.h */,
+				F29613AF2327E3EC00DF4281 /* MASLayoutConstraint.h */,
+				F29613B02327E3EC00DF4281 /* NSArray+MASShorthandAdditions.h */,
+				F29613B12327E3EC00DF4281 /* MASConstraintMaker.h */,
+				F29613B22327E3EC00DF4281 /* View+MASAdditions.h */,
+				F29613B32327E3EC00DF4281 /* NSArray+MASAdditions.h */,
+				F29613B42327E3EC00DF4281 /* MASUtilities.h */,
+				F29613B52327E3EC00DF4281 /* MASViewAttribute.h */,
+				F29613B62327E3EC00DF4281 /* ViewController+MASAdditions.m */,
+				F29613B72327E3EC00DF4281 /* MASViewConstraint.h */,
+				F29613B82327E3EC00DF4281 /* MASConstraint.h */,
+				F29613B92327E3EC00DF4281 /* NSLayoutConstraint+MASDebugAdditions.h */,
+				F29613BA2327E3EC00DF4281 /* MASCompositeConstraint.m */,
+				F29613BB2327E3EC00DF4281 /* MASConstraintMaker.m */,
+				F29613BC2327E3EC00DF4281 /* MASLayoutConstraint.m */,
+				F29613BD2327E3EC00DF4281 /* NSArray+MASAdditions.m */,
+				F29613BE2327E3EC00DF4281 /* View+MASAdditions.m */,
+				F29613BF2327E3EC00DF4281 /* View+MASShorthandAdditions.h */,
+				F29613C02327E3EC00DF4281 /* Masonry.h */,
+				F29613C12327E3EC00DF4281 /* MASConstraint.m */,
+				F29613C22327E3EC00DF4281 /* ViewController+MASAdditions.h */,
+				F29613C32327E3EC00DF4281 /* MASViewConstraint.m */,
+				F29613C42327E3EC00DF4281 /* MASViewAttribute.m */,
+			);
+			path = Masonry;
+			sourceTree = "<group>";
+		};
+		F2A8FC00232921D800522936 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				F2A8FC022329221100522936 /* UIView+FTFormExtern.h */,
+				F2A8FC032329221100522936 /* UIView+FTFormExtern.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		F2A8FC052329232500522936 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				F2A8FC2C232925EA00522936 /* FTFormActionViewControllerProtocol.h */,
+				F27D54FB23326D6C003508E8 /* FTFormVCProtocol.h */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F29613752326824E00DF4281 /* FTFormDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F296138C2326824F00DF4281 /* Build configuration list for PBXNativeTarget "FTFormDemo" */;
+			buildPhases = (
+				F29613722326824E00DF4281 /* Sources */,
+				F29613732326824E00DF4281 /* Frameworks */,
+				F29613742326824E00DF4281 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FTFormDemo;
+			productName = FTFormDemo;
+			productReference = F29613762326824E00DF4281 /* FTFormDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F296136E2326824E00DF4281 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = KFW;
+				TargetAttributes = {
+					F29613752326824E00DF4281 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+				};
+			};
+			buildConfigurationList = F29613712326824E00DF4281 /* Build configuration list for PBXProject "FTFormDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F296136D2326824E00DF4281;
+			productRefGroup = F29613772326824E00DF4281 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F29613752326824E00DF4281 /* FTFormDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F29613742326824E00DF4281 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F29613862326824F00DF4281 /* LaunchScreen.storyboard in Resources */,
+				F29613832326824F00DF4281 /* Assets.xcassets in Resources */,
+				F29613812326824E00DF4281 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F29613722326824E00DF4281 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F29613C52327E3EC00DF4281 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				F296137E2326824E00DF4281 /* ViewController.m in Sources */,
+				F27D5497232E77BF003508E8 /* FTFormParamVerify.m in Sources */,
+				F27D5491232B8469003508E8 /* FTMenDianModel.m in Sources */,
+				F29613CC2327E3EC00DF4281 /* MASConstraint.m in Sources */,
+				F27D54E423310289003508E8 /* FTButtonModel.m in Sources */,
+				F29613CD2327E3EC00DF4281 /* MASViewConstraint.m in Sources */,
+				F27D54F323320DA5003508E8 /* FTTChectView.m in Sources */,
+				F29613C62327E3EC00DF4281 /* ViewController+MASAdditions.m in Sources */,
+				F29613CE2327E3EC00DF4281 /* MASViewAttribute.m in Sources */,
+				F27D54F02331FA6B003508E8 /* FTTInformationModel.m in Sources */,
+				F296139D2326888C00DF4281 /* FTFormConst.m in Sources */,
+				F29613C72327E3EC00DF4281 /* MASCompositeConstraint.m in Sources */,
+				F29613CB2327E3EC00DF4281 /* View+MASAdditions.m in Sources */,
+				F29613A623268D3B00DF4281 /* FTFormVC.m in Sources */,
+				F29613A323268C0700DF4281 /* FTFormInputCell.m in Sources */,
+				F29613C92327E3EC00DF4281 /* MASLayoutConstraint.m in Sources */,
+				F27D54E1233101D3003508E8 /* FTFormButtonsCell.m in Sources */,
+				F27D54F623320E52003508E8 /* FTTChectButtonModel.m in Sources */,
+				F29613C82327E3EC00DF4281 /* MASConstraintMaker.m in Sources */,
+				F2961394232682C800DF4281 /* FTForm.m in Sources */,
+				F2961397232682D700DF4281 /* FTFormSection.m in Sources */,
+				F2A8FBFF23291CD900522936 /* FTFormAction.m in Sources */,
+				F2A8FBFC23291C4B00522936 /* FTSelectVC.m in Sources */,
+				F29613AA2327D07B00DF4281 /* FTFormBaseCell.m in Sources */,
+				F29613CA2327E3EC00DF4281 /* NSArray+MASAdditions.m in Sources */,
+				F27D54ED2331F840003508E8 /* FTTInformationCell.m in Sources */,
+				F29613892326824F00DF4281 /* main.m in Sources */,
+				F27D54FA2332661E003508E8 /* UIView+Image.m in Sources */,
+				F27D5494232B85CD003508E8 /* FTFormUniversalConversion.m in Sources */,
+				F296139A232682E500DF4281 /* FTFormRow.m in Sources */,
+				F2A8FC042329221100522936 /* UIView+FTFormExtern.m in Sources */,
+				F296137B2326824E00DF4281 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F296137F2326824E00DF4281 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F29613802326824E00DF4281 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F29613842326824F00DF4281 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F29613852326824F00DF4281 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F296138A2326824F00DF4281 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F296138B2326824F00DF4281 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F296138D2326824F00DF4281 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/FTFormDemo/PrefixHeader.pch";
+				INFOPLIST_FILE = FTFormDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.FTFormDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F296138E2326824F00DF4281 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/FTFormDemo/PrefixHeader.pch";
+				INFOPLIST_FILE = FTFormDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.FTFormDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F29613712326824E00DF4281 /* Build configuration list for PBXProject "FTFormDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F296138A2326824F00DF4281 /* Debug */,
+				F296138B2326824F00DF4281 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F296138C2326824F00DF4281 /* Build configuration list for PBXNativeTarget "FTFormDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F296138D2326824F00DF4281 /* Debug */,
+				F296138E2326824F00DF4281 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F296136E2326824E00DF4281 /* Project object */;
+}

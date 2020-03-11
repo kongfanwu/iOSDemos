@@ -4,7 +4,7 @@
 //
 //  Created by kfw on 2019/12/19.
 //  Copyright © 2019 神灯智能. All rights reserved.
-//
+// https://www.jianshu.com/p/14075b5ec5ff
 
 #import "ViewController.h"
 #import <ReactiveObjC/ReactiveObjC.h>
@@ -12,7 +12,7 @@
 
 #define aba(a)
 
-@interface ViewController ()
+@interface ViewController () <UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UIButton *button;
 @property (nonatomic, strong) RACDisposable *disposable;
@@ -117,14 +117,16 @@
 //可以省去设置 delegate 和实现代理方法的步骤。
 - (void)test3 {
     /* 监听 TextField 的输入（内容改变就会调用） */
-    UITextField *textField;
-    [[textField rac_textSignal] subscribeNext:^(NSString * _Nullable x) {
-        NSLog(@"输入框内容：%@", x);
+    [[self.textField rac_textSignal] subscribeNext:^(NSString * _Nullable x) {
+        if (x.length > 3) {
+            self.textField.text = [x substringToIndex:3];
+        }
     }];
     
     /* 添加监听条件 */
-    [[textField.rac_textSignal filter:^BOOL(NSString * _Nullable value) {
-        return value.length > 5; // 表示输入文字长度 > 5 时才会调用下面的 block
+    
+    [[[self.textField.rac_textSignal distinctUntilChanged] filter:^BOOL(NSString * _Nullable value) {
+        return value.length <= 3; // 表示输入文字长度 > 5 时才会调用下面的 block
     }] subscribeNext:^(NSString * _Nullable x) {
          NSLog(@"输入框内容：%@", x);
     }];
@@ -236,11 +238,14 @@
 // 代理
 // 以UITextField为例，当需要对UITextField逻辑处理时，往往需要实现其各类代理方法，大大增加了代码量。当使用RAC之后
 - (void)test12 {
-    UITextField *textField;
-    [[textField rac_signalForSelector:@selector(textFieldDidBeginEditing:) fromProtocol:@protocol(UITextFieldDelegate)] subscribeNext:^(RACTuple * _Nullable x) {
-        
+    _textField.delegate = self; // 一定要设置代理
+    RACSignal *sig = [self rac_signalForSelector:@selector(textFieldDidBeginEditing:) fromProtocol:@protocol(UITextFieldDelegate)];
+    [sig subscribeNext:^(RACTuple * _Nullable x) {
+        NSLog(@"textFieldDidBeginEditing");
     }];
+    
 }
+
 // --------------------映射
 // map映射用法。
 - (void)test13 {
@@ -369,7 +374,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self test];
+    [self test12];
 
     
 }

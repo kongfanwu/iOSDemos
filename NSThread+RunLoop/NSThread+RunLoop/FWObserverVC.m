@@ -27,6 +27,8 @@
 
 -(void)observer
 {
+//    https://blog.ibireme.com/2015/05/18/runloop/#more-41710
+    
     //1.创建监听者
     /*
      第一个参数:怎么分配存储空间

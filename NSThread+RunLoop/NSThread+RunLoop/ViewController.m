@@ -47,34 +47,38 @@
 
 static int num = 0;
 - (void)task:(id)obj {
-    BOOL isMainT = [NSThread isMainThread];
-    NSLog(@"isMainT:%d", isMainT);
-    
-    NSThread *thread = NSThread.currentThread; // 获取当前线程
-    for (int i = 0; i < 10; i++) {
-        NSLog(@"%d", i);
-        num += i;
+    @autoreleasepool {
+        BOOL isMainT = [NSThread isMainThread];
+        NSLog(@"isMainT:%d", isMainT);
+        
+        NSThread *thread = NSThread.currentThread; // 获取当前线程
+        for (int i = 0; i < 10; i++) {
+            NSLog(@"%d", i);
+            num += i;
+        }
+        
+        //    if (num > 100) {
+        //        NSLog(@"removePort");
+        ////        [[NSRunLoop currentRunLoop] removePort:[NSMachPort port] forMode:NSDefaultRunLoopMode];
+        //
+        //        CFRunLoopStop(CFRunLoopGetMain());
+        //
+        //
+        //    }
+        
+        // 子线程执行完任务，回到主线程刷线UI
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.label.text = @(num).stringValue;
+            
+        });
     }
-    
-//    if (num > 100) {
-//        NSLog(@"removePort");
-////        [[NSRunLoop currentRunLoop] removePort:[NSMachPort port] forMode:NSDefaultRunLoopMode];
-//
-//        CFRunLoopStop(CFRunLoopGetMain());
-//
-//
-//    }
-    
-    // 子线程执行完任务，回到主线程刷线UI
-    dispatch_async(dispatch_get_main_queue(), ^{
-        self.label.text = @(num).stringValue;
-       
-    });
 }
 
 + (void)stopThread {
-//    [subThreadRunLoop removePort:self.messagePort forMode:NSDefaultRunLoopMode];
+//    [subThreadRunLoop removePort:self.messagePort forMode:NSDefaultRunLoopMode]; 可能会销毁，不可靠
+// 线程里边 调用 exit 方法也是不可靠的。可能会销毁
 //    调用void CFRunLoopStop(CFRunLoopRef rl) 来干掉runloop
+    CFRunLoopStop(CFRunLoopGetCurrent());
 }
 
 + (NSThread *)networkRequestThread {
@@ -105,6 +109,7 @@ static int num = 0;
         [runLoop addPort:[NSMachPort port] forMode:NSDefaultRunLoopMode];
         // 运行线程
         [runLoop run];
+        NSLog(@"runLoop 退出了");
     }
 }
 

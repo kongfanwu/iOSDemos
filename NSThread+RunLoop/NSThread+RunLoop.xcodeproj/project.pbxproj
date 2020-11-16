@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F2036A0E2440137D007D125C /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = F2036A0D2440137D007D125C /* Person.m */; };
 		F230800F22EFF4A8009E3B78 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F230800E22EFF4A8009E3B78 /* AppDelegate.m */; };
 		F230801222EFF4A8009E3B78 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F230801122EFF4A8009E3B78 /* ViewController.m */; };
 		F230801522EFF4A8009E3B78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F230801322EFF4A8009E3B78 /* Main.storyboard */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F2036A0C2440137D007D125C /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		F2036A0D2440137D007D125C /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		F230800A22EFF4A8009E3B78 /* NSThread+RunLoop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NSThread+RunLoop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F230800D22EFF4A8009E3B78 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F230800E22EFF4A8009E3B78 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -246,6 +249,8 @@
 				F230802822F01DC5009E3B78 /* 2.png */,
 				F230800D22EFF4A8009E3B78 /* AppDelegate.h */,
 				F230800E22EFF4A8009E3B78 /* AppDelegate.m */,
+				F2036A0C2440137D007D125C /* Person.h */,
+				F2036A0D2440137D007D125C /* Person.m */,
 				F230801022EFF4A8009E3B78 /* ViewController.h */,
 				F230801122EFF4A8009E3B78 /* ViewController.m */,
 				F230802322F01C98009E3B78 /* FWTableViewVC.h */,
@@ -533,6 +538,7 @@
 			files = (
 				F230801222EFF4A8009E3B78 /* ViewController.m in Sources */,
 				F230818C22F037AA009E3B78 /* FWObserverVC.m in Sources */,
+				F2036A0E2440137D007D125C /* Person.m in Sources */,
 				F230801D22EFF4A8009E3B78 /* main.m in Sources */,
 				F230818822F02AC4009E3B78 /* FWTimeViewController.m in Sources */,
 				F230800F22EFF4A8009E3B78 /* AppDelegate.m in Sources */,

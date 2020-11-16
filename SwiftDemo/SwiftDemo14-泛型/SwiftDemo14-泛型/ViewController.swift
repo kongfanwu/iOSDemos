@@ -153,9 +153,7 @@ protocol SuffixableContainer: Container2 {
  someContainer 和 anotherContainer 包含相同类型的元素。
  someContainer 中的元素可以通过不等于操作符（!=）来检查它们是否相同。
  */
-func allItemsMatch<C1: Container, C2: Container>
-    (_ someContainer: C1, _ anotherContainer: C2) -> Bool
-    where C1.Item == C2.Item, C1.Item: Equatable {
+func allItemsMatch<C1: Container, C2: Container>(_ someContainer: C1, _ anotherContainer: C2) -> Bool where C1.Item == C2.Item, C1.Item: Equatable {
         
         // 检查两个容器含有相同数量的元素
         if someContainer.count != anotherContainer.count {

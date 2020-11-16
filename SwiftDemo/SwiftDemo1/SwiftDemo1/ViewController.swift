@@ -55,15 +55,36 @@ class ViewController: UIViewController {
         
 //
         
-        let text = "123456789"
+//        let text = "123456789"
+//
+//        let range = text.range(of: "4567")
+//
+//        print(range!.lowerBound.utf16Offset(in: text))
+//        print(range!.upperBound.utf16Offset(in: text))
+//
+//        print(text.distance(from: text.startIndex, to: range!.lowerBound))
+//        print(text.distance(from: range!.lowerBound, to: range!.upperBound))
         
-        let range = text.range(of: "4567")
+        // goto 语句
+//        findAnswer: for m in 1...300{
+//            for n in 1...30{
+//                if m == 5{
+//                    print(m , n)
+//                    break findAnswer //跳出整个循环,想当与C语言中的goto语句不建议使用
+//                }
+//            }
+//            print(m)
+//        }
         
-        print(range!.lowerBound.utf16Offset(in: text))
-        print(range!.upperBound.utf16Offset(in: text))
-        
-        print(text.distance(from: text.startIndex, to: range!.lowerBound))
-        print(text.distance(from: range!.lowerBound, to: range!.upperBound))
+        findAnswer: for m in 1...300{
+            switch m {
+            case 5:
+                break findAnswer
+            default:
+                break
+            }
+            print(m)
+        }
         
     }
 

@@ -32,7 +32,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // 1
-//        var shopping_list = [53,4,2,45]
+        var shopping_list = [53,4,2,45]
+        
+        
 //        for item in shopping_list.sorted(){
 //            print(item,terminator: " ")
 //        }

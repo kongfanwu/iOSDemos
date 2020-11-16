@@ -11,6 +11,7 @@
 #import "FWTableViewVC.h"
 #import "FWTimeViewController.h"
 #import "FWObserverVC.h"
+#import "Person.h"
 
 @interface AppDelegate ()
 

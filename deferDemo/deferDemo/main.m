@@ -23,8 +23,8 @@ __attribute__((diagnose_if(a >= 0, "12333", "warning")));
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {
-        int val =tabs(1); // warning: Redundant abs call
-        int val3 = tabs(val);
+//        int val =tabs(1); // warning: Redundant abs call
+//        int val3 = tabs(val);
         
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }

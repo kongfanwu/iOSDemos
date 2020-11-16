@@ -13,6 +13,9 @@
 		F285338B22BA62A900C2430C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F285338A22BA62A900C2430C /* Assets.xcassets */; };
 		F285338E22BA62A900C2430C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F285338C22BA62A900C2430C /* LaunchScreen.storyboard */; };
 		F285339122BA62A900C2430C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F285339022BA62A900C2430C /* main.m */; };
+		F2C5F4DD2519956F00D38DF5 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C5F4DC2519956F00D38DF5 /* Person.m */; };
+		F2F5B1EB24F60BD700C8F18F /* NSDictionary+XMHMap.m in Sources */ = {isa = PBXBuildFile; fileRef = F2F5B1E724F60BD700C8F18F /* NSDictionary+XMHMap.m */; };
+		F2F5B1EC24F60BD700C8F18F /* NSArray+XMHMap.m in Sources */ = {isa = PBXBuildFile; fileRef = F2F5B1E824F60BD700C8F18F /* NSArray+XMHMap.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		F285338D22BA62A900C2430C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F285338F22BA62A900C2430C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F285339022BA62A900C2430C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F2C5F4DB2519956F00D38DF5 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		F2C5F4DC2519956F00D38DF5 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		F2F5B1E724F60BD700C8F18F /* NSDictionary+XMHMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+XMHMap.m"; sourceTree = "<group>"; };
+		F2F5B1E824F60BD700C8F18F /* NSArray+XMHMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+XMHMap.m"; sourceTree = "<group>"; };
+		F2F5B1E924F60BD700C8F18F /* NSDictionary+XMHMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+XMHMap.h"; sourceTree = "<group>"; };
+		F2F5B1EA24F60BD700C8F18F /* NSArray+XMHMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+XMHMap.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +67,13 @@
 		F285338022BA62A900C2430C /* deferDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F2F5B1E624F60BD700C8F18F /* Category */,
 				F285338122BA62A900C2430C /* AppDelegate.h */,
 				F285338222BA62A900C2430C /* AppDelegate.m */,
 				F285338422BA62A900C2430C /* ViewController.h */,
 				F285338522BA62A900C2430C /* ViewController.m */,
+				F2C5F4DB2519956F00D38DF5 /* Person.h */,
+				F2C5F4DC2519956F00D38DF5 /* Person.m */,
 				F285338722BA62A900C2430C /* Main.storyboard */,
 				F285338A22BA62A900C2430C /* Assets.xcassets */,
 				F285338C22BA62A900C2430C /* LaunchScreen.storyboard */,
@@ -69,6 +81,18 @@
 				F285339022BA62A900C2430C /* main.m */,
 			);
 			path = deferDemo;
+			sourceTree = "<group>";
+		};
+		F2F5B1E624F60BD700C8F18F /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				F2F5B1EA24F60BD700C8F18F /* NSArray+XMHMap.h */,
+				F2F5B1E824F60BD700C8F18F /* NSArray+XMHMap.m */,
+				F2F5B1E924F60BD700C8F18F /* NSDictionary+XMHMap.h */,
+				F2F5B1E724F60BD700C8F18F /* NSDictionary+XMHMap.m */,
+			);
+			name = Category;
+			path = ../../Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,9 +165,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2C5F4DD2519956F00D38DF5 /* Person.m in Sources */,
 				F285338622BA62A900C2430C /* ViewController.m in Sources */,
+				F2F5B1EB24F60BD700C8F18F /* NSDictionary+XMHMap.m in Sources */,
 				F285339122BA62A900C2430C /* main.m in Sources */,
 				F285338322BA62A900C2430C /* AppDelegate.m in Sources */,
+				F2F5B1EC24F60BD700C8F18F /* NSArray+XMHMap.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

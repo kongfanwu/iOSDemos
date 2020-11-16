@@ -15,7 +15,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *userTF;
 @property (weak, nonatomic) IBOutlet UITextField *pwdTF;
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
-
+///
+@property (nonatomic, strong) model *m1;
 
 
 @end
@@ -25,7 +26,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    self.ml = model.new;
+    self.m1 = model.new;
+    
+    [RACObserve(self.m1, select) subscribeNext:^(id  _Nullable x) {
+       NSLog(@"---:%@", x);
+    }];
+//    self.m1.select = YES;
+//    self.m1.select = NO;
+
+    [self.m1 setValue:@(YES) forKey:@"select"];
+    [self.m1 setValue:@(NO) forKey:@"select"];
+//    [self.m1 setValue:@"kk1" forKeyPath:@"name"];
+//    [self.m1 setValue:@"kk2" forKeyPath:@"_name"];
+    
 //
 //    RAC(self.label, text, @"foobar") = self.tf.rac_textSignal;
 //    RAC(self.ml, name) = self.tf.rac_textSignal;
@@ -47,11 +60,11 @@
 //    [[self.button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
 //        NSLog(@"---:%@", x);
 //    }];
-    _userTF.text = @"123";
-    RAC(self.loginButton, selected) = [RACSignal combineLatest:@[self.userTF.rac_textSignal,self.pwdTF.rac_textSignal] reduce:^(NSString *userName, NSString *password) {
-            NSLog(@"%@ %@", userName, password);
-            return @(userName.length > 0 && password.length > 0);
-        }];
+//    _userTF.text = @"123";
+//    RAC(self.loginButton, selected) = [RACSignal combineLatest:@[self.userTF.rac_textSignal,self.pwdTF.rac_textSignal] reduce:^(NSString *userName, NSString *password) {
+//            NSLog(@"%@ %@", userName, password);
+//            return @(userName.length > 0 && password.length > 0);
+//        }];
     
    
 }

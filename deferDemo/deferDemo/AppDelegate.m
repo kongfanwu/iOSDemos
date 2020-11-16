@@ -7,8 +7,15 @@
 //
 
 #import "AppDelegate.h"
-
+#import "NSArray+XMHMap.h"
+#import "Person.h"
 @interface AppDelegate ()
+///
+@property (nonatomic, strong) NSArray <NSString *> *arr;
+
+//- (instancetype)initWithObjects:(ObjectType)firstObj, ... NS_REQUIRES_NIL_TERMINATION;
+///
+@property (nonatomic, copy) void (^block)(NSString *name, ...);
 
 @end
 
@@ -16,7 +23,38 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+//    self.arr = @[@"1", @"2", @"3", @"4"];
+//    NSArray *result = _arr.xmh_map(^id (id obj){
+//        return [NSString stringWithFormat:@"%@%@", obj, obj];
+//    });
+//    NSLog(@"result=%@", result); // 11 22  33
+//
+//    NSArray *result2 = _arr.xmh_map2(^id (NSUInteger idx, NSString *obj) {
+//        return [obj isEqualToString:@"2"] ? nil : obj; // 返回 nil 过滤
+//    });
+//    NSLog(@"result2=%@", result2); // 11  33
+//
+//    NSInteger sum = _arr.xmh_reduce(0, ^NSInteger (NSInteger x, NSInteger y) {
+//        return x + y;
+//    });
+//    NSLog(@"sum = %ld", sum);
+    
+    [self setBlock:^(NSString *name, ...){
+        va_list args;
+        va_start(args, name); // scan for arguments after firstObject.
+        // get rest of the objects until nil is found
+        for (NSString *str = name; str != nil; str = va_arg(args,NSString*)) {
+            NSLog(@"------:%@", str);
+        }
+        
+        va_end(args);
+    }];
+    self.block(@"1", @"2", @"3", nil);
+    
+    Person.new.xmhText(@"4", @"5", @"6", nil);
+    
+    
     return YES;
 }
 

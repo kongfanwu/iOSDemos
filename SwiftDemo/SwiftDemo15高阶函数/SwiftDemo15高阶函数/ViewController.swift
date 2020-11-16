@@ -12,7 +12,7 @@ class Personn {
     var name: String = ""
 }
 
-
+//https://blog.csdn.net/mo_xiao_mo/article/details/78424714
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -39,9 +39,47 @@ class ViewController: UIViewController {
 //
 //        let jsonStr = timeDic.jsonString()
 //        print(jsonStr)
-        var string = "123456789"
-        let text = string.stringByReplacingCharactersInRange(index: 9, length: 1, replacText: "q")
-        print(text)
+//        var string = "123456789"
+//        let text = string.stringByReplacingCharactersInRange(index: 9, length: 1, replacText: "q")
+//        print(text)
+        
+//        let arr = [1, 2, 3, 4]
+//        let arr2 = arr.map({
+//            $0 + 1
+//        })
+//        print(arr2)
+        
+        class Person: NSObject {}
+        
+       var namesOfIntegers = ["1", "2", "3", "4", "5", "6", "7"]
+        
+//        var dataArray = [[String]]()
+//        var cellArray: [String]!
+//        for (index, obj) in namesOfIntegers.enumerated() {
+//            if index % 3 == 0 {
+//                if index != 0 {
+//                    dataArray.append(cellArray)
+//                }
+//                cellArray = [String]()
+//                cellArray.append(obj)
+//            } else {
+//                cellArray.append(obj)
+//            }
+//        }
+//        dataArray.append(cellArray)
+//        print(dataArray)
+        
+        var dataArray = [[String]]()
+        for (index, obj) in namesOfIntegers.enumerated() {
+            let rowIndex = Int(floorf(Float(index) / 3.0))
+            if index % 3 == 0 {
+                dataArray.append([String]())
+                dataArray[rowIndex].append(obj)
+            } else {
+                dataArray[rowIndex].append(obj)
+            }
+        }
+        print(dataArray)
     }
 
 

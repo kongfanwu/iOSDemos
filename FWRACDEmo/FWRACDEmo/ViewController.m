@@ -5,7 +5,8 @@
 //  Created by kfw on 2019/12/19.
 //  Copyright © 2019 神灯智能. All rights reserved.
 // https://www.jianshu.com/p/14075b5ec5ff
-
+// https://www.jianshu.com/p/fecbe23d45c1
+// https://github.com/Draveness/analyze/blob/master/contents/ReactiveObjC/RACSignal.md
 #import "ViewController.h"
 #import <ReactiveObjC/ReactiveObjC.h>
 #import "ReactiveObjC-umbrella.h"
@@ -145,10 +146,18 @@
 - (void)test5 {
     UIButton *button;
     UITextField *_username, *_password;
+    // 多个心血号监听处理
     RAC(button, enabled) = [RACSignal combineLatest:@[_username.rac_textSignal, _password.rac_textSignal] reduce:^id _Nullable(NSString * username, NSString * password){
         
         return @(username.length && password.length);
     }];
+    
+    // 单个信号监听处理
+    RAC(button, enabled) = [_username.rac_textSignal map:^id _Nullable(NSString * _Nullable username) {
+        return @(username.length);
+    }];
+    
+    
 }
 
 //8. 监听 Notification 通知事件
@@ -301,6 +310,13 @@
     [subject sendNext:@1111];
     [subject sendNext:@2222];
     [subject sendNext:@2222];
+    
+    [[RACObserve(self.textField, hidden) distinctUntilChanged] subscribeNext:^(id  _Nullable x) {
+        
+    }];
+//    [[self.textField.rac_textSignal distinctUntilChanged] subscribeNext:^(NSString * _Nullable x) {
+//
+//    }];
 }
 
 - (void)test15 {
@@ -376,9 +392,6 @@
     
     [self test12];
 
-    
 }
-
-
 
 @end

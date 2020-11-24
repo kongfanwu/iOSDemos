@@ -590,9 +590,25 @@
     [subject sendNext:@"发送信号"];
 }
 
+- (void)test24 {
+    RACSignal *flattenSignal = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+        [[RACScheduler mainThreadScheduler] afterDelay:2 schedule:^{
+            [subscriber sendNext:@"11"];
+            [[RACScheduler mainThreadScheduler] afterDelay:2 schedule:^{
+                [subscriber sendError:nil];
+            }];
+        }];
+        return nil;
+    }];
+    // 如果有错误，显示错误提示，否则将Loading提前self信号显示
+    // catchTo: 如果信号是错误，返回新的信号。
+    // startWith: 先执行通过@"Loading"生成的新信号。再执行self信号。内部使用 concat :信号串联 技术
+    RAC(_label, text) = [[flattenSignal catchTo:[RACSignal return:@"Error"]] startWith:@"Loading"];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self test23];
+    [self test24];
 
 }
 

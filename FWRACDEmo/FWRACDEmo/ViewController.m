@@ -7,6 +7,16 @@
 // https://www.jianshu.com/p/14075b5ec5ff
 // https://www.jianshu.com/p/fecbe23d45c1
 // https://github.com/Draveness/analyze/blob/master/contents/ReactiveObjC/RACSignal.md
+// https://ld246.com/article/1481187709262
+// 美团团队 https://tech.meituan.com/2015/09/08/talk-about-reactivecocoas-cold-signal-and-hot-signal-part-1.html
+
+/*
+ 什么是冷信号与热信号
+ 冷热信号的概念源于.NET框架Reactive Extensions(RX)中的Hot Observable和Cold Observable，两者的区别是：
+ Hot Observable是主动的，尽管你并没有订阅事件，但是它会时刻推送，就像鼠标移动；而Cold Observable是被动的，只有当你订阅的时候，它才会发布消息。
+ Hot Observable可以有多个订阅者，是一对多，集合可以与订阅者共享信息；而Cold Observable只能一对一，当有不同的订阅者，消息是重新完整发送。
+ */
+
 #import "ViewController.h"
 #import <ReactiveObjC/ReactiveObjC.h>
 #import "ReactiveObjC-umbrella.h"
@@ -19,9 +29,21 @@
 @property (nonatomic, strong) RACDisposable *disposable;
 /** <##> */
 @property (nonatomic, strong) RACSignal *signal;
+///
+@property (weak, nonatomic) IBOutlet UILabel *label;
+@property (nonatomic, strong) UIActivityIndicatorView *activity;
 @end
 
 @implementation ViewController
+
+- (UIActivityIndicatorView *)activity {
+    if (_activity) return _activity;
+    _activity = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];//指定进度轮的大小
+    [_activity setCenter:CGPointMake(CGRectGetWidth(self.view.bounds) / 2, CGRectGetHeight(self.view.bounds) / 2)];//指定进度轮中心点
+    [_activity setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleLarge];//设置进度轮显示类型
+    [self.view addSubview:_activity];
+    return _activity;
+}
 
 /*
  信号映射：map、flattenMap
@@ -49,7 +71,7 @@
 - (void)test {
     // 订阅多个信号
     @weakify(self);
-    /* 创建信号 */
+    // 这是一个冷信号，每次订阅都会执行信号block，一对一关系
     RACSignal *signal = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
         /* 发送信号 */
         [subscriber sendNext:@"发送信号"];
@@ -72,7 +94,7 @@
 //    /* 取消订阅 */
 //    [disposable dispose];
     
-    /* 打印的log。会多执行耗时操作
+    /* 由于是冷信号，打印的log。会多执行耗时操作
         2019-12-20 13:52:14.812463+0800 FWRACDEmo[53358:34808357] 信号内容：发送信号
         2019-12-20 13:52:14.812574+0800 FWRACDEmo[53358:34808357] 耗时操作
         2019-12-20 13:52:14.812671+0800 FWRACDEmo[53358:34808357] RACDisposable
@@ -81,18 +103,30 @@
         2019-12-20 13:52:14.812909+0800 FWRACDEmo[53358:34808357] RACDisposable
         */
     
-    
-    // 解决方法
-    
-    RACMulticastConnection *connection = [signal publish];
+    // 解决方法：为解决冷信号导致的问题。将冷信号转为热信号。
+    // 方法1
+    RACMulticastConnection *connection = [signal publish]; // 内部其实是 RACSubject 作为热信号
     [connection.signal subscribeNext:^(id  _Nullable x) {
         NSLog(@"connection信号内容：%@", x);
     }];
-    
+//    connection.autoconnect
     [connection.signal subscribeNext:^(id  _Nullable x) {
         NSLog(@"connection信号内容2：%@", x);
     }];
     [connection connect];
+    
+    // 想要确保第一次订阅就能成功订阅sourceSignal，可以使用- (RACSignal *)autoconnect这个方法，它保证了第一个订阅者触发sourceSignal的订阅，也保证了当返回的信号所有订阅者都关闭连接后sourceSignal被正确关闭连接。
+//    [connection.autoconnect subscribeNext:nil];
+    
+    /*
+     // 方法2
+     RACSignal *newSignal = [signal replay]; // 内部其实是 RACReplaySubject 作为热信号，有缓存能力
+     // 方法3
+     RACSignal *newSignal = [signal replayLazily]; // 和replay相同，区别是newSignal被订阅时候才会订阅 signal
+     // 方法4
+     RACSignal *newSignal = [signal replayLast]; // - (RACSignal *)replayLast就是用Capacity为1的RACReplaySubject来替换- (RACSignal *)replay的`subject。其作用是使后来订阅者只收到最后的历史值。
+     */
+    
     /*
      2019-12-20 13:57:40.251990+0800 FWRACDEmo[53480:34821906] connection信号内容：发送信号
      2019-12-20 13:57:40.252099+0800 FWRACDEmo[53480:34821906] connection信号内容2：发送信号
@@ -106,12 +140,12 @@
 - (void)test2 {
     /* 创建信号 */
     RACSubject *subject = [RACSubject subject];
-    /* 发送信号 */
-    [subject sendNext:@"发送信号"];
     /* 订阅信号（通常在别的视图控制器中订阅，与代理的用法类似） */
     [subject subscribeNext:^(id  _Nullable x) {
         NSLog(@"信号内容：%@", x);
     }];
+    /* 发送信号 */
+    [subject sendNext:@"发送信号"];
 }
 
 //监听 TextField 的输入改变
@@ -137,8 +171,21 @@
 - (void)test4 {
     UIButton *button;
     [[button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
-       
         NSLog(@"%@ 按钮被点击了", x); // x 是 button 按钮对象
+    }];
+    
+    RACSignal *networkingSignal;
+    button.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
+        return networkingSignal;
+    }];
+    
+    //按钮的可用信号
+    RACSignal *btnEnableSignal = [RACSignal combineLatest:@[_textField.rac_textSignal,_textField.rac_textSignal] reduce:^id(NSString *username,NSString *pwd){
+        return @(username.length>0 && pwd.length>0);
+    }];
+    // 按钮是否可点击，可点击回调请求网络
+    button.rac_command = [[RACCommand alloc] initWithEnabled:btnEnableSignal signalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
+        return networkingSignal;
     }];
 }
 
@@ -156,8 +203,6 @@
     RAC(button, enabled) = [_username.rac_textSignal map:^id _Nullable(NSString * _Nullable username) {
         return @(username.length);
     }];
-    
-    
 }
 
 //8. 监听 Notification 通知事件
@@ -380,17 +425,174 @@
     [command execute:@"command执行"];
 }
 
+/// 实战使用示例：点击事件直接返回请求信号，
 - (void)test17 {
+    RACSignal *networkSignal = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2ull * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+            [subscriber sendNext:@"请求成功"];
+            [subscriber sendCompleted];
+        });
+        return nil;
+    }];
     
+    // 按钮事件里添加过滤，返回新信号，订阅新事件
+//    [[[_button rac_signalForControlEvents:UIControlEventTouchUpInside] flattenMap:^__kindof RACSignal * _Nullable(__kindof UIControl * _Nullable value) {
+//        return networkSignal;
+//    }] subscribeNext:^(id  _Nullable x) {
+//        NSLog(@"%@", x);
+//    }];
+
+    // doNext: 生成新信号，监听旧信号,一般用于在信号回调前增加额外功能
+    [[[[_button rac_signalForControlEvents:UIControlEventTouchUpInside] doNext:^(__kindof UIControl * _Nullable x) {
+        [self.activity startAnimating];
+    }] flattenMap:^__kindof RACSignal * _Nullable(__kindof UIControl * _Nullable value) {
+        return networkSignal;
+    }] subscribeNext:^(id  _Nullable x) {
+        [self.activity stopAnimating];
+        NSLog(@"%@", x);
+    }];
 }
 
+/// 延迟调用
 - (void)test18 {
-    
+    // throttle:订阅的 block(subscribeNext)延时被调用
+    [[[_button rac_signalForControlEvents:UIControlEventTouchUpInside] throttle:2] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        NSLog(@"throttle=%@",x);//2s后调用
+    }];
+
+    //  delay:延迟多久后
+    [[[_button rac_signalForControlEvents:UIControlEventTouchUpInside] delay:2] subscribeNext:^(id x) {
+        NSLog(@"delay=%@",x);//5s后调用
+    }];
+
+    // timeout:超时
+    RACSignal *buttonSignal = [_button rac_signalForControlEvents:UIControlEventTouchUpInside];
+    [[buttonSignal timeout:5 onScheduler:[RACScheduler scheduler]] subscribeNext:^(id  _Nullable x) {
+        NSLog(@"%@",x);//如果时间超过5s后就不会调用
+    }];
 }
+
+/// concat :信号串联，必须是一个信号完成之后，才可以开始另一个信号，所以第一个信号必须执行 sendCompleted 才会执行后面的信号
+/// merge: 信号并联，信号可以同时并联执行，必定是多线程执行的，后面的信号不一定等到前面的信号执行完才执行
+/// then: 信号忽略，会忽略调用此方法的信号，内部实现是串联 concat
+- (void)test119 {
+    RACSignal *eat = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [subscriber sendNext:@"吃饭"];
+        [subscriber sendNext:@"完毕"];
+        [subscriber sendCompleted];
+        return nil;
+    }];
+    
+    RACSignal *work = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [subscriber sendNext:@"上班"];
+        [subscriber sendNext:@"完毕"];
+        [subscriber sendCompleted];
+        return nil;
+    }];
+    
+//    [[eat concat:work]subscribeNext:^(id x) {
+//        NSLog(@"%@",x);//吃饭 完毕 上班 完毕  eat没有sendCompleted,就输出 吃饭 完毕
+//    }];
+    
+//    [[eat merge:work]subscribeNext:^(id x) {
+//        NSLog(@"%@",x);
+//    }];
+    
+    [[eat then:^RACSignal * _Nonnull{
+        return work;
+    }] subscribeNext:^(id  _Nullable x) {
+        NSLog(@"%@", x); // 上班 完毕
+    }];
+}
+
+/// UIKit分类相关
+- (void)test120 {
+    // 通知
+    [[[NSNotificationCenter defaultCenter]rac_addObserverForName:UIKeyboardWillShowNotification object:nil]subscribeNext:^(id x) {
+        NSLog(@"%@",x);
+    }];
+    
+    // 手势
+    self.view.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]init];
+    [tap.rac_gestureSignal subscribeNext:^(id x) {
+        NSLog(@"view被点击");
+    }];
+    [self.view addGestureRecognizer:tap];
+
+}
+
+/// 1.RACObserve(TARGET,KEYPATH):KVO 监听
+/// 2.RAC(TARGET, ...):绑定某个对象的属性
+- (void)test121 {
+    //监听某个对象的属性是否变化
+    //方法一:
+    [_textField.rac_textSignal subscribeNext:^(id x) {
+        NSLog(@"%@",x);
+    }];
+    
+    //方法二:RACObserve(<#TARGET#>, <#KEYPATH#>)
+    [RACObserve(_textField,text)subscribeNext:^(id x) {
+        NSLog(@"%@",x);
+    }];
+    
+    RAC(_label,text) = _textField.rac_textSignal;
+}
+
+/// 遍历集合
+- (void)test122 {
+    // 1.数组遍历
+//    NSArray *names = @[@"liu",@"wen",@"xiao",@"li"];
+//    [names.rac_sequence.signal subscribeNext:^(id x) {
+//        NSLog(@"%@",x);
+//        NSLog(@"[NSThread isMainThread]=%d", [NSThread isMainThread]); // 0  注意是异步的
+//    }];
+    
+    //2.字符串遍历
+    NSString *text = @"123456789";
+//    [text.rac_sequence.signal subscribeNext:^(id x) {
+//        NSLog(@"%@",x);
+//        NSLog(@"[NSThread isMainThread]+%d", [NSThread isMainThread]); // 0
+//    }];
+    
+    //3.添加过滤条件
+    [[text.rac_sequence.signal filter:^BOOL(id value) {
+        return [value integerValue] > 5;
+    }] subscribeNext:^(id x) {
+        NSLog(@"%@",x);//输出6,7,8,9
+    }];
+}
+
+/// 冷信号与热信号
+- (void)test23 {
+    /*
+     RACSubject及其子类(RACReplaySubject)是热信号。
+     RACSignal排除RACSubject类以外的是冷信号。
+     
+     热信号 RACSubject RACReplaySubject
+     冷信号 RACSignal
+     */
+    
+    // RACReplaySubject具备为未来订阅者缓冲事件的能力。
+    RACReplaySubject *replaySubject = [RACReplaySubject subject];
+    [replaySubject sendNext:@"1"];
+    [replaySubject sendNext:@"2"];
+    // 先发送，后订阅，也能收到之前发送的消息
+    [replaySubject subscribeNext:^(id  _Nullable x) {
+        NSLog(@"subscribeNext2:%@", x);
+    }];
+    
+    RACSubject *subject = [RACSubject subject];
+    // 没有缓存，先发送，后订阅，接收不了事件
+    [subject subscribeNext:^(id  _Nullable x) {
+        NSLog(@"信号内容：%@", x);
+    }];
+    [subject sendNext:@"发送信号"];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self test12];
+    [self test23];
 
 }
 

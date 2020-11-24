@@ -606,9 +606,41 @@
     RAC(_label, text) = [[flattenSignal catchTo:[RACSignal return:@"Error"]] startWith:@"Loading"];
 }
 
+/// 网络请求示例
+- (void)test125 {
+    RACCommand * btnPressCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
+          NSLog(@"组合参数，准备发送登录请求");
+          return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+              NSLog(@"开始请求");
+              NSLog(@"请求成功");
+              NSLog(@"处理数据");
+              [subscriber sendNext:@"请求完成，数据给你"];
+              [subscriber sendCompleted];
+              return [RACDisposable disposableWithBlock:^{
+                  NSLog(@"结束了");
+              }];
+          }];
+      }];
+      
+      [btnPressCommand.executionSignals.switchToLatest subscribeNext:^(id  _Nullable x) {
+          NSLog(@"登录成功，跳转页面");
+      }];
+      
+      [[btnPressCommand.executing skip:1] subscribeNext:^(NSNumber * _Nullable x) {
+          if ([x boolValue]) {
+              NSLog(@"正在执行中……");
+          }else{
+              NSLog(@"执行结束了");
+          }
+      }];
+    
+    [btnPressCommand execute:@{@"account": @"value"}];
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self test24];
+    [self test125];
 
 }
 

@@ -16,7 +16,18 @@
  Hot Observable是主动的，尽管你并没有订阅事件，但是它会时刻推送，就像鼠标移动；而Cold Observable是被动的，只有当你订阅的时候，它才会发布消息。
  Hot Observable可以有多个订阅者，是一对多，集合可以与订阅者共享信息；而Cold Observable只能一对一，当有不同的订阅者，消息是重新完整发送。
  */
-
+/*
+ 信号映射：map、flattenMap
+ 信号过滤：filter、ignore、distinctUntilChanged
+ 信号合并：combineLatest、reduce、merge、zipWith
+ 信号连接：concat、then
+ 信号操作时间：timeout、interval、dely
+ 信号跳过：skip
+ 信号取值：take、takeLast、takeUntil
+ 信号发送顺序：donext、cocompleted
+ 获取信号中的信号：switchToLatest
+ 信号错误重试：retry
+ */
 #import "ViewController.h"
 #import <ReactiveObjC/ReactiveObjC.h>
 #import "ReactiveObjC-umbrella.h"
@@ -35,7 +46,6 @@
 @end
 
 @implementation ViewController
-
 - (UIActivityIndicatorView *)activity {
     if (_activity) return _activity;
     _activity = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];//指定进度轮的大小
@@ -44,28 +54,6 @@
     [self.view addSubview:_activity];
     return _activity;
 }
-
-/*
- 信号映射：map、flattenMap
-
- 信号过滤：filter、ignore、distinctUntilChanged
-
- 信号合并：combineLatest、reduce、merge、zipWith
-
- 信号连接：concat、then
-
- 信号操作时间：timeout、interval、dely
-
- 信号跳过：skip
-
- 信号取值：take、takeLast、takeUntil
-
- 信号发送顺序：donext、cocompleted
-
- 获取信号中的信号：switchToLatest
-
- 信号错误重试：retry
- */
 
 // 1. RACSignal 信号
 - (void)test {
@@ -183,6 +171,7 @@
     RACSignal *btnEnableSignal = [RACSignal combineLatest:@[_textField.rac_textSignal,_textField.rac_textSignal] reduce:^id(NSString *username,NSString *pwd){
         return @(username.length>0 && pwd.length>0);
     }];
+    
     // 按钮是否可点击，可点击回调请求网络
     button.rac_command = [[RACCommand alloc] initWithEnabled:btnEnableSignal signalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
         return networkingSignal;
@@ -364,6 +353,7 @@
 //    }];
 }
 
+/// button 注册信号，返回新信号
 - (void)test15 {
     // 点击按钮，触发l过滤block,返回请求信号（网络请求），注册这个信号（请求完成后会回调）。
     [[[_button rac_signalForControlEvents:UIControlEventTouchUpInside] flattenMap:^id _Nullable(__kindof UIControl * _Nullable value) {
@@ -379,6 +369,7 @@
     }];
 }
 
+/// RACCommand
 - (void)test16 {
     //创建command信号
     RACCommand *command = [[RACCommand alloc]initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
@@ -590,6 +581,7 @@
     [subject sendNext:@"发送信号"];
 }
 
+/// 实战示例
 - (void)test24 {
     RACSignal *flattenSignal = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
         [[RACScheduler mainThreadScheduler] afterDelay:2 schedule:^{
@@ -609,39 +601,109 @@
 /// 网络请求示例
 - (void)test125 {
     RACCommand * btnPressCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
-          NSLog(@"组合参数，准备发送登录请求");
-          return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
-              NSLog(@"开始请求");
-              NSLog(@"请求成功");
-              NSLog(@"处理数据");
-              [subscriber sendNext:@"请求完成，数据给你"];
-              [subscriber sendCompleted];
-              return [RACDisposable disposableWithBlock:^{
-                  NSLog(@"结束了");
-              }];
-          }];
-      }];
-      
-      [btnPressCommand.executionSignals.switchToLatest subscribeNext:^(id  _Nullable x) {
-          NSLog(@"登录成功，跳转页面");
-      }];
-      
-      [[btnPressCommand.executing skip:1] subscribeNext:^(NSNumber * _Nullable x) {
-          if ([x boolValue]) {
-              NSLog(@"正在执行中……");
-          }else{
-              NSLog(@"执行结束了");
-          }
-      }];
+        NSLog(@"组合参数，准备发送登录请求");
+        return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+            NSLog(@"开始请求");
+            NSLog(@"请求成功");
+            NSLog(@"处理数据");
+            [subscriber sendNext:@"请求完成，数据给你"];
+            [subscriber sendNext:@"请求完成，数据给你1"];
+            [subscriber sendCompleted];
+            return [RACDisposable disposableWithBlock:^{
+                NSLog(@"结束了");
+            }];
+        }];
+    }];
+    
+    [btnPressCommand.executionSignals subscribeNext:^(id  _Nullable x) {
+        NSLog(@"登录成功，跳转页面… %@",x);
+    }];
+    
+    [btnPressCommand.executionSignals.switchToLatest subscribeNext:^(id  _Nullable x) {
+        NSLog(@"登录成功，跳转页面");
+    }];
+    
+    [[btnPressCommand.executing skip:1] subscribeNext:^(NSNumber * _Nullable x) {
+        if ([x boolValue]) {
+            NSLog(@"正在执行中……");
+        }else{
+            NSLog(@"执行结束了");
+        }
+    }];
     
     [btnPressCommand execute:@{@"account": @"value"}];
 }
 
+/// 信号取值：take、takeLast、takeUntil
+- (void)test26 {
+//    RACSubject * subject = [RACSubject subject];
+    // take 指定哪些信号 正序 取前2条消息
+//    [[subject take:2] subscribeNext:^(id  _Nullable x) {
+//        NSLog(@"%@",x);
+//    }];
+    
+    // take 指定哪些信号 倒序 取后2条消息
+//    [[subject takeLast:2] subscribeNext:^(id  _Nullable x) {
+//        NSLog(@"%@",x);
+//    }];
+    
+//    [subject sendNext:@"A"];
+//    [subject sendNext:@"B"];
+//    [subject sendNext:@"C"];
+//    [subject sendNext:@"D"];
+//    [subject sendNext:@"E"];
+//    [subject sendCompleted];
+    
+    
+    // takeUntil 标记，需要一个信号作为标记，当标记的信号发送数据，就停止。
+    RACSubject * subject = [RACSubject subject];
+    RACSubject * subject1 = [RACSubject subject];
+    // subject1 发送信号 subject就停止接受订阅
+    [[subject takeUntil:subject1] subscribeNext:^(id  _Nullable x) {
+        NSLog(@"%@",x);
+    }];
+    
+    [subject1 subscribeNext:^(id  _Nullable x) {
+        NSLog(@"%@",x);
+    }];
+    
+    [subject sendNext:@"1"];
+    [subject sendNext:@"2"];
+    [subject sendNext:@"3"];
+    
+    [subject1 sendNext:@"Stop"];
+    
+    [subject sendNext:@"4"];
+    [subject sendNext:@"5"];
+}
+
+/// zipWith
+- (void)test27 {
+    RACSignal *signalA = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+        [subscriber sendNext:@"signalA1"];
+        [subscriber sendNext:@"signalA2"];
+        [subscriber sendCompleted];
+        return nil;
+    }];
+    RACSignal *signalB = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+        [subscriber sendNext:@"signalB1"];
+        [subscriber sendNext:@"signalB2"];
+        [subscriber sendCompleted];
+        return nil;
+    }];
+    //调用
+    RACSignal *zipSignal = [signalA zipWith:signalB];
+    [zipSignal subscribeNext:^(id  _Nullable x) {
+        // x 是一个元祖
+        RACTupleUnpack(NSString *a, NSString *b) = x;
+        NSLog(@"a=%@ b=%@", a, b);
+    }];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self test125];
-
+    [self test27];
+    
 }
 
 @end

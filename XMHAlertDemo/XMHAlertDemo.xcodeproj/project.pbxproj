@@ -21,6 +21,7 @@
 		F2F8329B259470150044C57A /* XMHAlertTextFieldContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2F8329A259470150044C57A /* XMHAlertTextFieldContentView.m */; };
 		F2F832A825958A490044C57A /* XMHAlertContentBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2F832A725958A490044C57A /* XMHAlertContentBottomView.m */; };
 		F2F832AD2595B71D0044C57A /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = F2F832AC2595B71D0044C57A /* ViewController2.m */; };
+		F2F832B02595BC570044C57A /* XMHAlertVC.png in Resources */ = {isa = PBXBuildFile; fileRef = F2F832AF2595BC570044C57A /* XMHAlertVC.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		F2F832A725958A490044C57A /* XMHAlertContentBottomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMHAlertContentBottomView.m; sourceTree = "<group>"; };
 		F2F832AB2595B71D0044C57A /* ViewController2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
 		F2F832AC2595B71D0044C57A /* ViewController2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
+		F2F832AF2595BC570044C57A /* XMHAlertVC.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = XMHAlertVC.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 		F2D2D8022592DCF70056372B /* XMHAlert */ = {
 			isa = PBXGroup;
 			children = (
+				F2F832AF2595BC570044C57A /* XMHAlertVC.png */,
 				F2D2D82225932B760056372B /* UIView+Exting.h */,
 				F2D2D81F25932B580056372B /* UIView+Exting.m */,
 				F2D2D819259324C70056372B /* XMHAlertTool.h */,
@@ -182,6 +185,7 @@
 				F2D2D7F82592DCEB0056372B /* LaunchScreen.storyboard in Resources */,
 				F2D2D7F52592DCEB0056372B /* Assets.xcassets in Resources */,
 				F2D2D7F32592DCE90056372B /* Main.storyboard in Resources */,
+				F2F832B02595BC570044C57A /* XMHAlertVC.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

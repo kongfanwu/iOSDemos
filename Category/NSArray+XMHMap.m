@@ -7,6 +7,7 @@
 //
 
 #import "NSArray+XMHMap.h"
+#import "XMHBlockTrampoline.h"
 
 @implementation NSArray (XMHMap)
 
@@ -24,11 +25,11 @@
  });
  NSLog(@"sum = %ld", sum); // 10
 */
-- (NSArray *(^)(id _Nullable (^block)(id)))xmh_map {
-    return ^(id(^block)(id)) {
+- (XMHReturnBlock)xmh_map {
+    return ^(id(^block)(NSUInteger, id)) {
         NSMutableArray *list = NSMutableArray.new;
         [self enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            id result = block(obj);
+            NSString * result = [XMHBlockTrampoline invokeBlock:block withArguments:@[obj, @(idx)]];
             if (result) [list addObject:result];
         }];
         return list;

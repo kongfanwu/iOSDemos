@@ -1,0 +1,33 @@
+PODS:
+  - Alamofire (5.2.2)
+  - Moya (14.0.0):
+    - Moya/Core (= 14.0.0)
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
+  - Moya/RxSwift (14.0.0):
+    - Moya/Core
+    - RxSwift (~> 5.0)
+  - ProgressHUD (2.70)
+  - RxSwift (5.1.1)
+
+DEPENDENCIES:
+  - Moya (~> 14.0)
+  - Moya/RxSwift (~> 14.0)
+  - ProgressHUD
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - Moya
+    - ProgressHUD
+    - RxSwift
+
+SPEC CHECKSUMS:
+  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  ProgressHUD: e603e8b8622c47d8818b9fb38b3cfe9d3e7ca421
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+
+PODFILE CHECKSUM: 5be46b77d2ef186a921f8768142bf8a9bf925aa0
+
+COCOAPODS: 1.9.3

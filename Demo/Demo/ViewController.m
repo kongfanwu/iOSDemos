@@ -23,7 +23,7 @@
     self.dataArray = NSMutableArray.new;
     
     for (int i = 0 ; i < 10; i++) {
-        [_dataArray addObject:@{@""}];
+        [_dataArray addObject:@""];
     }
     
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];

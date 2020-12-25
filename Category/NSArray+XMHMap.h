@@ -10,6 +10,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+//typedef ValueType _Nonnull (^RACGenericReduceBlock)();
+
+_Pragma("clang diagnostic push") \
+_Pragma("clang diagnostic ignored \"-Wstrict-prototypes\"") \
+typedef NSArray * _Nonnull (^XMHReturnBlock)(id _Nullable (^block)());
+_Pragma("clang diagnostic pop")
+
 @interface NSArray (XMHMap)  
 
 /*
@@ -29,7 +36,7 @@ NS_ASSUME_NONNULL_BEGIN
  });
  NSLog(@"result2=%@", result2); // 1  3
  */
-- (NSArray *(^)(id _Nullable (^block)(id)))xmh_map;
+- (XMHReturnBlock)xmh_map;
 
 /* 与 xmh_map 相同，增加索引
  NSArray *result2 = _arr.xmh_map2(^id (NSUInteger idx, NSString *obj) {

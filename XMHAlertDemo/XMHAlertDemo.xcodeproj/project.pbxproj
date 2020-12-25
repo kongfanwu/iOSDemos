@@ -1,0 +1,403 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F2D2D7EA2592DCE90056372B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D2D7E92592DCE90056372B /* AppDelegate.m */; };
+		F2D2D7ED2592DCE90056372B /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D2D7EC2592DCE90056372B /* SceneDelegate.m */; };
+		F2D2D7F02592DCE90056372B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D2D7EF2592DCE90056372B /* ViewController.m */; };
+		F2D2D7F32592DCE90056372B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2D2D7F12592DCE90056372B /* Main.storyboard */; };
+		F2D2D7F52592DCEB0056372B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2D2D7F42592DCEB0056372B /* Assets.xcassets */; };
+		F2D2D7F82592DCEB0056372B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2D2D7F62592DCEB0056372B /* LaunchScreen.storyboard */; };
+		F2D2D7FB2592DCEB0056372B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D2D7FA2592DCEB0056372B /* main.m */; };
+		F2D2D81025931CA50056372B /* XMHAlertVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D2D80F25931CA50056372B /* XMHAlertVC.m */; };
+		F2D2D8162593237B0056372B /* XMHAlertDefaultContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D2D8152593237B0056372B /* XMHAlertDefaultContentView.m */; };
+		F2D2D82025932B590056372B /* UIView+Exting.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D2D81F25932B580056372B /* UIView+Exting.m */; };
+		F2D2D82B25934DD40056372B /* XMHAlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D2D82A25934DD40056372B /* XMHAlertAction.m */; };
+		F2F8329B259470150044C57A /* XMHAlertTextFieldContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2F8329A259470150044C57A /* XMHAlertTextFieldContentView.m */; };
+		F2F832A825958A490044C57A /* XMHAlertContentBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2F832A725958A490044C57A /* XMHAlertContentBottomView.m */; };
+		F2F832AD2595B71D0044C57A /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = F2F832AC2595B71D0044C57A /* ViewController2.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F2D2D7E52592DCE90056372B /* XMHAlertDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XMHAlertDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2D2D7E82592DCE90056372B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F2D2D7E92592DCE90056372B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F2D2D7EB2592DCE90056372B /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		F2D2D7EC2592DCE90056372B /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		F2D2D7EE2592DCE90056372B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F2D2D7EF2592DCE90056372B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F2D2D7F22592DCE90056372B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F2D2D7F42592DCEB0056372B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F2D2D7F72592DCEB0056372B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F2D2D7F92592DCEB0056372B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2D2D7FA2592DCEB0056372B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F2D2D80E25931CA50056372B /* XMHAlertVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMHAlertVC.h; sourceTree = "<group>"; };
+		F2D2D80F25931CA50056372B /* XMHAlertVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMHAlertVC.m; sourceTree = "<group>"; };
+		F2D2D813259323140056372B /* XMHAlertContentViewProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMHAlertContentViewProtocol.h; sourceTree = "<group>"; };
+		F2D2D8142593237B0056372B /* XMHAlertDefaultContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMHAlertDefaultContentView.h; sourceTree = "<group>"; };
+		F2D2D8152593237B0056372B /* XMHAlertDefaultContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMHAlertDefaultContentView.m; sourceTree = "<group>"; };
+		F2D2D819259324C70056372B /* XMHAlertTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMHAlertTool.h; sourceTree = "<group>"; };
+		F2D2D81F25932B580056372B /* UIView+Exting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Exting.m"; sourceTree = "<group>"; };
+		F2D2D82225932B760056372B /* UIView+Exting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Exting.h"; sourceTree = "<group>"; };
+		F2D2D82925934DD40056372B /* XMHAlertAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMHAlertAction.h; sourceTree = "<group>"; };
+		F2D2D82A25934DD40056372B /* XMHAlertAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMHAlertAction.m; sourceTree = "<group>"; };
+		F2F83299259470150044C57A /* XMHAlertTextFieldContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMHAlertTextFieldContentView.h; sourceTree = "<group>"; };
+		F2F8329A259470150044C57A /* XMHAlertTextFieldContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMHAlertTextFieldContentView.m; sourceTree = "<group>"; };
+		F2F832A625958A490044C57A /* XMHAlertContentBottomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMHAlertContentBottomView.h; sourceTree = "<group>"; };
+		F2F832A725958A490044C57A /* XMHAlertContentBottomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMHAlertContentBottomView.m; sourceTree = "<group>"; };
+		F2F832AB2595B71D0044C57A /* ViewController2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
+		F2F832AC2595B71D0044C57A /* ViewController2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F2D2D7E22592DCE90056372B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F2D2D7DC2592DCE90056372B = {
+			isa = PBXGroup;
+			children = (
+				F2D2D7E72592DCE90056372B /* XMHAlertDemo */,
+				F2D2D7E62592DCE90056372B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F2D2D7E62592DCE90056372B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F2D2D7E52592DCE90056372B /* XMHAlertDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F2D2D7E72592DCE90056372B /* XMHAlertDemo */ = {
+			isa = PBXGroup;
+			children = (
+				F2D2D8022592DCF70056372B /* XMHAlert */,
+				F2D2D7E82592DCE90056372B /* AppDelegate.h */,
+				F2D2D7E92592DCE90056372B /* AppDelegate.m */,
+				F2D2D7EB2592DCE90056372B /* SceneDelegate.h */,
+				F2D2D7EC2592DCE90056372B /* SceneDelegate.m */,
+				F2D2D7EE2592DCE90056372B /* ViewController.h */,
+				F2D2D7EF2592DCE90056372B /* ViewController.m */,
+				F2F832AB2595B71D0044C57A /* ViewController2.h */,
+				F2F832AC2595B71D0044C57A /* ViewController2.m */,
+				F2D2D7F12592DCE90056372B /* Main.storyboard */,
+				F2D2D7F42592DCEB0056372B /* Assets.xcassets */,
+				F2D2D7F62592DCEB0056372B /* LaunchScreen.storyboard */,
+				F2D2D7F92592DCEB0056372B /* Info.plist */,
+				F2D2D7FA2592DCEB0056372B /* main.m */,
+			);
+			path = XMHAlertDemo;
+			sourceTree = "<group>";
+		};
+		F2D2D8022592DCF70056372B /* XMHAlert */ = {
+			isa = PBXGroup;
+			children = (
+				F2D2D82225932B760056372B /* UIView+Exting.h */,
+				F2D2D81F25932B580056372B /* UIView+Exting.m */,
+				F2D2D819259324C70056372B /* XMHAlertTool.h */,
+				F2D2D80E25931CA50056372B /* XMHAlertVC.h */,
+				F2D2D80F25931CA50056372B /* XMHAlertVC.m */,
+				F2D2D82925934DD40056372B /* XMHAlertAction.h */,
+				F2D2D82A25934DD40056372B /* XMHAlertAction.m */,
+				F2F832A625958A490044C57A /* XMHAlertContentBottomView.h */,
+				F2F832A725958A490044C57A /* XMHAlertContentBottomView.m */,
+				F2D2D813259323140056372B /* XMHAlertContentViewProtocol.h */,
+				F2D2D8142593237B0056372B /* XMHAlertDefaultContentView.h */,
+				F2D2D8152593237B0056372B /* XMHAlertDefaultContentView.m */,
+				F2F83299259470150044C57A /* XMHAlertTextFieldContentView.h */,
+				F2F8329A259470150044C57A /* XMHAlertTextFieldContentView.m */,
+			);
+			path = XMHAlert;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F2D2D7E42592DCE90056372B /* XMHAlertDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2D2D7FE2592DCEB0056372B /* Build configuration list for PBXNativeTarget "XMHAlertDemo" */;
+			buildPhases = (
+				F2D2D7E12592DCE90056372B /* Sources */,
+				F2D2D7E22592DCE90056372B /* Frameworks */,
+				F2D2D7E32592DCE90056372B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XMHAlertDemo;
+			productName = XMHAlertDemo;
+			productReference = F2D2D7E52592DCE90056372B /* XMHAlertDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F2D2D7DD2592DCE90056372B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					F2D2D7E42592DCE90056372B = {
+						CreatedOnToolsVersion = 12.2;
+					};
+				};
+			};
+			buildConfigurationList = F2D2D7E02592DCE90056372B /* Build configuration list for PBXProject "XMHAlertDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F2D2D7DC2592DCE90056372B;
+			productRefGroup = F2D2D7E62592DCE90056372B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F2D2D7E42592DCE90056372B /* XMHAlertDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F2D2D7E32592DCE90056372B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2D2D7F82592DCEB0056372B /* LaunchScreen.storyboard in Resources */,
+				F2D2D7F52592DCEB0056372B /* Assets.xcassets in Resources */,
+				F2D2D7F32592DCE90056372B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F2D2D7E12592DCE90056372B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2F8329B259470150044C57A /* XMHAlertTextFieldContentView.m in Sources */,
+				F2F832A825958A490044C57A /* XMHAlertContentBottomView.m in Sources */,
+				F2D2D7F02592DCE90056372B /* ViewController.m in Sources */,
+				F2F832AD2595B71D0044C57A /* ViewController2.m in Sources */,
+				F2D2D82025932B590056372B /* UIView+Exting.m in Sources */,
+				F2D2D81025931CA50056372B /* XMHAlertVC.m in Sources */,
+				F2D2D7EA2592DCE90056372B /* AppDelegate.m in Sources */,
+				F2D2D82B25934DD40056372B /* XMHAlertAction.m in Sources */,
+				F2D2D8162593237B0056372B /* XMHAlertDefaultContentView.m in Sources */,
+				F2D2D7FB2592DCEB0056372B /* main.m in Sources */,
+				F2D2D7ED2592DCE90056372B /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F2D2D7F12592DCE90056372B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2D2D7F22592DCE90056372B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F2D2D7F62592DCEB0056372B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2D2D7F72592DCEB0056372B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F2D2D7FC2592DCEB0056372B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F2D2D7FD2592DCEB0056372B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F2D2D7FF2592DCEB0056372B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 346QFZZACH;
+				INFOPLIST_FILE = XMHAlertDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.shendeng.zhineng.XMHAlertDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F2D2D8002592DCEB0056372B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 346QFZZACH;
+				INFOPLIST_FILE = XMHAlertDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.shendeng.zhineng.XMHAlertDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F2D2D7E02592DCE90056372B /* Build configuration list for PBXProject "XMHAlertDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2D2D7FC2592DCEB0056372B /* Debug */,
+				F2D2D7FD2592DCEB0056372B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2D2D7FE2592DCEB0056372B /* Build configuration list for PBXNativeTarget "XMHAlertDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2D2D7FF2592DCEB0056372B /* Debug */,
+				F2D2D8002592DCEB0056372B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F2D2D7DD2592DCE90056372B /* Project object */;
+}

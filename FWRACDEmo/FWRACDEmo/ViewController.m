@@ -9,6 +9,7 @@
 // https://github.com/Draveness/analyze/blob/master/contents/ReactiveObjC/RACSignal.md
 // https://ld246.com/article/1481187709262
 // 美团团队 https://tech.meituan.com/2015/09/08/talk-about-reactivecocoas-cold-signal-and-hot-signal-part-1.html
+// 宏教程 https://cloud.tencent.com/developer/article/1198972
 
 /*
  什么是冷信号与热信号
@@ -33,6 +34,7 @@
 #import "ReactiveObjC-umbrella.h"
 
 #define aba(a)
+
 
 @interface ViewController () <UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *textField;
@@ -700,10 +702,97 @@
     }];
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self test27];
+/// RACBlockTrampoline 是一个block 动态传参处理类
+- (void)test28 {
+    // block 参数个数、参数类型要与元祖相同
+    NSString *(^block)(NSString *, NSString *, NSString *) = ^NSString *(NSString *a, NSString *b, NSString *c){
+        NSString *res = [NSString stringWithFormat:@"%@+%@+%@", a, b, c];
+        NSLog(@"res = %@", res);
+        return res;
+    };;
+    
+    //创建元祖， 参数个数自定义
+    RACTuple *tuple = RACTuplePack(@"1", @"2", @"3");
+    for (NSUInteger i = 0; i < tuple.count; i++) {
+        id arg = tuple[i];
+        NSLog(@"arg = %@", arg);
+    }
+    
+    // 返回值是block的返回值
+    NSString * blockResult = [RACBlockTrampoline invokeBlock:block withArguments:tuple];
+    NSLog(@"blockResult = %@", blockResult);
+}
+
+/// 元祖
+- (void)test29 {
+    RACTuple *tuple1 = [RACTuple tupleWithObjects:@1, @2, @3, nil];
+    RACTupleUnpack(NSString *value, NSString *value2) = RACTuplePack(@"1", @"2");
+    NSLog(@"%@ %@", value, value2);
+}
+
+/// 1 test_metamacro_concat_
+#define test_metamacro_concat_(A, B) A ## B
+#define test_metamacro_concat(A, B) \
+    test_metamacro_concat_(A, B)
+
+/// 2 获取参数变量 __VA_ARGS__ 里的第一个参数
+#define test_metamacro_head_(FIRST, ...) FIRST // 接到参数变量，直接返回的是第一个参数
+#define test_metamacro_head(...) \
+    test_metamacro_head_(__VA_ARGS__, 0)
+
+///
+#define test_metamacro_at20(_0, _1, _2, _3, _4, _5, _6, _7, _8, _9, _10, _11, _12, _13, _14, _15, _16, _17, _18, _19, ...) \
+({ \
+    NSLog(@"%@ %@ %@", _0, _1, _2); \
+    test_metamacro_head(__VA_ARGS__); /* __VA_ARGS__ 是装不下的参数 3 2 1 */ \
+}) \
+
+/// 拼接调用方法，传参，
+#define test_metamacro_at(N, ...) \
+({ \
+    NSLog(@"N=%d", N);\
+    NSLog(@"参数=%@ %@ %@", ##__VA_ARGS__); \
+    test_metamacro_concat(test_metamacro_at, N)(__VA_ARGS__);/* 拼接宏方法并调用 test_metamacro_at20(1, 2, 3) */ \
+}) \
+
+/// 3 方法参数最多只能有20个，加入入参3个，倒序插入 20 - 1，最后 有 3 2 1 参数插不进去，传给 test_metamacro_head_() 获取第一个数3，就是test_metamacro_argcount2()参数的个数
+#define test_metamacro_argcount2(...) \
+    test_metamacro_at(20, __VA_ARGS__, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1)
+
+/// 宏魔法学习
+- (void)test30 {
+//    NSInteger age = 10;
+    
+    // 1 把入参VALUE转换成一个字符串返回。
+//    NSLog(@"%@", @metamacro_stringify(str));
+//
+//    // 2 这个宏就是用来合并入参A，B到一起。在RAC里面主要用这个方法来合成另外一个宏的名字。
+//    NSString * metamacro_concat(var, name) = @"还可以这么玩";
+//    NSLog(@"%@", varname);
+//
+//    // 3 这个宏设计的也非常巧妙，它是用来获取参数个数的。由于宏展开是在预编译时期的，所以它在预编译时期获取参数个数的，其他非宏的方法都是在运行时获取参数个数的。
+//    int argCount = test_metamacro_argcount(@"1", @"2", @"3");
+//    NSLog(@"参数个数=%d", argCount);
+    
+      // 4
+//    NSLog(@"%@", test_metamacro_head(@"5", @"4", @"3"));
+    
+
+    NSLog(@"参数个数=%d", test_metamacro_argcount2(@"1", @"2", @"3"));
+
+    
+    
+    
     
 }
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self test30];
+    
+    
+}
+
+
 
 @end

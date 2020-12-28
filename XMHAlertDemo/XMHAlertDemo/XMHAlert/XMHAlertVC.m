@@ -78,12 +78,21 @@
 }
 
 /// 显示
-- (XMHAlertVC *(^)(void))show {    
+- (XMHAlertVC *)show_swift {
+    return self.show();
+}
+
+- (XMHAlertVC *(^)(void))show {
     return ^XMHAlertVC *(){
         UIViewController *vc = [UIView getCurrentWindow].rootViewController;
         return self.showInVC(vc);
     };
 }
+
+- (XMHAlertVC *)showInVC:(UIViewController *)vc {
+    return self.showInVC(vc);
+}
+
 - (XMHAlertVC *(^)(UIViewController *))showInVC {
     return ^XMHAlertVC *(UIViewController *vc){
         NSAssert(vc != nil, @"vc 不能为nil");
@@ -98,6 +107,11 @@
 
 @implementation XMHAlertVC (ContentViewConfigure)
 
+- (XMHAlertVC *)titleText:(NSString *)titleText {
+    self.contentView.titleText = titleText;
+    return self;
+}
+
 - (XMHAlertVC *(^)(NSString *))titleText {
     return ^XMHAlertVC *(NSString * titleText){
         self.contentView.titleText = titleText;
@@ -105,11 +119,22 @@
     };
 }
 
+- (XMHAlertVC *)messageText:(NSString *)messageText {
+    self.contentView.messageText = messageText;
+    return self;
+}
+
 - (XMHAlertVC *(^)(NSString *))messageText {
     return ^XMHAlertVC *(NSString * messageText){
         self.contentView.messageText = messageText;
         return self;
     };
+}
+
+- (XMHAlertVC *)action:(XMHAlertAction *)action {
+    NSAssert(action != nil, @"action 不能为nil");
+    [self.contentView.actions addObject:action];
+    return self;
 }
 
 - (XMHAlertVC *(^)(XMHAlertAction *))action {

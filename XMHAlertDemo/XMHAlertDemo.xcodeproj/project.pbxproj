@@ -16,7 +16,7 @@
 		F2D2D7FB2592DCEB0056372B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D2D7FA2592DCEB0056372B /* main.m */; };
 		F2D2D81025931CA50056372B /* XMHAlertVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D2D80F25931CA50056372B /* XMHAlertVC.m */; };
 		F2D2D8162593237B0056372B /* XMHAlertDefaultContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D2D8152593237B0056372B /* XMHAlertDefaultContentView.m */; };
-		F2D2D82025932B590056372B /* UIView+Exting.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D2D81F25932B580056372B /* UIView+Exting.m */; };
+		F2D2D82025932B590056372B /* UIView+XMHAlertExting.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D2D81F25932B580056372B /* UIView+XMHAlertExting.m */; };
 		F2D2D82B25934DD40056372B /* XMHAlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D2D82A25934DD40056372B /* XMHAlertAction.m */; };
 		F2F8329B259470150044C57A /* XMHAlertTextFieldContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2F8329A259470150044C57A /* XMHAlertTextFieldContentView.m */; };
 		F2F832A825958A490044C57A /* XMHAlertContentBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2F832A725958A490044C57A /* XMHAlertContentBottomView.m */; };
@@ -42,9 +42,9 @@
 		F2D2D813259323140056372B /* XMHAlertContentViewProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMHAlertContentViewProtocol.h; sourceTree = "<group>"; };
 		F2D2D8142593237B0056372B /* XMHAlertDefaultContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMHAlertDefaultContentView.h; sourceTree = "<group>"; };
 		F2D2D8152593237B0056372B /* XMHAlertDefaultContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMHAlertDefaultContentView.m; sourceTree = "<group>"; };
-		F2D2D819259324C70056372B /* XMHAlertTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMHAlertTool.h; sourceTree = "<group>"; };
-		F2D2D81F25932B580056372B /* UIView+Exting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Exting.m"; sourceTree = "<group>"; };
-		F2D2D82225932B760056372B /* UIView+Exting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Exting.h"; sourceTree = "<group>"; };
+		F2D2D819259324C70056372B /* XMHAlertToolAndConfigure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMHAlertToolAndConfigure.h; sourceTree = "<group>"; };
+		F2D2D81F25932B580056372B /* UIView+XMHAlertExting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XMHAlertExting.m"; sourceTree = "<group>"; };
+		F2D2D82225932B760056372B /* UIView+XMHAlertExting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+XMHAlertExting.h"; sourceTree = "<group>"; };
 		F2D2D82925934DD40056372B /* XMHAlertAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMHAlertAction.h; sourceTree = "<group>"; };
 		F2D2D82A25934DD40056372B /* XMHAlertAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMHAlertAction.m; sourceTree = "<group>"; };
 		F2F83299259470150044C57A /* XMHAlertTextFieldContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMHAlertTextFieldContentView.h; sourceTree = "<group>"; };
@@ -108,9 +108,9 @@
 			isa = PBXGroup;
 			children = (
 				F2F832AF2595BC570044C57A /* XMHAlertVC.png */,
-				F2D2D82225932B760056372B /* UIView+Exting.h */,
-				F2D2D81F25932B580056372B /* UIView+Exting.m */,
-				F2D2D819259324C70056372B /* XMHAlertTool.h */,
+				F2D2D82225932B760056372B /* UIView+XMHAlertExting.h */,
+				F2D2D81F25932B580056372B /* UIView+XMHAlertExting.m */,
+				F2D2D819259324C70056372B /* XMHAlertToolAndConfigure.h */,
 				F2D2D80E25931CA50056372B /* XMHAlertVC.h */,
 				F2D2D80F25931CA50056372B /* XMHAlertVC.m */,
 				F2D2D82925934DD40056372B /* XMHAlertAction.h */,
@@ -200,7 +200,7 @@
 				F2F832A825958A490044C57A /* XMHAlertContentBottomView.m in Sources */,
 				F2D2D7F02592DCE90056372B /* ViewController.m in Sources */,
 				F2F832AD2595B71D0044C57A /* ViewController2.m in Sources */,
-				F2D2D82025932B590056372B /* UIView+Exting.m in Sources */,
+				F2D2D82025932B590056372B /* UIView+XMHAlertExting.m in Sources */,
 				F2D2D81025931CA50056372B /* XMHAlertVC.m in Sources */,
 				F2D2D7EA2592DCE90056372B /* AppDelegate.m in Sources */,
 				F2D2D82B25934DD40056372B /* XMHAlertAction.m in Sources */,

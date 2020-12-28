@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIView (Exting)
+@interface UIView (XMHAlertExting)
 
 @property (nonatomic) CGFloat left;
 @property (nonatomic) CGFloat top;

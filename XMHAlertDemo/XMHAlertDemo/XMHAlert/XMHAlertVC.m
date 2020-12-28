@@ -6,7 +6,7 @@
 //
 
 #import "XMHAlertVC.h"
-#import "UIView+Exting.h"
+#import "UIView+XMHAlertExting.h"
 #import "XMHAlertAction.h"
 #import "XMHAlertDefaultContentView.h"
 #import "XMHAlertTextFieldContentView.h"

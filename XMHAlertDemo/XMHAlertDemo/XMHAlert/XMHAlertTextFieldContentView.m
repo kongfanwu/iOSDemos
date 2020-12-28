@@ -6,8 +6,8 @@
 //
 
 #import "XMHAlertTextFieldContentView.h"
-#import "XMHAlertTool.h"
-#import "UIView+Exting.h"
+#import "XMHAlertToolAndConfigure.h"
+#import "UIView+XMHAlertExting.h"
 #import "XMHAlertAction.h"
 #import "XMHAlertContentBottomView.h"
 

@@ -6,9 +6,9 @@
 //  Copyright © 2015年 51credit.com. All rights reserved.
 //
 
-#import "UIView+Exting.h"
+#import "UIView+XMHAlertExting.h"
 
-@implementation UIView (Exting)
+@implementation UIView (XMHAlertExting)
 
 - (CGFloat)top
 {

@@ -40,14 +40,15 @@
 - (IBAction)click2:(id)sender {
     // 显示标题和详情
     XMHAlertVC.alertWithStyle(XMHAlertStyleDefault)
-    .titleText(@"title")
-    .messageText(@"提示内容，告知状态，信息可以以折行，提示内容")
+    .titleText(@"")
+    .messageText(@"")
     .action([XMHAlertAction actionWithTitle:@"确认" style:XMHAlertActionStyleDefault handler:^(XMHAlertAction * _Nonnull action) {
         
     }])
     .action([XMHAlertAction actionWithTitle:@"取消" style:XMHAlertActionStyleDestructive handler:^(XMHAlertAction * _Nonnull action) {
         
     }]).show();
+    
 }
 - (IBAction)click3:(id)sender {
     // 输入框
@@ -61,7 +62,6 @@
     // 也可以这样玩
 //    XMHAlertTextFieldContentView *textFieldContentView = (XMHAlertTextFieldContentView *)alert.contentView;
 //    textFieldContentView.textField.text = @"初始值2";
-    
     
     
 }

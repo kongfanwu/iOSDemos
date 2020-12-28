@@ -6,8 +6,8 @@
 //
 
 #import "XMHAlertContentBottomView.h"
-#import "XMHAlertTool.h"
-#import "UIView+Exting.h"
+#import "XMHAlertToolAndConfigure.h"
+#import "UIView+XMHAlertExting.h"
 #import "XMHAlertAction.h"
 
 @interface XMHAlertContentBottomView()
@@ -19,7 +19,7 @@
 
 - (CALayer *)createLayer {
     CALayer *layer = [[CALayer alloc] init];
-    layer.backgroundColor = kLineColor.CGColor;
+    layer.backgroundColor = kAlertLineColor.CGColor;
     return layer;
 }
 
@@ -39,12 +39,12 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    _topLayer.frame = CGRectMake(0, 0, self.width, kLineHeight);
+    _topLayer.frame = CGRectMake(0, 0, self.width, kAlertLineHeight);
     if (_actions.count > 0) {
         [self removeAllSubViews];
         if (_actions.count == 1) {
             UIButton *button = [XMHAlertAction buttonFromAction:_actions.firstObject];
-            button.frame = CGRectMake(0, kLineHeight, self.width, self.height - kLineHeight);
+            button.frame = CGRectMake(0, kAlertLineHeight, self.width, self.height - kAlertLineHeight);
             [self addSubview:button];
         }
         else if (_actions.count == 2) {
@@ -52,18 +52,18 @@
                 if (layer != _topLayer) [layer removeFromSuperlayer];
             }
             
-            CGFloat buttonWidth = (self.width - kLineHeight) / 2.f;
+            CGFloat buttonWidth = (self.width - kAlertLineHeight) / 2.f;
             
             UIButton *firstButton = [XMHAlertAction buttonFromAction:_actions.firstObject];
-            firstButton.frame = CGRectMake(0, kLineHeight, buttonWidth, self.height - kLineHeight);
+            firstButton.frame = CGRectMake(0, kAlertLineHeight, buttonWidth, self.height - kAlertLineHeight);
             [self addSubview:firstButton];
             
             CALayer *layer = [self createLayer];
-            layer.frame = CGRectMake(firstButton.right, kLineHeight, kLineHeight, self.height - kLineHeight);
+            layer.frame = CGRectMake(firstButton.right, kAlertLineHeight, kAlertLineHeight, self.height - kAlertLineHeight);
             [self.layer addSublayer:layer];
             
             UIButton *lastButton = [XMHAlertAction buttonFromAction:_actions.lastObject];
-            lastButton.frame = CGRectMake(buttonWidth + kLineHeight, kLineHeight, buttonWidth, firstButton.height);
+            lastButton.frame = CGRectMake(buttonWidth + kAlertLineHeight, kAlertLineHeight, buttonWidth, firstButton.height);
             [self addSubview:lastButton];
         }
     }

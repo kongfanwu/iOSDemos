@@ -6,8 +6,8 @@
 //
 
 #import "XMHAlertDefaultContentView.h"
-#import "XMHAlertTool.h"
-#import "UIView+Exting.h"
+#import "XMHAlertToolAndConfigure.h"
+#import "UIView+XMHAlertExting.h"
 #import "XMHAlertAction.h"
 #import "XMHAlertContentBottomView.h"
 
@@ -43,7 +43,7 @@
     if (_titleLabel) return _titleLabel;
     _titleLabel = UILabel.new;
     _titleLabel.font = [UIFont systemFontOfSize:18];
-    _titleLabel.textColor = kTitleColor;
+    _titleLabel.textColor = kAlertTitleColor;
     _titleLabel.textAlignment = NSTextAlignmentCenter;
     _titleLabel.numberOfLines = 0;
     [self addSubview:_titleLabel];
@@ -54,7 +54,7 @@
     if (_contentLabel) return _contentLabel;
     _contentLabel = UILabel.new;
     _contentLabel.font = [UIFont systemFontOfSize:14];
-    _contentLabel.textColor = kMessageColor;
+    _contentLabel.textColor = kAlertMessageColor;
     _contentLabel.textAlignment = NSTextAlignmentCenter;
     _contentLabel.numberOfLines = 0;
     [self addSubview:_contentLabel];
@@ -70,7 +70,7 @@
 
 - (CALayer *)createLayer {
     CALayer *layer = [[CALayer alloc] init];
-    layer.backgroundColor = kLineColor.CGColor;
+    layer.backgroundColor = kAlertLineColor.CGColor;
     return layer;
 }
 

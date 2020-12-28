@@ -6,8 +6,8 @@
 //
 
 #import "XMHAlertAction.h"
-#import "XMHAlertTool.h"
-#import "UIView+Exting.h"
+#import "XMHAlertToolAndConfigure.h"
+#import "UIView+XMHAlertExting.h"
 
 @interface XMHAlertAction()
 @property (nullable, nonatomic) NSString *title;
@@ -94,16 +94,16 @@
 + (UIColor *)colorFromAction:(XMHAlertAction *)action {
     switch (action.style) {
         case XMHAlertActionStyleDefault:
-            return kActionDefaultColor;
+            return kAlertActionDefaultColor;
             break;
         case XMHAlertActionStyleMostly:
-            return kActionMostlyColor;
+            return kAlertActionMostlyColor;
             break;
         case XMHAlertActionStyleDestructive:
-            return kActionDestructiveColor;
+            return kAlertActionDestructiveColor;
             break;
         default:
-            return kActionDefaultColor;
+            return kAlertActionDefaultColor;
             break;
     }
 }
